@@ -4,6 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#bedef2"
     tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="342dp"
+        android:layout_height="223dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/painelogin_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="269dp">
+
+        <EditText
+            android:id="@+id/eeEmail2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/editext_bg"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/epwSenha2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/editext_bg"
+            android:ems="10"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eeEmail2" />
+
+        <Button
+            android:id="@+id/btnEntrar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#B25ABF"
+            android:fontFamily="@font/montserrat"
+            android:text="ENTRAR"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/epwSenha2"
+            app:strokeColor="#ffffff"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/btnEntrarG"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FFFF"
+            android:fontFamily="@font/montserrat"
+            android:text="ENTRAR COM O GOOGLE"
+            android:textColor="#B25ABF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
+            app:strokeColor="#b25abf"
+            app:strokeWidth="2dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#bedef2"
+        android:text="CADASTRE-SE"
+        android:textAlignment="center"
+        android:textColor="#B25ABF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:layout_editor_absoluteX="142dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#bedef2"
+        android:text="ESQUECI MINHA SENHA?"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:strokeColor="#bedef2"
+        app:strokeWidth="@dimen/cardview_default_radius"
+        tools:layout_editor_absoluteX="107dp" />
+
+    <ImageView
+        android:id="@+id/imgvLogoLogin"
+        android:layout_width="416dp"
+        android:layout_height="437dp"
+        app:srcCompat="@mipmap/logo_login"
+        tools:layout_editor_absoluteX="-12dp"
+        tools:layout_editor_absoluteY="-53dp" />
+
+    <ImageView
+        android:id="@+id/imgvRodape"
+        android:layout_width="137dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:srcCompat="@mipmap/rodape"
+        tools:layout_editor_absoluteX="132dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

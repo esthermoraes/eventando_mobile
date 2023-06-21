@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="#ededed"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="375dp"
+        android:layout_height="540dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/painel_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
+            android:text="CADASTRO"
+            android:textColor="#20201F"
+            android:textColorHighlight="#009688"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <EditText
+            android:id="@+id/etNome"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/editext_bg"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:foregroundTint="#787878"
+            android:hint="Nome"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCadastro" />
+
+        <EditText
+            android:id="@+id/eeEmail"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/editext_bg"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/epTelefone" />
+
+        <EditText
+            android:id="@+id/edDataNasc"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/editext_bg"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Data de Nascimento"
+            android:inputType="date"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNome" />
+
+        <EditText
+            android:id="@+id/epTelefone"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/editext_bg"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Telefone"
+            android:inputType="phone"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spEstado" />
+
+        <Spinner
+            android:id="@+id/spEstado"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/editext_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edDataNasc" />
+
+        <EditText
+            android:id="@+id/epwSenha"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/editext_bg"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eeEmail" />
+
+        <EditText
+            android:id="@+id/epwConfSenha"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/editext_bg"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Confirmação da Senha"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/epwSenha" />
+
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="#b25abf"
+            android:fontFamily="@font/montserrat"
+            android:text="CADASTRAR"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/epwConfSenha"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="2dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

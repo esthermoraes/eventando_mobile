@@ -116,7 +116,7 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#bedef2"
         android:text="ESQUECI MINHA SENHA?"
         android:textAlignment="center"
@@ -145,7 +145,8 @@
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@mipmap/rodape"
-        tools:layout_editor_absoluteX="132dp" />
+        tools:layout_editor_absoluteX="137dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

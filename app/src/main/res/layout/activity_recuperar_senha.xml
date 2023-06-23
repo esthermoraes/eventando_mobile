@@ -21,62 +21,27 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/tvCadastro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:id="@+id/tvTextRecSenha"
+            android:layout_width="337dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/montserrat"
-            android:text="RECUPERAÇÃO DE SENHA"
-            android:textColor="#20201F"
-            android:textColorHighlight="#009688"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnEnviar"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:backgroundTint="#b25abf"
-            android:fontFamily="@font/montserrat"
-            android:text="ENVIAR"
-            android:textAlignment="center"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:cornerRadius="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:strokeColor="#FFFFFF"
-            app:strokeWidth="2dp"
-            tools:layout_editor_absoluteY="218dp" />
-
-        <TextView
-            android:id="@+id/TextEmailRec"
-            android:layout_width="328dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/montserrat"
             android:text="Para recuperarmos sua senha, informe seu endereço de e-mail."
             android:textColor="#424242"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvCadastro" />
+            app:layout_constraintTop_toBottomOf="@+id/tvRecSenha" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/eeEmail3"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/editext_bg"
             android:ems="10"
@@ -86,7 +51,43 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="173dp" />
+            app:layout_constraintTop_toBottomOf="@+id/tvTextRecSenha" />
+
+        <TextView
+            android:id="@+id/tvRecSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="28dp"
+            android:fontFamily="@font/montserrat"
+            android:text="RECUPERAÇÃO DE SENHA"
+            android:textColor="#20201F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#b25abf"
+            android:fontFamily="@font/montserrat"
+            android:text="ENVIAR"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eeEmail3"
+            app:strokeColor="#ffffff"
+            app:strokeWidth="2dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

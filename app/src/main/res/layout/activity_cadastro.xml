@@ -40,7 +40,7 @@
         <EditText
             android:id="@+id/etNome"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="36dp"
             android:layout_marginEnd="24dp"
@@ -58,7 +58,7 @@
         <EditText
             android:id="@+id/eeEmail"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
@@ -75,7 +75,7 @@
         <EditText
             android:id="@+id/edDataNasc"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
@@ -92,7 +92,7 @@
         <EditText
             android:id="@+id/epTelefone"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
@@ -109,7 +109,7 @@
         <Spinner
             android:id="@+id/spEstado"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
@@ -123,7 +123,7 @@
         <EditText
             android:id="@+id/epwSenha"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
@@ -140,7 +140,7 @@
         <EditText
             android:id="@+id/epwConfSenha"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
@@ -157,7 +157,7 @@
         <Button
             android:id="@+id/btnCadastrar"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"

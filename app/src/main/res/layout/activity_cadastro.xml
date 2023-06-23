@@ -23,15 +23,19 @@
             android:id="@+id/tvCadastro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:fontFamily="@font/montserrat"
             android:text="CADASTRO"
             android:textColor="#20201F"
             android:textColorHighlight="#009688"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="16dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/etNome"
@@ -149,7 +153,7 @@
             app:layout_constraintTop_toBottomOf="@+id/epwSenha" />
 
         <Button
-            android:id="@+id/btnEnviar"
+            android:id="@+id/btnCadastrar"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="24dp"
@@ -161,6 +165,7 @@
             android:textAlignment="center"
             android:textSize="12sp"
             android:textStyle="bold"
+            app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/epwConfSenha"

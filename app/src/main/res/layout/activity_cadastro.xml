@@ -149,7 +149,7 @@
             app:layout_constraintTop_toBottomOf="@+id/epwSenha" />
 
         <Button
-            android:id="@+id/btnCadastrar"
+            android:id="@+id/btnEnviar"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="24dp"

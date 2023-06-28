@@ -33,6 +33,15 @@
         <item>Piauí</item>
         <item>Tocantins</item>
     </string-array>
+
+    <string-array name="filtro">
+        <item>Filtrar</item>
+        <item>Meus eventos</item>
+        <item>Eventos Recentes</item>
+        <item>Ordem alfabetica</item>
+        <item>Eventos online</item>
+        <item>Eventos presenciais</item>
+    </string-array>
 </resources>
 
 

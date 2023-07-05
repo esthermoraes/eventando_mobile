@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
-    android:backgroundTint="@android:color/transparent"
+    android:background="#ededed"
     tools:context=".EventPresencialActivity">
 
     <TextView
@@ -217,7 +216,7 @@
     <EditText
         android:id="@+id/editTextNumberSigned"
         android:layout_width="80dp"
-        android:layout_height="33dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/editext_bg"
@@ -236,11 +235,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
         android:fontFamily="@font/montserrat"
         android:foregroundTint="#000000"
         android:text="Adicionar Informações"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:icon="@drawable/baseline_add_24"
+        app:iconPadding="2dp"
         app:iconTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

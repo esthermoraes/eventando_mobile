@@ -9,15 +9,15 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="342dp"
-        android:layout_height="223dp"
+        android:layout_width="338dp"
+        android:layout_height="207dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/painelogin_bg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="269dp">
+        tools:layout_editor_absoluteY="207dp">
 
         <EditText
             android:id="@+id/eeEmail2"
@@ -41,7 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/editext_bg"
             android:ems="10"
@@ -57,7 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#B25ABF"
             android:fontFamily="@font/montserrat"
@@ -78,9 +78,9 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:backgroundTint="#FFFF"
             android:fontFamily="@font/montserrat"
             android:text="ENTRAR COM O GOOGLE"
@@ -99,6 +99,46 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#bedef2"
+        android:text="ESQUECI MINHA SENHA?"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:strokeColor="#bedef2"
+        app:strokeWidth="@dimen/cardview_default_radius" />
+
+    <ImageView
+        android:id="@+id/imgvRodape"
+        android:layout_width="130dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.347"
+        app:srcCompat="@mipmap/rodape" />
+
+    <ImageView
+        android:id="@+id/imgvLogoLogin"
+        android:layout_width="373dp"
+        android:layout_height="352dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/logo_login"
+        tools:layout_editor_absoluteY="-99dp" />
+
+    <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,44 +149,8 @@
         android:textColor="#B25ABF"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        tools:layout_editor_absoluteX="142dp" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#bedef2"
-        android:text="ESQUECI MINHA SENHA?"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:strokeColor="#bedef2"
-        app:strokeWidth="@dimen/cardview_default_radius"
-        tools:layout_editor_absoluteX="107dp" />
-
-    <ImageView
-        android:id="@+id/imgvLogoLogin"
-        android:layout_width="397dp"
-        android:layout_height="371dp"
-        app:srcCompat="@mipmap/logo_login"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="-50dp" />
-
-    <ImageView
-        android:id="@+id/imgvRodape"
-        android:layout_width="137dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.2"
-        app:srcCompat="@mipmap/rodape"
-        tools:layout_editor_absoluteX="137dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

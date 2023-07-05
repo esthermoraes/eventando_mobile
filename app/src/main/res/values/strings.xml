@@ -42,6 +42,24 @@
         <item>Eventos online</item>
         <item>Eventos presenciais</item>
     </string-array>
+
+    <string-array name="plataforma">
+        <item>Plataforma</item>
+        <item>Google Meet</item>
+        <item>Microsoft Teams</item>
+        <item>Zoom</item>
+        <item>Youtube</item>
+        <item>Instagram</item>
+        <item>Discord</item>
+    </string-array>
+
+    <string-array name="tipoContato">
+        <item>Tipo de contato</item>
+        <item>Telefone</item>
+        <item>E-mail</item>
+        <item>Instagram</item>
+        <item>Tik Tok</item>
+    </string-array>
 </resources>
 
 

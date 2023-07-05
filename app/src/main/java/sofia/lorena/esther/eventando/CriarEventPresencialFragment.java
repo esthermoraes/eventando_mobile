@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link fragment_events_presencial#newInstance} factory method to
+ * Use the {@link CriarEventPresencialFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragment_events_presencial extends Fragment {
+public class CriarEventPresencialFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class fragment_events_presencial extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public fragment_events_presencial() {
+    public CriarEventPresencialFragment() {
         // Required empty public constructor
     }
 
@@ -37,8 +37,8 @@ public class fragment_events_presencial extends Fragment {
      * @return A new instance of fragment fragment_events_presencial.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment_events_presencial newInstance(String param1, String param2) {
-        fragment_events_presencial fragment = new fragment_events_presencial();
+    public static CriarEventPresencialFragment newInstance(String param1, String param2) {
+        CriarEventPresencialFragment fragment = new CriarEventPresencialFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

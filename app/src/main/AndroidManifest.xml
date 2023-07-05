@@ -12,10 +12,16 @@
         android:theme="@style/Theme.Eventando"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".CriarEventoActivity"
             android:exported="false" />
         <activity
-            android:name=".PerfilActivity"
+            android:name=".EventOnlineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EventPresencialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".RecuperarSenhaActivity"

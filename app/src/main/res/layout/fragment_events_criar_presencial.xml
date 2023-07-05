@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment_events_presencial">
+    android:background="#ededed"
+    tools:context=".EventsCriarPresencialFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -26,12 +27,14 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fontFamily="@font/montserrat"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextTextPersonName6"
@@ -42,6 +45,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Objetivo"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -58,6 +62,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Data prevista"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -71,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat"
         android:text="Localização"
         android:textColor="#090909"
         android:textSize="16sp"
@@ -78,32 +84,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
 
-    <EditText
-        android:id="@+id/editTextDate3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/busca_bg"
-        android:ems="10"
-        android:hint="Data prevista"
-        android:inputType="date"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
-
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate3" />
+        tools:layout_editor_absoluteY="176dp" />
 
     <EditText
         android:id="@+id/editTextTime3"
@@ -114,12 +103,14 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Horário"
         android:inputType="time"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
 
     <EditText
         android:id="@+id/editTextTextPersonName8"
@@ -129,6 +120,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="CEP"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -140,15 +132,18 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Estado"
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName8"
-        tools:layout_editor_absoluteY="254dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/editTextTextPersonName10"
@@ -158,6 +153,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Cidade"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -169,15 +165,18 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Bairro"
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName10"
-        tools:layout_editor_absoluteY="286dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
 
     <EditText
         android:id="@+id/editTextTextPersonName12"
@@ -187,6 +186,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Logradouro"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -202,6 +202,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Nº"
         android:inputType="textPersonName"
         android:textSize="14sp"
@@ -219,12 +220,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_bg"
+        android:fontFamily="@font/montserrat"
         android:text="CRIAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,6 +12,21 @@
         android:theme="@style/Theme.Eventando"
         tools:targetApi="31">
         <activity
+            android:name=".ListaConvidadosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CriarConviteOnlineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CriarConvitePresencialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConviteOnlineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConvitePresencialActivity"
+            android:exported="false" />
+        <activity
             android:name=".CriarEventoActivity"
             android:exported="false" />
         <activity
@@ -32,15 +47,6 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

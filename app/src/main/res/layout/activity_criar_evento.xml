@@ -60,8 +60,9 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat"
         android:text="FORMATO"
-        android:textColor="#020202"
+        android:textColor="#000000"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 

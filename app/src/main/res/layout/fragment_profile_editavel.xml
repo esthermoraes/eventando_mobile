@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".ProfileEditavelFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -17,41 +17,24 @@
         android:layout_height="match_parent"
         tools:context=".PerfilActivity">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ConstraintLayout3"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_margin="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/painel_bg"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
-
-            <TextView
-                android:id="@+id/tvPerfil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat"
-                android:text="PERFIL"
-                android:textColor="#20201F"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="111dp"
+            android:layout_height="105dp"
+            android:adjustViewBounds="false"
+            android:background="@drawable/imagemperfil"
+            android:cropToPadding="false"
+            android:elevation="3dp"
+            tools:layout_editor_absoluteX="294dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:srcCompat="@color/material_dynamic_neutral_variant90" />
 
         <Button
             android:id="@+id/btnSalvarEd"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="#b25abf"
             android:contextClickable="false"
@@ -64,30 +47,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/ConstraintLayout2"
             app:strokeColor="#FFFFFF"
             app:strokeWidth="3dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
+            android:id="@+id/ConstraintLayout2"
             android:layout_width="0dp"
-            android:layout_height="166dp"
+            android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/painel_bg"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ConstraintLayout2"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="71dp">
 
             <TextView
-                android:id="@+id/tvPerfil"
+                android:id="@+id/tvPerfil3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/montserrat"
                 android:text="INFORMAÇÕES DE CONTATO"
@@ -95,30 +78,34 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.123"
+                app:layout_constraintHorizontal_bias="0.066"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
             <EditText
                 android:id="@+id/editTextPhone"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/editext_bg"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
                 android:hint="Telefone"
                 android:inputType="phone"
+                android:textColor="#424242"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.238"
+                app:layout_constraintHorizontal_bias="0.8"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvPerfil" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
+                app:layout_constraintVertical_bias="0.0" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress2"
+                android:id="@+id/editTextTextEmailAddress3"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -129,26 +116,12 @@
                 android:fontFamily="@font/montserrat"
                 android:hint="E-mail"
                 android:inputType="textEmailAddress"
+                android:textColor="#424242"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.724"
+                app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ConstraintLayout2"
-            android:layout_width="0dp"
-            android:layout_height="213dp"
-            android:layout_margin="20dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/painel_bg"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ConstraintLayout3"
-            tools:ignore="MissingConstraints">
+                app:layout_constraintTop_toBottomOf="@+id/tvPerfil3" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -163,7 +136,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.049"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -172,16 +145,16 @@
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
                 android:hint="Data de Nascimento"
                 android:inputType="date"
+                android:textColor="#424242"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
@@ -197,6 +170,7 @@
                 android:fontFamily="@font/montserrat"
                 android:hint="Nome"
                 android:inputType="textPersonName"
+                android:textColor="#424242"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -216,43 +190,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="101dp"
-            android:layout_height="95dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="16dp"
-            android:adjustViewBounds="false"
-            android:background="@drawable/imagemperfil"
-            android:cropToPadding="false"
-            app:layout_constraintBottom_toTopOf="@+id/ConstraintLayout2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@color/material_dynamic_neutral_variant90" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="90dp"
-            android:layout_marginBottom="8dp"
-            android:src="@android:drawable/ic_menu_edit"
-            android:tint="#9C27B0"
-            app:layout_constraintBottom_toTopOf="@+id/ConstraintLayout2"
-            app:layout_constraintEnd_toEndOf="@+id/ConstraintLayout3"
-            app:layout_constraintStart_toStartOf="@+id/imageView2" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="26dp"
-            android:layout_height="30dp"
-            android:src="@android:drawable/ic_menu_edit"
-            android:tint="#AA38BD"
-            tools:layout_editor_absoluteX="307dp"
-            tools:layout_editor_absoluteY="73dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

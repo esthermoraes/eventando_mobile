@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class VisualizarEventosPresenciaisActivity extends AppCompatActivity {
+public class VisualizarMeusEventosPresencialNaoEditavel extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_visualizar_eventos_presencial);
+        setContentView(R.layout.activity_visualizar_meus_eventos_presencial_nao_editavel);
     }
 }

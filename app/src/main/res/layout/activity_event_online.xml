@@ -8,44 +8,58 @@
     tools:context=".EventPresencialActivity">
 
     <Button
-        android:id="@+id/button19"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/button_bg"
-        android:text="SALVAR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button17" />
-
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/button_bg"
-        android:text="CRIAR CONVITE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button17"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
-
-    <Button
         android:id="@+id/button17"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/button_bg"
+        android:backgroundTint="#B25AbF"
         android:text="IMPORTAR CONVITE"
-        android:textSize="14sp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
         app:icon="@drawable/baseline_cloud_upload_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#B25AbF"
+        android:text="CRIAR CONVITE"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#B25AbF"
+        android:text="SALVAR"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button17"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="2dp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName21"

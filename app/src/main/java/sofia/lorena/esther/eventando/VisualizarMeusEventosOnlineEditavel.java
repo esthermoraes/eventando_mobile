@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class VisualizarEventosOnlineActivity extends AppCompatActivity {
+public class VisualizarMeusEventosOnlineEditavel extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_visualizar_eventos_online_nao_editavel);
+        setContentView(R.layout.activity_visualizar_meus_eventos_online_editavel);
     }
 }

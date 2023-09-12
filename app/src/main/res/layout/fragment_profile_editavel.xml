@@ -80,7 +80,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.066"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+                app:layout_constraintTop_toBottomOf="@+id/spEstado2" />
 
             <EditText
                 android:id="@+id/editTextPhone"
@@ -141,7 +141,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextDate"
+                android:id="@+id/dtDataPrevista"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -156,10 +156,10 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+                app:layout_constraintTop_toBottomOf="@+id/etObjetivo" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/etObjetivo"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -177,7 +177,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spEstado2"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -187,7 +187,7 @@
                 android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+                app:layout_constraintTop_toBottomOf="@+id/dtDataPrevista" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

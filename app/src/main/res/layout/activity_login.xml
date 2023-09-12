@@ -7,6 +7,15 @@
     android:background="#bedef2"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:id="@+id/imLogoLogin"
+        android:layout_width="373dp"
+        android:layout_height="352dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/logo_login"
+        tools:layout_editor_absoluteY="-99dp" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="338dp"
@@ -20,7 +29,7 @@
         tools:layout_editor_absoluteY="186dp">
 
         <EditText
-            android:id="@+id/eeEmail2"
+            android:id="@+id/emEmail2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -37,7 +46,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/epwSenha2"
+            android:id="@+id/pwdSenha2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -45,12 +54,13 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/editext_bg"
             android:ems="10"
+            android:fontFamily="@font/montserrat"
             android:hint="Senha"
             android:inputType="textPassword"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/eeEmail2" />
+            app:layout_constraintTop_toBottomOf="@+id/emEmail2" />
 
         <Button
             android:id="@+id/btnEntrar"
@@ -69,7 +79,7 @@
             app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/epwSenha2"
+            app:layout_constraintTop_toBottomOf="@+id/pwdSenha2"
             app:strokeColor="#ffffff"
             app:strokeWidth="2dp" />
 
@@ -99,11 +109,12 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnEsqueciSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="#bedef2"
+        android:fontFamily="@font/montserrat"
         android:text="ESQUECI MINHA SENHA?"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -117,7 +128,7 @@
         app:strokeWidth="@dimen/cardview_default_radius" />
 
     <ImageView
-        android:id="@+id/imgvRodape"
+        android:id="@+id/imRodape"
         android:layout_width="130dp"
         android:layout_height="49dp"
         android:layout_marginTop="16dp"
@@ -126,25 +137,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastro"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/rodape" />
 
-    <ImageView
-        android:id="@+id/imgvLogoLogin"
-        android:layout_width="373dp"
-        android:layout_height="352dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/logo_login"
-        tools:layout_editor_absoluteY="-99dp" />
-
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:backgroundTint="#bedef2"
+        android:fontFamily="@font/montserrat"
         android:text="CADASTRE-SE"
         android:textAlignment="center"
         android:textColor="#B25ABF"
@@ -152,6 +155,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEsqueciSenha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

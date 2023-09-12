@@ -8,7 +8,7 @@
     tools:context=".EventPresencialActivity">
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/btnSalvar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -21,12 +21,12 @@
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/btnImportarConvite"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/btnImportarConvite"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,7 +43,7 @@
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/btnCriarConvite"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -55,7 +55,7 @@
         android:textStyle="bold"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintStart_toEndOf="@+id/btnImportarConvite"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout3"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
@@ -69,12 +69,12 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2">
+        app:layout_constraintTop_toBottomOf="@+id/btnAdicionar">
 
     </FrameLayout>
 
     <TextView
-        android:id="@+id/tvNome"
+        android:id="@+id/tvNomeEvento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
     <TextView
-        android:id="@+id/tvFormato"
+        android:id="@+id/tvFormatoP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -105,7 +105,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNome" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
     <ToggleButton
         android:id="@+id/toggleButton2"
@@ -133,7 +133,7 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/dtDataPrevista"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -142,15 +142,15 @@
         android:background="@drawable/editext_bg"
         android:ems="10"
         android:fontFamily="@font/montserrat"
-        android:hint="Data"
+        android:hint="Data Prevista"
         android:inputType="date"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFormato" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFormatoP" />
 
     <EditText
-        android:id="@+id/editTextTime"
+        android:id="@+id/tmHorario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -165,10 +165,10 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/dtDataPrevista" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etObjetivo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -182,10 +182,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+        app:layout_constraintTop_toBottomOf="@+id/tmHorario" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tvLocalizacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -199,10 +199,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/etObjetivo" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/etCep"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -214,12 +214,12 @@
         android:hint="CEP"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintEnd_toStartOf="@+id/spEstado2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spEstado2"
         android:layout_width="240dp"
         android:layout_height="31dp"
         android:layout_marginTop="4dp"
@@ -227,10 +227,10 @@
         android:background="@drawable/editext_bg"
         android:entries="@array/estados"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/etCidade"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -242,13 +242,13 @@
         android:hint="Cidade"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName14"
+        app:layout_constraintEnd_toStartOf="@+id/etBairro"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/etCep" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName14"
+        android:id="@+id/etBairro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -260,10 +260,10 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spEstado2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName15"
+        android:id="@+id/etLogradouro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -275,13 +275,13 @@
         android:hint="Logradouro"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumberSigned"
+        app:layout_constraintEnd_toStartOf="@+id/numNumero"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/etCidade" />
 
     <EditText
-        android:id="@+id/editTextNumberSigned"
+        android:id="@+id/numNumero"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -293,10 +293,10 @@
         android:inputType="numberSigned"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+        app:layout_constraintTop_toBottomOf="@+id/etBairro" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnAdicionar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -314,7 +314,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned" />
+        app:layout_constraintTop_toBottomOf="@+id/numNumero" />
 
     <ImageButton
         android:id="@+id/imageButton3"

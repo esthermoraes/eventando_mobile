@@ -32,7 +32,7 @@
         android:clickable="true"
         android:foregroundTintMode="add"
         android:tint="#b25abf"
-        android:tintMode="add"
+        android:tintMode="src_in"
         app:backgroundTint="#b25abf"
         app:backgroundTintMode="add"
         app:elevation="12dp"

@@ -12,6 +12,15 @@
         android:theme="@style/Theme.Eventando"
         tools:targetApi="31">
         <activity
+            android:name=".VisualizarEventosOnlineNaoEditavel"
+            android:exported="false" />
+        <activity
+            android:name=".VisualizarEventosPresencialNaoEditavel"
+            android:exported="false" />
+        <activity
+            android:name=".VisualizarMeusEventosOnlineNaoEditavel"
+            android:exported="false" />
+        <activity
             android:name=".VisualizarMeusEventosOnlineEditavel"
             android:exported="false" />
         <activity
@@ -19,9 +28,6 @@
             android:exported="false" />
         <activity
             android:name=".VisualizarMeusEventosPresencialEditavel"
-            android:exported="false" />
-        <activity
-            android:name=".VisualizarEventosOnlineActivity"
             android:exported="false" />
         <activity
             android:name=".ListaConvidadosActivity"

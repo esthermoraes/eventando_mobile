@@ -29,7 +29,7 @@
         tools:layout_editor_absoluteY="186dp">
 
         <EditText
-            android:id="@+id/emEmail2"
+            android:id="@+id/emEmailLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -46,7 +46,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/pwdSenha2"
+            android:id="@+id/pwdSenhaLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -60,7 +60,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emEmail2" />
+            app:layout_constraintTop_toBottomOf="@+id/emEmailLogin" />
 
         <Button
             android:id="@+id/btnEntrar"
@@ -79,7 +79,7 @@
             app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pwdSenha2"
+            app:layout_constraintTop_toBottomOf="@+id/pwdSenhaLogin"
             app:strokeColor="#ffffff"
             app:strokeWidth="2dp" />
 

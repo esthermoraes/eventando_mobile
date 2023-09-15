@@ -4,12 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileEditavelFragment">
+    tools:context=".menu.perfil.ProfileEditavelFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tvPerfil"
@@ -125,6 +122,8 @@
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/montserrat"
                 android:text="Nome"
+                android:textColor="#424242"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.8"
                 app:layout_constraintStart_toStartOf="parent"
@@ -139,6 +138,7 @@
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/montserrat"
                 android:text="Data de nascimento"
+                android:textColor="#424242"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -152,6 +152,7 @@
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/montserrat"
                 android:text="Endereço"
+                android:textColor="#424242"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"

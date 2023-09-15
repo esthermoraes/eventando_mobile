@@ -8,14 +8,15 @@
     android:elevation="6dp"
     android:foregroundTint="#FFFFFF"
     android:foregroundTintMode="add"
-    tools:context=".HomeActivity">
+    tools:context=".menu.HomeActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/bnvMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:itemIconTint="@color/black"
         app:itemTextColor="#000000"
+        app:labelVisibilityMode="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,18 +26,18 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton4"
+        android:id="@+id/fabCriarEvento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:clickable="true"
-        android:foregroundTintMode="add"
-        android:tint="#b25abf"
-        android:tintMode="add"
+        android:foregroundTintMode="src_in"
+        android:tint="@color/white"
+        android:tintMode="src_in"
         app:backgroundTint="#b25abf"
         app:backgroundTintMode="add"
         app:elevation="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="@+id/bnvMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/baseline_add_24" />

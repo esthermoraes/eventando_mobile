@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ededed"
     android:scrollbars="vertical"
-    tools:context=".EventsCriarPresencialFragment">
+    tools:context=".menu.criar_evento.criar_evento_presencial.CriarEventPresencialFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -129,7 +129,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spEstado2" />
 
     <Button
         android:id="@+id/button"
@@ -155,7 +155,7 @@
         app:strokeWidth="2dp" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spEstado2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

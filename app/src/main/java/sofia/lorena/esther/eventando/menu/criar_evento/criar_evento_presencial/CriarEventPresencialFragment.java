@@ -1,4 +1,4 @@
-package sofia.lorena.esther.eventando;
+package sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import sofia.lorena.esther.eventando.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link EventsCriarOnlineFragment#newInstance} factory method to
+ * Use the {@link CriarEventPresencialFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class EventsCriarOnlineFragment extends Fragment {
+public class CriarEventPresencialFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class EventsCriarOnlineFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public EventsCriarOnlineFragment() {
+    public CriarEventPresencialFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class EventsCriarOnlineFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment EventsCriarOnlineFragment.
+     * @return A new instance of fragment fragment_events_presencial.
      */
     // TODO: Rename and change types and number of parameters
-    public static EventsCriarOnlineFragment newInstance(String param1, String param2) {
-        EventsCriarOnlineFragment fragment = new EventsCriarOnlineFragment();
+    public static CriarEventPresencialFragment newInstance(String param1, String param2) {
+        CriarEventPresencialFragment fragment = new CriarEventPresencialFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class EventsCriarOnlineFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_events_criar_online, container, false);
+        return inflater.inflate(R.layout.fragment_events_criar_presencial, container, false);
     }
 }

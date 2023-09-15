@@ -12,49 +12,49 @@
         android:theme="@style/Theme.Eventando"
         tools:targetApi="31">
         <activity
-            android:name=".VisualizarEventosOnlineNaoEditavel"
+            android:name=".menu.criar_evento.criar_evento_online.VisualizarEventOnlineNaoEditavel"
             android:exported="false" />
         <activity
-            android:name=".VisualizarEventosPresencialNaoEditavel"
+            android:name=".menu.criar_evento.criar_evento_presencial.VisualizarEventPresencialNaoEditavel"
             android:exported="false" />
         <activity
-            android:name=".VisualizarMeusEventosOnlineNaoEditavel"
+            android:name=".menu.criar_evento.criar_evento_online.VisualizarMyEventsOnlineNaoEditavel"
             android:exported="false" />
         <activity
-            android:name=".VisualizarMeusEventosOnlineEditavel"
+            android:name=".menu.criar_evento.criar_evento_online.VisualizarMyEventsOnlineEditavel"
             android:exported="false" />
         <activity
-            android:name=".VisualizarMeusEventosPresencialNaoEditavel"
+            android:name=".menu.criar_evento.criar_evento_presencial.VisualizarMyEventsPresencialNaoEditavel"
             android:exported="false" />
         <activity
-            android:name=".VisualizarMeusEventosPresencialEditavel"
+            android:name=".menu.criar_evento.criar_evento_presencial.VisualizarMyEventsPresencialEditavel"
             android:exported="false" />
         <activity
-            android:name=".ListaConvidadosActivity"
+            android:name=".menu.criar_evento.ListaConvidadosActivity"
             android:exported="false" />
         <activity
-            android:name=".CriarConviteOnlineActivity"
+            android:name=".menu.criar_evento.criar_evento_online.CriarConviteOnlineActivity"
             android:exported="false" />
         <activity
-            android:name=".CriarConvitePresencialActivity"
+            android:name=".menu.criar_evento.criar_evento_presencial.CriarConvitePresencialActivity"
             android:exported="false" />
         <activity
-            android:name=".ConviteOnlineActivity"
+            android:name=".menu.criar_evento.criar_evento_online.ConviteOnlineActivity"
             android:exported="false" />
         <activity
-            android:name=".ConvitePresencialActivity"
+            android:name=".menu.criar_evento.criar_evento_presencial.ConvitePresencialActivity"
             android:exported="false" />
         <activity
-            android:name=".CriarEventoActivity"
+            android:name=".menu.criar_evento.CriarEventActivity"
             android:exported="false" />
         <activity
-            android:name=".EventOnlineActivity"
+            android:name=".menu.criar_evento.criar_evento_online.EventOnlineActivity"
             android:exported="false" />
         <activity
-            android:name=".EventPresencialActivity"
+            android:name=".menu.criar_evento.criar_evento_presencial.EventPresencialActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".menu.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".PerfilActivity"

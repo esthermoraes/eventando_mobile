@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/emEmail"
+            android:id="@+id/emEmailCadastro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -103,7 +103,7 @@
             app:layout_constraintTop_toBottomOf="@+id/dtDataNasc" />
 
         <EditText
-            android:id="@+id/pwdSenha"
+            android:id="@+id/pwdSenhaCadastro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -117,7 +117,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/emEmailCadastro" />
 
         <EditText
             android:id="@+id/pwdConfSenha"
@@ -134,7 +134,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pwdSenha" />
+            app:layout_constraintTop_toBottomOf="@+id/pwdSenhaCadastro" />
 
         <Button
             android:id="@+id/btnCadastrar"

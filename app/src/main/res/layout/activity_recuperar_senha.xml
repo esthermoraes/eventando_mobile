@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="#ededed"
     android:scrollbarThumbHorizontal="@drawable/painel_bg"
-    tools:context=".RecuperarSenhaActivity">
+    tools:context=".acessar.RecuperarSenhaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -37,7 +37,7 @@
             tools:layout_editor_absoluteY="21dp" />
 
         <EditText
-            android:id="@+id/emEmail3"
+            android:id="@+id/emEmailRecSenha"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -70,7 +70,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emEmail3"
+            app:layout_constraintTop_toBottomOf="@+id/emEmailRecSenha"
             app:strokeColor="#ffffff"
             app:strokeWidth="2dp" />
 

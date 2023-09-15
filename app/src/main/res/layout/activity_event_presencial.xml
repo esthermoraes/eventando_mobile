@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ededed"
-    tools:context=".EventPresencialActivity">
+    tools:context=".menu.criar_evento.criar_evento_presencial.EventPresencialActivity">
 
     <Button
         android:id="@+id/btnSalvar"

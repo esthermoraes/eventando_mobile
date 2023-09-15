@@ -1,10 +1,12 @@
-package sofia.lorena.esther.eventando;
+package sofia.lorena.esther.eventando.menu.criar_evento;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CriarEventoActivity extends AppCompatActivity {
+import sofia.lorena.esther.eventando.R;
+
+public class CriarEventActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

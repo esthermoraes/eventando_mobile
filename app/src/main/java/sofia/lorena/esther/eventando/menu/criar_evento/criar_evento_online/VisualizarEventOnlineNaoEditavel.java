@@ -1,10 +1,12 @@
-package sofia.lorena.esther.eventando;
+package sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_online;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class VisualizarEventosOnlineNaoEditavel extends AppCompatActivity {
+import sofia.lorena.esther.eventando.R;
+
+public class VisualizarEventOnlineNaoEditavel extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

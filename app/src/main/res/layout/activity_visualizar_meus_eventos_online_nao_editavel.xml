@@ -8,6 +8,22 @@
     tools:context=".VisualizarEventosPresenciaisActivity"
     tools:layout_editor_absoluteY="81dp">
 
+    <ToggleButton
+        android:id="@+id/toggleButton3"
+        android:layout_width="88dp"
+        android:layout_height="33dp"
+        android:background="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:button="@drawable/baseline_lock_open_24"
+        android:buttonTint="#B25ABF"
+        android:fontFamily="@font/montserrat"
+        android:textOff="PÚBLICO"
+        android:textOn="PRIVADO"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -307,23 +323,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:background="@android:color/transparent"
-        android:backgroundTint="@android:color/transparent"
-        android:button="@drawable/baseline_lock_open_24"
-        android:buttonTint="#B25ABF"
-        android:fontFamily="@font/montserrat"
-        android:textOff="PÚBLICO"
-        android:textOn="PRIVADO"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/textView4"

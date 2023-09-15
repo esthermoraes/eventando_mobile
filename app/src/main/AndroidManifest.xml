@@ -60,22 +60,18 @@
             android:name=".PerfilActivity"
             android:exported="false" />
         <activity
-            android:name=".RecuperarSenhaActivity"
+            android:name=".acessar.RecuperarSenhaActivity"
             android:exported="false" />
         <activity
-            android:name=".CadastroActivity"
+            android:name=".acessar.CadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".acessar.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

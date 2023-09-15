@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="#ededed"
     android:scrollbarThumbHorizontal="@drawable/painel_bg"
-    tools:context=".RecuperarSenhaActivity">
+    tools:context=".acessar.RecuperarSenhaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"

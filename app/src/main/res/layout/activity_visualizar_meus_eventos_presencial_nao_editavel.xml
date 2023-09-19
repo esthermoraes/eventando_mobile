@@ -146,7 +146,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/tvCores"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -159,11 +159,11 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.666"
-                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintStart_toEndOf="@+id/tvEstilo"
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/tvEstilo"
                 android:layout_width="346dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -176,7 +176,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/txtInfoad"
-                app:layout_constraintEnd_toStartOf="@+id/textView15"
+                app:layout_constraintEnd_toStartOf="@+id/tvCores"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -193,7 +193,7 @@
                 android:hint="Bairro"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/textView14"
+                app:layout_constraintBottom_toTopOf="@+id/tvEstilo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView9"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -241,7 +241,7 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/imConviteA"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -317,7 +317,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/tvEstilo" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -369,7 +369,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imConviteA"
                 android:layout_width="164dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="8dp"
@@ -391,8 +391,8 @@
                 android:textOn="PRIVADO"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-                app:layout_constraintEnd_toEndOf="@+id/imageView3" />
+                app:layout_constraintBottom_toBottomOf="@+id/imConviteA"
+                app:layout_constraintEnd_toEndOf="@+id/imConviteA" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -407,7 +407,7 @@
                 android:inputType="time"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/imConviteA"
                 app:layout_constraintHorizontal_bias="0.615"
                 app:layout_constraintStart_toEndOf="@+id/data"
                 app:layout_constraintTop_toBottomOf="@+id/txtPresencial" />

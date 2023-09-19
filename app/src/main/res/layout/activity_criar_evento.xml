@@ -53,7 +53,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tvFormatoo"
+        android:id="@+id/tvFormato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -74,7 +74,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
-        app:layout_constraintTop_toBottomOf="@+id/tvFormatoo">
+        app:layout_constraintTop_toBottomOf="@+id/tvFormato">
 
         <RadioButton
             android:id="@+id/btnPresencial"
@@ -94,6 +94,7 @@
     </RadioGroup>
 
     <FrameLayout
+        android:id="@+id/frInfoBasicas"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"

@@ -7,7 +7,7 @@
     android:background="#ededed">
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tvEstilo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteY="48dp" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/tvCores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -44,10 +44,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14">
+        app:layout_constraintTop_toBottomOf="@+id/tvEstilo">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imConviteA"
             android:layout_width="118dp"
             android:layout_height="74dp"
             android:layout_marginStart="4dp"
@@ -59,20 +59,20 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imConviteB"
             android:layout_width="121dp"
             android:layout_height="72dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/imConviteA"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.574"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imConviteC"
             android:layout_width="120dp"
             android:layout_height="74dp"
             android:layout_marginStart="8dp"
@@ -82,7 +82,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imConviteB"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.576"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
@@ -99,52 +99,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15">
+        app:layout_constraintTop_toBottomOf="@+id/tvCores">
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="118dp"
+            android:id="@+id/imCorA"
+            android:layout_width="120dp"
             android:layout_height="74dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.483"
-            tools:srcCompat="@color/purple_500" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="121dp"
-            android:layout_height="72dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.574"
+            app:layout_constraintVertical_bias="0.557"
+            app:srcCompat="@color/purple_200" />
+
+        <ImageView
+            android:id="@+id/imCorB"
+            android:layout_width="120dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imCorA"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538"
             tools:srcCompat="@color/teal_200" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imageView4"
             android:layout_width="120dp"
             android:layout_height="74dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.576"
+            app:layout_constraintVertical_bias="0.538"
             tools:srcCompat="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btnGerar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

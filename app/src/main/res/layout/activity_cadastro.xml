@@ -20,7 +20,7 @@
         tools:ignore="MissingConstraints">
 
         <EditText
-            android:id="@+id/etNome"
+            android:id="@+id/etNomeCadastro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -52,10 +52,10 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phTelefone" />
+            app:layout_constraintTop_toBottomOf="@+id/phTelefoneCadastro" />
 
         <EditText
-            android:id="@+id/dtDataNasc"
+            android:id="@+id/dtDataNascCadastro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -69,10 +69,10 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etNome" />
+            app:layout_constraintTop_toBottomOf="@+id/etNomeCadastro" />
 
         <EditText
-            android:id="@+id/phTelefone"
+            android:id="@+id/phTelefoneCadastro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -86,10 +86,10 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spEstado" />
+            app:layout_constraintTop_toBottomOf="@+id/spEstadoCadastro" />
 
         <Spinner
-            android:id="@+id/spEstado"
+            android:id="@+id/spEstadoCadastro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -100,7 +100,7 @@
             android:textAlignment="textStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dtDataNasc" />
+            app:layout_constraintTop_toBottomOf="@+id/dtDataNascCadastro" />
 
         <EditText
             android:id="@+id/pwdSenhaCadastro"
@@ -120,7 +120,7 @@
             app:layout_constraintTop_toBottomOf="@+id/emEmailCadastro" />
 
         <EditText
-            android:id="@+id/pwdConfSenha"
+            android:id="@+id/pwdConfSenhaCadastro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -154,7 +154,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pwdConfSenha"
+            app:layout_constraintTop_toBottomOf="@+id/pwdConfSenhaCadastro"
             app:strokeColor="#FFFFFF"
             app:strokeWidth="2dp" />
 

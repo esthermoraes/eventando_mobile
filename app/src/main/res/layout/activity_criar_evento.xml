@@ -82,7 +82,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:buttonTint="#B25ABF"
-            android:text="PRESENCIAL" />
+            android:text="PRESENCIAL"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/btnOnline"
@@ -90,7 +91,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:buttonTint="#B25ABF"
-            android:text="ONLINE" />
+            android:text="ONLINE"
+            android:textColor="#000000" />
     </RadioGroup>
 
     <FrameLayout

@@ -25,7 +25,7 @@
             tools:layout_editor_absoluteY="81dp">
 
             <Spinner
-                android:id="@+id/spinner5"
+                android:id="@+id/tvTipoContato"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -34,7 +34,7 @@
                 android:entries="@array/tipoContato"
                 android:spinnerMode="dropdown"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintTop_toBottomOf="@+id/tvAtracoes" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
@@ -47,7 +47,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinner5">
+                app:layout_constraintTop_toBottomOf="@+id/tvTipoContato">
 
                 <TextView
                     android:id="@+id/textView10"
@@ -145,7 +145,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <EditText
-                android:id="@+id/textView8"
+                android:id="@+id/tvNomeEvento"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -158,10 +158,10 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtCep" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPlataforma" />
 
             <TextView
-                android:id="@+id/txtFormatura"
+                android:id="@+id/tvNomeEvento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -175,7 +175,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtPresencial"
+                android:id="@+id/tvOnline"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -185,10 +185,10 @@
                 android:textSize="14dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtFormatura" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
             <EditText
-                android:id="@+id/data"
+                android:id="@+id/tvDataPrevistaO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -202,10 +202,10 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPresencial" />
+                app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
             <TextView
-                android:id="@+id/textlocal"
+                android:id="@+id/tvEndereco"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -216,10 +216,10 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
 
             <Spinner
-                android:id="@+id/txtCep"
+                android:id="@+id/tvPlataforma"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -230,7 +230,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textlocal" />
+                app:layout_constraintTop_toBottomOf="@+id/tvEndereco" />
 
             <TextView
                 android:id="@+id/txtInfoad"
@@ -244,10 +244,10 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
             <EditText
-                android:id="@+id/textView5"
+                android:id="@+id/tvAtracoes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -276,11 +276,11 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/spinner5"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintStart_toEndOf="@+id/tvTipoContato"
+                app:layout_constraintTop_toBottomOf="@+id/tvAtracoes" />
 
             <ImageView
-                android:id="@+id/imConviteA"
+                android:id="@+id/imFotoEvento"
                 android:layout_width="164dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="8dp"
@@ -290,7 +290,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ToggleButton
-                android:id="@+id/toggleButton4"
+                android:id="@+id/tbPrivacidade"
                 android:layout_width="88dp"
                 android:layout_height="33dp"
                 android:background="@android:color/white"
@@ -302,11 +302,11 @@
                 android:textOn="PRIVADO"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imConviteA"
-                app:layout_constraintEnd_toEndOf="@+id/imConviteA" />
+                app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
+                app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
             <EditText
-                android:id="@+id/textView4"
+                android:id="@+id/tvHorarioO"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -318,13 +318,13 @@
                 android:inputType="time"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/imConviteA"
+                app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
                 app:layout_constraintHorizontal_bias="0.615"
-                app:layout_constraintStart_toEndOf="@+id/data"
-                app:layout_constraintTop_toBottomOf="@+id/txtPresencial" />
+                app:layout_constraintStart_toEndOf="@+id/tvDataPrevistaO"
+                app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
             <EditText
-                android:id="@+id/textView12"
+                android:id="@+id/tvObjetivoO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -338,7 +338,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toBottomOf="@+id/tvHorarioO" />
 
             <Button
                 android:id="@+id/button21"

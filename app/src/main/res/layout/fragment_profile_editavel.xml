@@ -140,7 +140,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/dtDataPrevistaO"
+                android:id="@+id/tvDataPrevistaO"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -155,10 +155,10 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etObjetivoO" />
+                app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
 
             <EditText
-                android:id="@+id/etObjetivoO"
+                android:id="@+id/tvObjetivoO"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -186,7 +186,7 @@
                 android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dtDataPrevistaO" />
+                app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

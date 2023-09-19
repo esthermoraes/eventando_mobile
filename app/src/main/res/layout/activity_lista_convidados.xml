@@ -7,7 +7,7 @@
     android:background="#ededed">
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/tvNomeEvento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -15,7 +15,7 @@
         android:fontFamily="@font/montserrat"
         android:text="NOME DO EVENTO"
         android:textColor="#000000"
-        android:textSize="14sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,10 +30,10 @@
         android:background="@drawable/painelevents_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento">
 
         <TextView
-            android:id="@+id/tvEndereco"
+            android:id="@+id/tvListaConvi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -41,12 +41,13 @@
             android:fontFamily="@font/montserrat"
             android:text="LISTA DE CONVIDADOS"
             android:textColor="#000000"
-            android:textSize="14sp"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView2"
+            android:id="@+id/rvNomeConvi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -54,11 +55,12 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvEndereco"
+            app:layout_constraintTop_toBottomOf="@+id/tvListaConvi"
             app:layout_constraintVertical_bias="0.0" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="wrap_content"
+            android:id="@+id/rvEmailConvi"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -66,14 +68,14 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/recyclerView2"
-            app:layout_constraintTop_toBottomOf="@+id/tvEndereco"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/rvNomeConvi"
+            app:layout_constraintTop_toBottomOf="@+id/tvListaConvi"
             app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnSalvarList"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

@@ -44,7 +44,7 @@
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/btnSalvar"
+        android:id="@+id/button7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -125,7 +125,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imConviteA"
+        app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
@@ -139,6 +139,7 @@
         android:background="@android:color/transparent"
         android:button="@drawable/baseline_lock_open_24"
         android:buttonTint="#B25ABF"
+        android:textColor="#000000"
         android:textOff="PÚBLICO"
         android:textOn="PRIVADO"
         android:textStyle="bold"
@@ -146,7 +147,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnExcluir" />
 
     <ImageView
-        android:id="@+id/imConviteA"
+        android:id="@+id/imFotoEvento"
         android:layout_width="176dp"
         android:layout_height="87dp"
         android:layout_marginTop="8dp"
@@ -156,7 +157,7 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <EditText
-        android:id="@+id/dtDataPrevistaO"
+        android:id="@+id/tvDataPrevistaO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -168,12 +169,12 @@
         android:hint="Data"
         android:inputType="date"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/imConviteA"
+        app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
     <EditText
-        android:id="@+id/tmHorarioO"
+        android:id="@+id/tvHorarioO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -185,13 +186,13 @@
         android:hint="Horário"
         android:inputType="time"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/imConviteA"
+        app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dtDataPrevistaO" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
 
     <EditText
-        android:id="@+id/etObjetivoO"
+        android:id="@+id/tvObjetivoO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -205,7 +206,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tmHorarioO" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHorarioO" />
 
     <TextView
         android:id="@+id/tvEndereco"
@@ -222,7 +223,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etObjetivoO" />
+        app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
 
     <Button
         android:id="@+id/btnAdicionar"
@@ -258,7 +259,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_restore_from_trash_24" />
+        app:srcCompat="@drawable/baseline_delete_forever_24" />
 
     <FrameLayout
         android:id="@+id/frameLayout2"

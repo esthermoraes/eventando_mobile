@@ -29,7 +29,7 @@
         tools:layout_editor_absoluteY="186dp">
 
         <EditText
-            android:id="@+id/eeEmail2"
+            android:id="@+id/eeEmailLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -46,7 +46,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/epwSenha2"
+            android:id="@+id/epwSenhaLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -59,7 +59,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/eeEmail2" />
+            app:layout_constraintTop_toBottomOf="@+id/eeEmailLogin" />
 
         <Button
             android:id="@+id/btnEntrar"
@@ -78,7 +78,7 @@
             app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/epwSenha2"
+            app:layout_constraintTop_toBottomOf="@+id/epwSenhaLogin"
             app:strokeColor="#ffffff"
             app:strokeWidth="2dp" />
 
@@ -108,7 +108,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnEsqueciSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -126,7 +126,7 @@
         app:strokeWidth="@dimen/cardview_default_radius" />
 
     <ImageView
-        android:id="@+id/imgvRodape"
+        android:id="@+id/imRodape"
         android:layout_width="130dp"
         android:layout_height="49dp"
         android:layout_marginTop="16dp"
@@ -135,7 +135,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastreSe"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/rodape" />
 
@@ -149,7 +149,7 @@
         tools:layout_editor_absoluteY="-99dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCadastreSe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -161,6 +161,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEsqueciSenha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

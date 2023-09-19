@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvAtracoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tvLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -165,6 +165,6 @@
         android:entries="@array/plataforma"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

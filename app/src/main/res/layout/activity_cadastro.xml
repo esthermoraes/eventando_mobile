@@ -20,7 +20,7 @@
         tools:ignore="MissingConstraints">
 
         <EditText
-            android:id="@+id/etNomeCadastro"
+            android:id="@+id/etNomeNaoEd"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -55,7 +55,7 @@
             app:layout_constraintTop_toBottomOf="@+id/phTelefoneCadastro" />
 
         <EditText
-            android:id="@+id/dtDataNascCadastro"
+            android:id="@+id/dtDataNasc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -69,7 +69,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etNomeCadastro" />
+            app:layout_constraintTop_toBottomOf="@+id/etNomeNaoEd" />
 
         <EditText
             android:id="@+id/phTelefoneCadastro"
@@ -100,7 +100,7 @@
             android:textAlignment="textStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dtDataNascCadastro" />
+            app:layout_constraintTop_toBottomOf="@+id/dtDataNasc" />
 
         <EditText
             android:id="@+id/pwdSenhaCadastro"

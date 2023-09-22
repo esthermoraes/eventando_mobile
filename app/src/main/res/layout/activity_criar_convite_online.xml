@@ -123,14 +123,14 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintEnd_toStartOf="@+id/imCorC"
             app:layout_constraintStart_toEndOf="@+id/imCorA"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.538"
             tools:srcCompat="@color/teal_200" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imCorC"
             android:layout_width="120dp"
             android:layout_height="74dp"
             android:layout_marginTop="8dp"

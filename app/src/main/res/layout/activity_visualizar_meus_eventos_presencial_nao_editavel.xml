@@ -24,7 +24,7 @@
             tools:layout_editor_absoluteY="81dp">
 
             <TextView
-                android:id="@+id/tvTipoContato"
+                android:id="@+id/tvTipoContato0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -34,7 +34,7 @@
                 android:hint="Tipo contato"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvAtracoes" />
+                app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
@@ -47,7 +47,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTipoContato">
+                app:layout_constraintTop_toBottomOf="@+id/tvTipoContato0">
 
                 <TextView
                     android:id="@+id/textView10"
@@ -178,7 +178,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/txtInfoad"
                 app:layout_constraintEnd_toStartOf="@+id/tvCores"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvLink" />
+                app:layout_constraintTop_toBottomOf="@+id/tvLinkO" />
 
             <EditText
                 android:id="@+id/textView13"
@@ -195,11 +195,11 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/tvEstilo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvLink"
+                app:layout_constraintStart_toEndOf="@+id/tvLinkO"
                 app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
             <EditText
-                android:id="@+id/tvLink"
+                android:id="@+id/tvLinkO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -211,7 +211,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/textView13"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvPlataforma" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPlataformaO" />
 
             <TextView
                 android:id="@+id/tvNomeEvento"
@@ -226,7 +226,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvPlataforma"
+                app:layout_constraintStart_toEndOf="@+id/tvPlataformaO"
                 app:layout_constraintTop_toBottomOf="@+id/tvEndereco" />
 
             <TextView
@@ -291,7 +291,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
             <TextView
-                android:id="@+id/tvPlataforma"
+                android:id="@+id/tvPlataformaO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -320,7 +320,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvEstilo" />
 
             <TextView
-                android:id="@+id/tvAtracoes"
+                android:id="@+id/tvAtracoes0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -365,8 +365,8 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvTipoContato"
-                app:layout_constraintTop_toBottomOf="@+id/tvAtracoes" />
+                app:layout_constraintStart_toEndOf="@+id/tvTipoContato0"
+                app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
             <ImageView
                 android:id="@+id/imFotoEvento"

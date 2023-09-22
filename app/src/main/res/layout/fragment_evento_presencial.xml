@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="87dp" />
 
     <EditText
-        android:id="@+id/etBairro"
+        android:id="@+id/etContato"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -32,113 +32,8 @@
         app:layout_constraintStart_toEndOf="@+id/spTipoContato"
         tools:layout_editor_absoluteY="87dp" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/painelevents_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spTipoContato">
-
-        <TextView
-            android:id="@+id/tvListaConvi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Liste seus convidados"
-            android:textColor="#090909"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
-
-        <EditText
-            android:id="@+id/etLogradouro"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Convidado 1"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvListaConvi" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName16"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Convidado 1"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etLogradouro" />
-
-        <EditText
-            android:id="@+id/emEmailConvi"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:text="Email"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/etLogradouro"
-            app:layout_constraintTop_toBottomOf="@+id/tvListaConvi" />
-
-        <EditText
-            android:id="@+id/emEmailConvi2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:text="Email"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName16"
-            app:layout_constraintTop_toBottomOf="@+id/emEmailConvi" />
-
-        <Button
-            android:id="@+id/btnAdicionar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="#00FFFFFF"
-            android:fontFamily="@font/montserrat"
-            android:text="Ver tudo"
-            android:textColor="#000000"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emEmailConvi2"
-            app:layout_constraintVertical_bias="0.0" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <EditText
-        android:id="@+id/etBuffet"
+        android:id="@+id/etBuffetPresencial"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -156,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etAtracoes"
+        android:id="@+id/etAtracPresencial"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -169,6 +64,25 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBuffet" />
+        app:layout_constraintTop_toBottomOf="@+id/etBuffetPresencial" />
+
+    <Button
+        android:id="@+id/btnListeConvi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#C34BD8"
+        android:fontFamily="@font/montserrat"
+        android:text="LISTE SEUS CONVIDADOS"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContato" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

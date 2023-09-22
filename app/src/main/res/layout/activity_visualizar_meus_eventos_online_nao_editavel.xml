@@ -71,7 +71,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="7dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#B25ABF"
         android:fontFamily="@font/montserrat"
@@ -80,9 +79,9 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
         app:strokeColor="#ffffff"
-        app:strokeWidth="2dp" />
+        app:strokeWidth="2dp"
+        tools:layout_editor_absoluteY="558dp" />
 
     <TextView
         android:id="@+id/tvTipoContato0"
@@ -97,114 +96,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/painelevents_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTipoContato0">
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Liste seus convidados"
-            android:textColor="#090909"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
-
-        <TextView
-            android:id="@+id/editTextTextPersonName15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:fontFamily="@font/montserrat"
-            android:inputType="textPersonName"
-            android:text="Convidado 1"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-        <TextView
-            android:id="@+id/editTextTextPersonName16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:fontFamily="@font/montserrat"
-            android:inputType="textPersonName"
-            android:text="Convidado 1"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
-
-        <TextView
-            android:id="@+id/editTextTextEmailAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:fontFamily="@font/montserrat"
-            android:inputType="textEmailAddress"
-            android:text="Email"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName15"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-        <TextView
-            android:id="@+id/editTextTextEmailAddress2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:fontFamily="@font/montserrat"
-            android:inputType="textEmailAddress"
-            android:text="Email"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName16"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="#00FFFFFF"
-            android:fontFamily="@font/montserrat"
-            android:text="Ver tudo"
-            android:textColor="#000000"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
-            app:layout_constraintVertical_bias="0.0" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tvEndereco"

@@ -21,11 +21,11 @@
         android:text="ToggleButton"
         android:textOff="Público"
         android:textOn="Privado"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="@+id/tbPrivEventOnline"
+        app:layout_constraintTop_toTopOf="@+id/tbPrivEventOnline" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tbPrivEventOnline"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/montserrat"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/tvDataPrevista"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -111,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevista" />
 
     <EditText
         android:id="@+id/editTextTime2"

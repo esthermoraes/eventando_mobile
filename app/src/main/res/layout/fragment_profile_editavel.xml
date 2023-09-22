@@ -123,7 +123,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvPerfil3" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tbPrivEventOnline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -173,7 +173,7 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintTop_toBottomOf="@+id/tbPrivEventOnline" />
 
             <Spinner
                 android:id="@+id/spEstado2"

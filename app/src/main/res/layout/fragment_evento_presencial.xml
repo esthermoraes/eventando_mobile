@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="87dp" />
 
     <EditText
-        android:id="@+id/etBairro"
+        android:id="@+id/etContato"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -33,7 +33,7 @@
         tools:layout_editor_absoluteY="87dp" />
 
     <EditText
-        android:id="@+id/etBuffet"
+        android:id="@+id/etBuffetPresencial"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etAtracoes"
+        android:id="@+id/etAtracPresencial"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -64,7 +64,26 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBuffet" />
+        app:layout_constraintTop_toBottomOf="@+id/etBuffetPresencial" />
+
+    <Button
+        android:id="@+id/btnListeConvi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#C34BD8"
+        android:fontFamily="@font/montserrat"
+        android:text="LISTE SEUS CONVIDADOS"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContato" />
 
     <Button
         android:id="@+id/btnListeConvi"

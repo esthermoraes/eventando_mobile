@@ -8,6 +8,22 @@
     tools:context=".VisualizarEventosPresenciaisActivity"
     tools:layout_editor_absoluteY="81dp">
 
+    <ToggleButton
+        android:id="@+id/tbPrivacidade2"
+        android:layout_width="88dp"
+        android:layout_height="33dp"
+        android:background="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:button="@drawable/baseline_lock_open_24"
+        android:buttonTint="#B25ABF"
+        android:fontFamily="@font/montserrat"
+        android:textOff="PÚBLICO"
+        android:textOn="PRIVADO"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
+        app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
+
     <ImageView
         android:id="@+id/toggleButton5"
         android:layout_width="88dp"
@@ -23,7 +39,7 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
@@ -44,7 +60,7 @@
         android:fontFamily="@font/montserrat"
         android:text="FORMATURA"
         android:textColor="#000000"
-        android:textSize="16dp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -64,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
     <TextView
-        android:id="@+id/tvTipoContato"
+        android:id="@+id/tvTipoContato0"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -75,7 +91,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
     <TextView
         android:id="@+id/tvEndereco"
@@ -92,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
 
     <TextView
-        android:id="@+id/tvLink"
+        android:id="@+id/tvLinkO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -105,7 +121,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPlataforma" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPlataformaO" />
 
     <TextView
         android:id="@+id/tvDataPrevistaO"
@@ -124,7 +140,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
     <TextView
-        android:id="@+id/tvPlataforma"
+        android:id="@+id/tvPlataformaO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -151,10 +167,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLink" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLinkO" />
 
     <TextView
-        android:id="@+id/tvAtracoes"
+        android:id="@+id/tvAtracoes0"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -171,7 +187,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtInfoad" />
 
     <TextView
-        android:id="@+id/tvContato"
+        android:id="@+id/tvContato0"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -183,8 +199,8 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvTipoContato"
-        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes" />
+        app:layout_constraintStart_toEndOf="@+id/tvTipoContato0"
+        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
     <ImageView
         android:id="@+id/imFotoEvento"
@@ -195,24 +211,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
-
-    <ToggleButton
-        android:id="@+id/tbPrivacidade"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:background="@android:color/transparent"
-        android:backgroundTint="@android:color/transparent"
-        android:button="@drawable/baseline_lock_open_24"
-        android:buttonTint="#B25ABF"
-        android:fontFamily="@font/montserrat"
-        android:textColor="#000000"
-        android:textOff="PÚBLICO"
-        android:textOn="PRIVADO"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
-        app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
     <TextView
         android:id="@+id/tvHorarioO"
@@ -253,14 +251,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/painelevents_bg"
+        android:backgroundTint="#C34BD8"
         android:fontFamily="@font/montserrat"
         android:text="VER LISTA DE CONVIDADOS"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:textSize="12sp"
         android:textStyle="bold"
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvContato" />
+        app:layout_constraintTop_toBottomOf="@+id/tvContato0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

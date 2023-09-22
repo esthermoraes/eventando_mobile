@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VisualizarMeusEventosPresencialEditavel">
+    tools:context=".VisualizarMyEventsPresencialEditavel">
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -23,7 +24,7 @@
             tools:layout_editor_absoluteY="81dp">
 
             <Spinner
-                android:id="@+id/spinner5"
+                android:id="@+id/spinnerTipoContatoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -32,119 +33,43 @@
                 android:entries="@array/tipoContato"
                 android:spinnerMode="dropdown"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintTop_toBottomOf="@+id/txtAtracoesP" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
+            <Button
+                android:id="@+id/btnListaConviP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:background="@drawable/painelevents_bg"
+                android:backgroundTint="#C34BD8"
+                android:fontFamily="@font/montserrat"
+                android:text="VER LISTA DE CONVIDADOS"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinner5">
-
-                <TextView
-                    android:id="@+id/textView100"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="Liste seus convidados"
-                    android:textColor="#090909"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textPersonName"
-                    android:text="Convidado 1"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView100" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textPersonName"
-                    android:text="Convidado 1"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
-
-                <EditText
-                    android:id="@+id/editTextTextEmailAddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textEmailAddress"
-                    android:text="Email"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName15"
-                    app:layout_constraintTop_toBottomOf="@+id/textView100" />
-
-                <EditText
-                    android:id="@+id/editTextTextEmailAddress2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textEmailAddress"
-                    android:text="Email"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName16"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="#00FFFFFF"
-                    android:fontFamily="@font/montserrat"
-                    android:text="Ver tudo"
-                    android:textColor="#000000"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
-                    app:layout_constraintVertical_bias="0.0" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintTop_toBottomOf="@+id/txtContatoP" />
 
             <EditText
-                android:id="@+id/textView15"
+                android:id="@+id/txtNumero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/editext_bg"
+                android:fontFamily="@font/montserrat"
+                android:hint="Nº         "
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtBairro" />
+
+
+            <EditText
+                android:id="@+id/txtLogradouro"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -152,34 +77,16 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
-                android:hint="Nº"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.666"
-                app:layout_constraintStart_toEndOf="@+id/textView14"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <EditText
-                android:id="@+id/textView14"
-                android:layout_width="346dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/editext_bg"
-                android:fontFamily="@font/montserrat"
                 android:hint="Logradouro"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txtInfoad"
-                app:layout_constraintEnd_toStartOf="@+id/textView15"
+                app:layout_constraintEnd_toStartOf="@+id/txtNumero"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                app:layout_constraintTop_toBottomOf="@+id/txtCidade" />
 
             <EditText
-                android:id="@+id/textView13"
+                android:id="@+id/txtBairro"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -191,28 +98,29 @@
                 android:hint="Bairro"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/textView14"
+
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView9"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                app:layout_constraintStart_toEndOf="@+id/txtCEP"
+                app:layout_constraintTop_toBottomOf="@+id/txtEstado" />
 
             <EditText
-                android:id="@+id/textView9"
+                android:id="@+id/txtCidade"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Cidade"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/textView13"
+                app:layout_constraintEnd_toStartOf="@+id/txtBairro"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtCep" />
+                app:layout_constraintTop_toBottomOf="@+id/txtCEP" />
 
             <EditText
-                android:id="@+id/textView8"
+                android:id="@+id/txtEstado"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -224,11 +132,11 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txtCep"
+                app:layout_constraintStart_toEndOf="@+id/txtCEP"
                 app:layout_constraintTop_toBottomOf="@+id/textlocal" />
 
             <TextView
-                android:id="@+id/txtFormaturaa"
+                android:id="@+id/tvNomeEvento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -239,13 +147,13 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtPresencial"
+                android:id="@+id/tvOnline"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -255,7 +163,7 @@
                 android:textSize="14dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtFormaturaa" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
             <TextView
                 android:id="@+id/textlocal"
@@ -263,15 +171,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="Endereço"
+                android:text="Localização
+"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                app:layout_constraintTop_toBottomOf="@+id/txtHorarioPObjetivoP" />
 
             <EditText
-                android:id="@+id/data"
+                android:id="@+id/txtDataPrevistaP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -285,10 +194,10 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPresencial" />
+                app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
             <EditText
-                android:id="@+id/txtCep"
+                android:id="@+id/txtCEP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -298,7 +207,7 @@
                 android:hint="CEP"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/textView8"
+                app:layout_constraintEnd_toStartOf="@+id/txtEstado"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textlocal" />
 
@@ -314,10 +223,10 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/txtLogradouro" />
 
             <EditText
-                android:id="@+id/textView5"
+                android:id="@+id/txtAtracoesP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -331,10 +240,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                app:layout_constraintTop_toBottomOf="@+id/txtBuffetP" />
 
             <EditText
-                android:id="@+id/textView16"
+                android:id="@+id/txtBuffetP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -351,7 +260,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtInfoad" />
 
             <EditText
-                android:id="@+id/textView10"
+                android:id="@+id/txtContatoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -363,11 +272,11 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/spinner5"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintStart_toEndOf="@+id/spinnerTipoContatoP"
+                app:layout_constraintTop_toBottomOf="@+id/txtAtracoesP" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imFotoEvento"
                 android:layout_width="164dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="8dp"
@@ -377,7 +286,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <ToggleButton
-                android:id="@+id/toggleButton4"
+                android:id="@+id/tbPrivacidade"
                 android:layout_width="88dp"
                 android:layout_height="33dp"
                 android:background="@android:color/white"
@@ -389,11 +298,11 @@
                 android:textOn="PRIVADO"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-                app:layout_constraintEnd_toEndOf="@+id/imageView3" />
+                app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
+                app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
             <EditText
-                android:id="@+id/textView4"
+                android:id="@+id/txtHorarioP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -405,17 +314,17 @@
                 android:inputType="time"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
                 app:layout_constraintHorizontal_bias="0.615"
-                app:layout_constraintStart_toEndOf="@+id/data"
-                app:layout_constraintTop_toBottomOf="@+id/txtPresencial" />
+                app:layout_constraintStart_toEndOf="@+id/txtDataPrevistaP"
+                app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
             <EditText
-                android:id="@+id/textView12"
+                android:id="@+id/txtHorarioPObjetivoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
@@ -425,14 +334,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toBottomOf="@+id/txtHorarioP" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/btnImportarC"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:backgroundTint="#B25AbF"
                 android:fontFamily="@font/montserrat"
                 android:text="IMPORTAR CONVITE"
@@ -440,16 +350,17 @@
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:icon="@drawable/baseline_cloud_upload_24"
+                app:layout_constraintEnd_toStartOf="@+id/btnCriarConvite"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/btnListaConviP"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/btnCriarConvite"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#B25AbF"
@@ -459,8 +370,7 @@
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button21"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/btnListaConviP"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 
@@ -479,7 +389,7 @@
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button21"
+                app:layout_constraintTop_toBottomOf="@+id/btnImportarC"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 

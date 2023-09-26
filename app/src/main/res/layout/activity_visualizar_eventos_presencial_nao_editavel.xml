@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu.criar_evento.criar_evento_presencial.VisualizarMyEventsPresencialEditavel">
+    tools:context=".menu.criar_evento.criar_evento_presencial.VisualizarEventPresencialNaoEditavel">
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#F5F4F4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,8 +29,8 @@
                 android:id="@+id/tvTipoContatoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/busca_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Tipo contato"
@@ -37,7 +39,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvAtracoesP" />
 
             <TextView
-                android:id="@+id/tvCores"
+                android:id="@+id/tvNumeroP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -50,46 +52,39 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.666"
-                app:layout_constraintStart_toEndOf="@+id/tvEstilo"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                app:layout_constraintStart_toEndOf="@+id/tvLogradouroP"
+                app:layout_constraintTop_toBottomOf="@+id/tvBairroP" />
+
 
             <TextView
-                android:id="@+id/tvLogradouro"
+                android:id="@+id/tvLogradouroP"
                 android:layout_width="346dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Logradouro"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txtInfoad"
-                app:layout_constraintEnd_toStartOf="@+id/tvCores"
-                app:layout_constraintHorizontal_bias="0.296"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvLinkO" />
+                app:layout_constraintTop_toBottomOf="@+id/tvCidadeP" />
 
             <EditText
-                android:id="@+id/textView13"
+                android:id="@+id/tvBairroP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Bairro"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tvLogradouroP"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvCidadeP"
-                app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/tvEstadoP" />
 
             <EditText
                 android:id="@+id/tvCidadeP"
@@ -102,9 +97,9 @@
                 android:hint="Cidade"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/textView13"
+                app:layout_constraintEnd_toStartOf="@+id/tvBairroP"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvPlataformaO" />
+                app:layout_constraintTop_toBottomOf="@+id/tvCEP" />
 
             <TextView
                 android:id="@+id/tvEstadoP"
@@ -118,8 +113,9 @@
                 android:hint="Estado"
                 android:textSize="12sp"
                 android:textStyle="bold"
+
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvPlataformaO"
+                app:layout_constraintStart_toEndOf="@+id/tvCEP"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
             <TextView
@@ -127,7 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/montserrat"
                 android:text="FORMATURA"
@@ -135,7 +131,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
-                app:layout_constraintHorizontal_bias="0.452"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -144,10 +140,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="@font/montserrat"
-                android:text="ONLINE"
-                android:textColor="#000000"
+                android:text="PRESENCIAL"
                 android:textSize="14dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -185,25 +180,24 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvPresencial" />
 
             <TextView
-                android:id="@+id/tvCep"
+                android:id="@+id/tvCEP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
-                android:hint="CEP"
+                android:hint="CEP                                                   "
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/tvNomeEvento"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
             <TextView
-                android:id="@+id/txtInfoad"
+                android:id="@+id/tvInfoadd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="Informações adicionais"
@@ -211,7 +205,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvEstadoP" />
+                app:layout_constraintTop_toBottomOf="@+id/tvLogradouroP" />
 
             <TextView
                 android:id="@+id/tvAtracoesP"
@@ -234,7 +228,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="92dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
@@ -244,23 +238,43 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtInfoad" />
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoadd" />
 
             <TextView
                 android:id="@+id/tvContatoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="104dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Contato"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/tvTipoContatoP"
                 app:layout_constraintTop_toBottomOf="@+id/tvAtracoesP" />
+
+            <Button
+                android:id="@+id/btnListaConviP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#C34BD8"
+                android:fontFamily="@font/montserrat"
+                android:text="VER LISTA DE CONVIDADOS"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTipoContatoP" />
 
             <ImageView
                 android:id="@+id/imFotoEvento"
@@ -311,7 +325,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="128dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"

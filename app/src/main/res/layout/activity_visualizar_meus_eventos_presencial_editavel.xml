@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VisualizarMyEventsPresencialEditavel">
+    tools:context=".menu.criar_evento.criar_evento_presencial.VisualizarMyEventsPresencialEditavel">
 
     <ScrollView
         android:layout_width="0dp"
@@ -36,7 +36,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtAtracoesP" />
 
             <Button
-                android:id="@+id/btnListaConviP"
+                android:id="@+id/btnListaEdConviP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -44,7 +44,7 @@
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#C34BD8"
                 android:fontFamily="@font/montserrat"
-                android:text="VER LISTA DE CONVIDADOS"
+                android:text="EDITAR LISTA DE CONVIDADOS"
                 android:textColor="#ffffff"
                 android:textSize="12sp"
                 android:textStyle="bold"
@@ -54,7 +54,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtContatoP" />
 
             <EditText
-                android:id="@+id/txtNumero"
+                android:id="@+id/numNumeroP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -80,7 +80,7 @@
                 android:hint="Logradouro"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/txtNumero"
+                app:layout_constraintEnd_toStartOf="@+id/numNumeroP"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtCidade" />
@@ -133,7 +133,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/txtCEP"
-                app:layout_constraintTop_toBottomOf="@+id/textlocal" />
+                app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
             <TextView
                 android:id="@+id/tvNomeEvento"
@@ -166,7 +166,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
             <TextView
-                android:id="@+id/textlocal"
+                android:id="@+id/tvLocalizacao"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -177,7 +177,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtHorarioPObjetivoP" />
+                app:layout_constraintTop_toBottomOf="@+id/txtObjetivoP" />
 
             <EditText
                 android:id="@+id/txtDataPrevistaP"
@@ -209,10 +209,10 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/txtEstado"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textlocal" />
+                app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
             <TextView
-                android:id="@+id/txtInfoad"
+                android:id="@+id/txtInfoadd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -257,7 +257,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtInfoad" />
+                app:layout_constraintTop_toBottomOf="@+id/txtInfoadd" />
 
             <EditText
                 android:id="@+id/txtContatoP"
@@ -320,7 +320,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
             <EditText
-                android:id="@+id/txtHorarioPObjetivoP"
+                android:id="@+id/txtObjetivoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -353,7 +353,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/btnCriarConvite"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnListaConviP"
+                app:layout_constraintTop_toBottomOf="@+id/btnListaEdConviP"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 
@@ -370,12 +370,12 @@
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnListaConviP"
+                app:layout_constraintTop_toBottomOf="@+id/btnListaEdConviP"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 
             <Button
-                android:id="@+id/button23"
+                android:id="@+id/btnSalvarEd"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu.criar_evento.criar_evento_presencial.VisualizarMyEventsPresencialEditavel">
+    tools:context=".menu.criar_evento.criar_evento_online.VisualizarMyEventsOnlineEditavel">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -25,7 +25,7 @@
             tools:layout_editor_absoluteY="81dp">
 
             <Spinner
-                android:id="@+id/tvTipoContato0"
+                android:id="@+id/spinnerTipoContatoO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -34,131 +34,7 @@
                 android:entries="@array/tipoContato"
                 android:spinnerMode="dropdown"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/painelevents_bg"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTipoContato0">
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="Liste seus convidados"
-                    android:textColor="#090909"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textPersonName"
-                    android:text="Convidado 1"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textPersonName"
-                    android:text="Convidado 1"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
-
-                <EditText
-                    android:id="@+id/editTextTextEmailAddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textEmailAddress"
-                    android:text="Email"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName15"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-                <EditText
-                    android:id="@+id/editTextTextEmailAddress2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textEmailAddress"
-                    android:text="Email"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName16"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="#00FFFFFF"
-                    android:fontFamily="@font/montserrat"
-                    android:text="Ver tudo"
-                    android:textColor="#000000"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
-                    app:layout_constraintVertical_bias="0.0" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <EditText
-                android:id="@+id/tvNomeEvento"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/editext_bg"
-                android:fontFamily="@font/montserrat"
-                android:hint="Link"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvPlataformaO" />
+                app:layout_constraintTop_toBottomOf="@+id/txtAtracoes0" />
 
             <TextView
                 android:id="@+id/tvNomeEvento"
@@ -188,7 +64,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
             <EditText
-                android:id="@+id/tvDataPrevistaO"
+                android:id="@+id/txtDataPrevistaO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -216,10 +92,10 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
+                app:layout_constraintTop_toBottomOf="@+id/txtObjetivoO" />
 
             <Spinner
-                android:id="@+id/tvPlataformaO"
+                android:id="@+id/spPlataformaO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -233,7 +109,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvEndereco" />
 
             <TextView
-                android:id="@+id/txtInfoad"
+                android:id="@+id/tvInfoadd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -244,10 +120,10 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
+                app:layout_constraintTop_toBottomOf="@+id/txtLinkO" />
 
             <EditText
-                android:id="@+id/tvAtracoes0"
+                android:id="@+id/txtAtracoes0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -261,10 +137,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtInfoad" />
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoadd" />
 
             <EditText
-                android:id="@+id/textView10"
+                android:id="@+id/txtContatoO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -276,8 +152,8 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvTipoContato0"
-                app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
+                app:layout_constraintStart_toEndOf="@+id/spinnerTipoContatoO"
+                app:layout_constraintTop_toBottomOf="@+id/txtAtracoes0" />
 
             <ImageView
                 android:id="@+id/imFotoEvento"
@@ -306,7 +182,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
             <EditText
-                android:id="@+id/tvHorarioO"
+                android:id="@+id/txtHorarioO"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -320,11 +196,11 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
                 app:layout_constraintHorizontal_bias="0.615"
-                app:layout_constraintStart_toEndOf="@+id/tvDataPrevistaO"
+                app:layout_constraintStart_toEndOf="@+id/txtDataPrevistaO"
                 app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
             <EditText
-                android:id="@+id/tvObjetivoO"
+                android:id="@+id/txtObjetivoO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -338,14 +214,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvHorarioO" />
+                app:layout_constraintTop_toBottomOf="@+id/txtHorarioO" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/btnImportarC"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
                 android:backgroundTint="#B25AbF"
                 android:fontFamily="@font/montserrat"
                 android:text="IMPORTAR CONVITE"
@@ -354,16 +229,15 @@
                 app:cornerRadius="8dp"
                 app:icon="@drawable/baseline_cloud_upload_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/btnListaEdConviO"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/btnCriarConvite"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#B25AbF"
                 android:fontFamily="@font/montserrat"
@@ -372,13 +246,14 @@
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button21"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/btnImportarC"
+                app:layout_constraintTop_toBottomOf="@+id/btnListaEdConviO"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 
             <Button
-                android:id="@+id/button23"
+                android:id="@+id/btnSalvarEd"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -392,9 +267,44 @@
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button21"
+                app:layout_constraintTop_toBottomOf="@+id/btnImportarC"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/btnListaEdConviO"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#C34BD8"
+                android:fontFamily="@font/montserrat"
+                android:text="EDITAR LISTA DE CONVIDADOS"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerTipoContatoO" />
+
+            <TextView
+                android:id="@+id/txtLinkO"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/editext_bg"
+                android:fontFamily="@font/montserrat"
+                android:text="Link"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spPlataformaO" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

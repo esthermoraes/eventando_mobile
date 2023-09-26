@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F5F5"
-    tools:context=".VisualizarEventosPresenciaisActivity"
+    tools:context=".menu.criar_evento.criar_evento_online.VisualizarEventOnlineNaoEditavel"
     tools:layout_editor_absoluteY="81dp">
 
     <ToggleButton
@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
     <ImageView
-        android:id="@+id/toggleButton5"
+        android:id="@+id/tbPrivacidade"
         android:layout_width="88dp"
         android:layout_height="33dp"
         android:background="@android:color/white"
@@ -156,7 +156,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvEndereco" />
 
     <TextView
-        android:id="@+id/txtInfoad"
+        android:id="@+id/tvInfoadd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -184,7 +184,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInfoad" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoadd" />
 
     <TextView
         android:id="@+id/tvContato0"
@@ -245,7 +245,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
 
     <Button
-        android:id="@+id/btnListaConvi"
+        android:id="@+id/btnListaConviO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

@@ -11,6 +11,6 @@ public class ListaConvidadosActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_convidados);
+        setContentView(R.layout.activity_my_lista_convidados);
     }
 }

@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F5F5"
-    tools:context=".VisualizarEventosPresenciaisActivity"
+    tools:context=".menu.criar_evento.criar_evento_online.VisualizarMyEventsOnlineNaoEditavel"
     tools:layout_editor_absoluteY="81dp">
 
     <ToggleButton
-        android:id="@+id/toggleButton3"
+        android:id="@+id/tbPrivacidade"
         android:layout_width="88dp"
         android:layout_height="33dp"
         android:background="@android:color/white"
@@ -31,7 +31,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -48,6 +49,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat"
         android:text="FORMATURA"
+        android:textColor="#000000"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,10 +69,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/btnEditarEvenO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#B25ABF"
         android:fontFamily="@font/montserrat"
@@ -79,9 +82,27 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnListaConviO"
         app:strokeColor="#ffffff"
-        app:strokeWidth="2dp"
-        tools:layout_editor_absoluteY="558dp" />
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btnListaConviO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#C34BD8"
+        android:fontFamily="@font/montserrat"
+        android:text="VER LISTA DE CONVIDADOS"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContatoO" />
 
     <TextView
         android:id="@+id/tvTipoContato0"
@@ -159,7 +180,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvEndereco" />
 
     <TextView
-        android:id="@+id/txtInfoad"
+        android:id="@+id/tvInfoadd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -187,10 +208,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInfoad" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoadd" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/tvContatoO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

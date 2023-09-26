@@ -20,11 +20,11 @@
         android:text="ToggleButton"
         android:textOff="Público"
         android:textOn="Privado"
-        app:layout_constraintStart_toStartOf="@+id/tbPrivEventOnline"
-        app:layout_constraintTop_toTopOf="@+id/tbPrivEventOnline" />
+        app:layout_constraintStart_toStartOf="@+id/tbInfoBasica"
+        app:layout_constraintTop_toTopOf="@+id/tbInfoBasica" />
 
     <TextView
-        android:id="@+id/tbPrivEventOnline"
+        android:id="@+id/tbInfoBasica"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/montserrat"
@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/tvObjetivoCO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
 
     <EditText
-        android:id="@+id/tvDataPrevista"
+        android:id="@+id/tvDataPrevistaCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,10 +68,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+        app:layout_constraintTop_toBottomOf="@+id/tvObjetivoCO" />
 
     <TextView
-        android:id="@+id/tvAtracoes0"
+        android:id="@+id/tvLocalizacaoCP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -82,7 +82,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHorarioCO" />
 
     <TextView
         android:id="@+id/tvLinkO"
@@ -95,7 +95,7 @@
         tools:layout_editor_absoluteY="176dp" />
 
     <EditText
-        android:id="@+id/editTextTime3"
+        android:id="@+id/tvHorarioCO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -110,10 +110,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevista" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaCP" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/txCepCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -125,10 +125,10 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacaoCP" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName9"
+        android:id="@+id/txEstadoCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -142,11 +142,11 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName8"
-        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
+        app:layout_constraintStart_toEndOf="@+id/txCepCP"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacaoCP" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName10"
+        android:id="@+id/txCidadeCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -158,10 +158,10 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+        app:layout_constraintTop_toBottomOf="@+id/txCepCP" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/txBairroCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -175,11 +175,11 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName10"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+        app:layout_constraintStart_toEndOf="@+id/txCidadeCP"
+        app:layout_constraintTop_toBottomOf="@+id/txEstadoCP" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName12"
+        android:id="@+id/txLogradouroCP"
         android:layout_width="259dp"
         android:layout_height="29dp"
         android:layout_marginStart="8dp"
@@ -191,10 +191,10 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />
+        app:layout_constraintTop_toBottomOf="@+id/txCidadeCP" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName13"
+        android:id="@+id/txNumeroCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -208,11 +208,11 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.714"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName12"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        app:layout_constraintStart_toEndOf="@+id/txLogradouroCP"
+        app:layout_constraintTop_toBottomOf="@+id/txBairroCP" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCriar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -228,7 +228,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12"
+        app:layout_constraintTop_toBottomOf="@+id/txLogradouroCP"
         app:layout_constraintVertical_bias="0.0"
         app:strokeColor="#ffffff"
         app:strokeWidth="2dp" />

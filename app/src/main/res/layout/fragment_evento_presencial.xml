@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="87dp" />
 
     <EditText
-        android:id="@+id/etContato"
+        android:id="@+id/etContatoPresencial"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -83,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContato" />
+        app:layout_constraintTop_toBottomOf="@+id/etContatoPresencial" />
 
     <Button
         android:id="@+id/btnListeConvi"
@@ -102,6 +102,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBairro" />
+        app:layout_constraintTop_toBottomOf="@+id/etContatoOnline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

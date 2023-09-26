@@ -157,7 +157,7 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <EditText
-        android:id="@+id/tvDataPrevistaO"
+        android:id="@+id/tvDataNasc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -189,10 +189,10 @@
         app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDataNasc" />
 
     <EditText
-        android:id="@+id/tvObjetivoO"
+        android:id="@+id/etNome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -223,10 +223,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
+        app:layout_constraintTop_toBottomOf="@+id/etNome" />
 
     <Button
-        android:id="@+id/btnAdicionar"
+        android:id="@+id/btnVerTudo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -271,7 +271,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAdicionar">
+        app:layout_constraintTop_toBottomOf="@+id/btnVerTudo">
 
     </FrameLayout>
 

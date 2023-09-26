@@ -18,7 +18,7 @@
         tools:context=".PerfilActivity">
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/imPerfilEdit"
             android:layout_width="111dp"
             android:layout_height="105dp"
             android:adjustViewBounds="false"
@@ -65,7 +65,7 @@
             tools:layout_editor_absoluteY="71dp">
 
             <TextView
-                android:id="@+id/tvPerfil3"
+                android:id="@+id/tvInfoContato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -79,10 +79,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spEstado2" />
+                app:layout_constraintTop_toBottomOf="@+id/spEstado" />
 
             <EditText
-                android:id="@+id/editTextPhone"
+                android:id="@+id/phTelefonePerfil"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -100,11 +100,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.8"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
+                app:layout_constraintTop_toBottomOf="@+id/emEmailPerfil"
                 app:layout_constraintVertical_bias="0.0" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress3"
+                android:id="@+id/emEmailPerfil"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -120,10 +120,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvPerfil3" />
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoContato" />
 
             <TextView
-                android:id="@+id/tbPrivEventOnline"
+                android:id="@+id/tbInfoBasica"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -140,7 +140,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/tvDataPrevistaO"
+                android:id="@+id/tvDataNasc"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -155,14 +155,14 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
+                app:layout_constraintTop_toBottomOf="@+id/etNome" />
 
             <EditText
-                android:id="@+id/tvObjetivoO"
+                android:id="@+id/etNome"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:ems="10"
@@ -172,11 +172,12 @@
                 android:textColor="#424242"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.555"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tbPrivEventOnline" />
+                app:layout_constraintTop_toBottomOf="@+id/tbInfoBasica" />
 
             <Spinner
-                android:id="@+id/spEstado2"
+                android:id="@+id/spEstado"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="8dp"
@@ -186,7 +187,7 @@
                 android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
+                app:layout_constraintTop_toBottomOf="@+id/tvDataNasc" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

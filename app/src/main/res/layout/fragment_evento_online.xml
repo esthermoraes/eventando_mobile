@@ -15,10 +15,10 @@
         android:background="@drawable/busca_bg"
         android:entries="@array/tipoContato"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCep" />
+        app:layout_constraintTop_toBottomOf="@+id/etatracoes" />
 
     <EditText
-        android:id="@+id/etCep"
+        android:id="@+id/etatracoes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etBairro"
+        android:id="@+id/etContatoOnline"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -50,7 +50,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/spTipoContato"
-        app:layout_constraintTop_toBottomOf="@+id/etCep" />
+        app:layout_constraintTop_toBottomOf="@+id/etatracoes" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -77,10 +77,10 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
+            app:layout_constraintTop_toBottomOf="@+id/tvHorarioCO" />
 
         <EditText
-            android:id="@+id/etLogradouro"
+            android:id="@+id/etConvi1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -93,7 +93,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvListaConvi" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName16"
+            android:id="@+id/etConvi2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -103,7 +103,7 @@
             android:text="Convidado 1"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etLogradouro" />
+            app:layout_constraintTop_toBottomOf="@+id/etConvi1" />
 
         <EditText
             android:id="@+id/emEmailConvi"
@@ -118,7 +118,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/etLogradouro"
+            app:layout_constraintStart_toEndOf="@+id/etConvi1"
             app:layout_constraintTop_toBottomOf="@+id/tvListaConvi" />
 
         <EditText
@@ -134,11 +134,11 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName16"
+            app:layout_constraintStart_toEndOf="@+id/etConvi2"
             app:layout_constraintTop_toBottomOf="@+id/emEmailConvi" />
 
         <Button
-            android:id="@+id/btnAdicionar"
+            android:id="@+id/btnVerTudo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

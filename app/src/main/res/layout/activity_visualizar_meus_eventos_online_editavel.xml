@@ -10,6 +10,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -36,116 +37,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/painelevents_bg"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTipoContato0">
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="Liste seus convidados"
-                    android:textColor="#090909"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textPersonName"
-                    android:text="Convidado 1"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textPersonName"
-                    android:text="Convidado 1"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
-
-                <EditText
-                    android:id="@+id/editTextTextEmailAddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textEmailAddress"
-                    android:text="Email"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName15"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-                <EditText
-                    android:id="@+id/editTextTextEmailAddress2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:ems="10"
-                    android:fontFamily="@font/montserrat"
-                    android:inputType="textEmailAddress"
-                    android:text="Email"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName16"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="#00FFFFFF"
-                    android:fontFamily="@font/montserrat"
-                    android:text="Ver tudo"
-                    android:textColor="#000000"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
-                    app:layout_constraintVertical_bias="0.0" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
             <EditText
-                android:id="@+id/tvNomeEvento"
+                android:id="@+id/tvLinkO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -244,7 +137,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
+                app:layout_constraintTop_toBottomOf="@+id/tvLinkO" />
 
             <EditText
                 android:id="@+id/tvAtracoes0"
@@ -264,7 +157,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtInfoad" />
 
             <EditText
-                android:id="@+id/textView10"
+                android:id="@+id/tvContato0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -272,11 +165,12 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
-                android:hint="contato"
+                android:hint="Contato"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvTipoContato0"
+
+                app:layout_constraintStart_toEndOf="@+id/spinnerTipoContatoO"
                 app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
             <ImageView
@@ -341,7 +235,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvHorarioO" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/btnImportarC"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -354,12 +248,12 @@
                 app:cornerRadius="8dp"
                 app:icon="@drawable/baseline_cloud_upload_24"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/btnListaEdConviP2"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/btnCriarConvite"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
@@ -372,13 +266,14 @@
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button21"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/btnImportarC"
+                app:layout_constraintTop_toBottomOf="@+id/btnListaEdConviP2"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 
             <Button
-                android:id="@+id/button23"
+                android:id="@+id/btnSalvarEd"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -391,10 +286,29 @@
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button21"
+                app:layout_constraintTop_toBottomOf="@+id/btnImportarC"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/btnListaEdConviP2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#C34BD8"
+                android:fontFamily="@font/montserrat"
+                android:text="EDITAR LISTA DE CONVIDADOS"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerTipoContatoO" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

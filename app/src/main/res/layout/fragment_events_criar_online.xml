@@ -129,7 +129,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spEstado" />
+        app:layout_constraintTop_toBottomOf="@+id/spPlataformaO" />
 
     <Button
         android:id="@+id/btnCriar"
@@ -155,7 +155,7 @@
         app:strokeWidth="2dp" />
 
     <Spinner
-        android:id="@+id/spEstado"
+        android:id="@+id/spPlataformaO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

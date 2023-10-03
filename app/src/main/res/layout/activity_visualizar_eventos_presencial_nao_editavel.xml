@@ -34,6 +34,7 @@
                 android:background="@drawable/busca_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Tipo contato"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvAtracoesP" />
@@ -99,7 +100,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/tvBairroP"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvCEP" />
+                app:layout_constraintTop_toBottomOf="@+id/tvCepP" />
 
             <TextView
                 android:id="@+id/tvEstadoP"
@@ -115,7 +116,7 @@
                 android:textStyle="bold"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvCEP"
+                app:layout_constraintStart_toEndOf="@+id/tvCepP"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
             <TextView
@@ -143,6 +144,7 @@
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/montserrat"
                 android:text="PRESENCIAL"
+                android:textColor="#000"
                 android:textSize="14dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -180,7 +182,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvPresencial" />
 
             <TextView
-                android:id="@+id/tvCEP"
+                android:id="@+id/tvCepP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -258,7 +260,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvAtracoesP" />
 
             <Button
-                android:id="@+id/btnListaConviP"
+                android:id="@+id/btnVerListaConviP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -325,7 +327,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"

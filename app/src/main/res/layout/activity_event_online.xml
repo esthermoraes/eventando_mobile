@@ -20,7 +20,7 @@
         app:cornerRadius="8dp"
         app:icon="@drawable/baseline_cloud_upload_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/frInfoAdd"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 
@@ -39,12 +39,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnImportarC"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/frInfoAdd"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnSalvar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -61,20 +61,17 @@
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 
-    <EditText
-        android:id="@+id/etPlataformaO"
+    <Spinner
+        android:id="@+id/spPlataformaO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/busca_bg"
-        android:ems="10"
-        android:fontFamily="@font/montserrat"
-        android:hint="Plataforma"
-        android:inputType="textPersonName"
-        android:textSize="14sp"
+        android:background="@drawable/editext_bg"
+        android:entries="@array/plataforma"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEndereco" />
 
@@ -94,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPlataformaO" />
+        app:layout_constraintTop_toBottomOf="@+id/spPlataformaO" />
 
     <TextView
         android:id="@+id/tvNomeEvento"
@@ -157,7 +154,7 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <EditText
-        android:id="@+id/tvDataNasc"
+        android:id="@+id/etDataPrevistaO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -174,7 +171,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
     <EditText
-        android:id="@+id/tvHorarioO"
+        android:id="@+id/tmHorarioO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -189,10 +186,10 @@
         app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataNasc" />
+        app:layout_constraintTop_toBottomOf="@+id/etDataPrevistaO" />
 
     <EditText
-        android:id="@+id/etNome"
+        android:id="@+id/etObjetivoO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -206,7 +203,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHorarioO" />
+        app:layout_constraintTop_toBottomOf="@+id/tmHorarioO" />
 
     <TextView
         android:id="@+id/tvEndereco"
@@ -223,10 +220,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNome" />
+        app:layout_constraintTop_toBottomOf="@+id/etObjetivoO" />
 
     <Button
-        android:id="@+id/btnVerTudo"
+        android:id="@+id/btnAddInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -251,7 +248,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
         android:scaleType="fitEnd"
@@ -262,7 +259,7 @@
         app:srcCompat="@drawable/baseline_delete_forever_24" />
 
     <FrameLayout
-        android:id="@+id/frameLayout2"
+        android:id="@+id/frInfoAdd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -271,7 +268,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerTudo">
+        app:layout_constraintTop_toBottomOf="@+id/btnAddInfo">
 
     </FrameLayout>
 

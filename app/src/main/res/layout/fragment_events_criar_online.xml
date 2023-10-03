@@ -85,16 +85,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHorarioCO" />
 
-    <TextView
-        android:id="@+id/tvLinkO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="176dp" />
-
     <EditText
         android:id="@+id/tvHorarioCO"
         android:layout_width="0dp"
@@ -123,7 +113,7 @@
         android:background="@drawable/busca_bg"
         android:ems="10"
         android:fontFamily="@font/montserrat"
-        android:hint="Horário"
+        android:hint="Link"
         android:inputType="time"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"

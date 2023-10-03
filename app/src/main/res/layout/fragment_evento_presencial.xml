@@ -7,7 +7,7 @@
     android:background="#ededed">
 
     <Spinner
-        android:id="@+id/spTipoContato"
+        android:id="@+id/spTipoContatoP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="87dp" />
 
     <EditText
-        android:id="@+id/etContatoPresencial"
+        android:id="@+id/etContatoP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,11 +29,11 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spTipoContato"
+        app:layout_constraintStart_toEndOf="@+id/spTipoContatoP"
         tools:layout_editor_absoluteY="87dp" />
 
     <EditText
-        android:id="@+id/etBuffetPresencial"
+        android:id="@+id/etBuffetP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etAtracPresencial"
+        android:id="@+id/etAtracoesP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -64,10 +64,10 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBuffetPresencial" />
+        app:layout_constraintTop_toBottomOf="@+id/etBuffetP" />
 
     <Button
-        android:id="@+id/btnListeConvi"
+        android:id="@+id/btnListeConviP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -83,25 +83,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContatoPresencial" />
-
-    <Button
-        android:id="@+id/btnListeConvi"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:backgroundTint="#C34BD8"
-        android:fontFamily="@font/montserrat"
-        android:text="LISTE SEUS CONVIDADOS"
-        android:textColor="#ffffff"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:cornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContatoOnline" />
+        app:layout_constraintTop_toBottomOf="@+id/etContatoP" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

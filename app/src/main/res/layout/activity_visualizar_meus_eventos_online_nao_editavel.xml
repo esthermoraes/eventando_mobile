@@ -63,13 +63,14 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat"
         android:text="ONLINE"
+        android:textColor="#000"
         android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
     <Button
-        android:id="@+id/btnEditarEvenO"
+        android:id="@+id/btnEditarEventO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -82,12 +83,12 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnListaConviO"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerListaConviO"
         app:strokeColor="#ffffff"
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/btnListaConviO"
+        android:id="@+id/btnVerListaConviO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -116,7 +117,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacaoCP" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
     <TextView
         android:id="@+id/tvEndereco"
@@ -130,7 +131,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNome" />
+        app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
 
     <TextView
         android:id="@+id/tvLinkO"
@@ -142,13 +143,14 @@
         android:background="@drawable/editext_bg"
         android:fontFamily="@font/montserrat"
         android:text="Link"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPlataformaO" />
 
     <TextView
-        android:id="@+id/tvDataNasc"
+        android:id="@+id/tvDataPrevistaO"
         android:layout_width="0dp"
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
@@ -194,7 +196,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvLinkO" />
 
     <TextView
-        android:id="@+id/tvLocalizacaoCP"
+        android:id="@+id/tvAtracoes0"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -224,7 +226,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvTipoContato0"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacaoCP" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
     <ImageView
         android:id="@+id/imFotoEvento"
@@ -249,11 +251,11 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
-        app:layout_constraintStart_toEndOf="@+id/tvDataNasc"
+        app:layout_constraintStart_toEndOf="@+id/tvDataPrevistaO"
         app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
     <TextView
-        android:id="@+id/etNome"
+        android:id="@+id/tvObjetivoO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -261,11 +263,11 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/editext_bg"
         android:fontFamily="@font/montserrat"
-        android:hint="Obejetivo"
+        android:hint="Objetivo"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataNasc" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

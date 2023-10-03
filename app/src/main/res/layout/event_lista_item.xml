@@ -7,7 +7,7 @@
     android:background="@drawable/painelevents_bg">
 
     <ImageView
-        android:id="@+id/imgEvents"
+        android:id="@+id/imFotoEventoF"
         android:layout_width="130dp"
         android:layout_height="110dp"
         android:layout_marginStart="8dp"
@@ -21,7 +21,7 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
-        android:id="@+id/txtNome"
+        android:id="@+id/tvNomeF"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -33,11 +33,11 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imgEvents"
+        app:layout_constraintStart_toEndOf="@+id/imFotoEventoF"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtObjetivo"
+        android:id="@+id/tvObjetivoF"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -49,11 +49,11 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.025"
-        app:layout_constraintStart_toEndOf="@+id/imgEvents"
-        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+        app:layout_constraintStart_toEndOf="@+id/imFotoEventoF"
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeF" />
 
     <TextView
-        android:id="@+id/txtData"
+        android:id="@+id/tvDataF"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,19 +68,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imgEvents"
-        app:layout_constraintTop_toBottomOf="@+id/txtObjetivo"
+        app:layout_constraintStart_toEndOf="@+id/imFotoEventoF"
+        app:layout_constraintTop_toBottomOf="@+id/tvObjetivoF"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
-        android:id="@+id/iconEstrelaF"
+        android:id="@+id/icEstrelaF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:layout_marginTop="2dp"
         android:background="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/imgEvents"
-        app:layout_constraintTop_toTopOf="@+id/imgEvents"
+        app:layout_constraintStart_toStartOf="@+id/imFotoEventoF"
+        app:layout_constraintTop_toTopOf="@+id/imFotoEventoF"
         app:srcCompat="@drawable/baseline_star_border_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

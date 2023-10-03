@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteY="81dp">
 
     <ToggleButton
-        android:id="@+id/tbPrivacidade2"
+        android:id="@+id/tbPrivacidade"
         android:layout_width="88dp"
         android:layout_height="33dp"
         android:background="@android:color/white"
@@ -21,15 +21,6 @@
         android:textOn="PRIVADO"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
-        app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
-
-    <ImageView
-        android:id="@+id/tbPrivacidade"
-        android:layout_width="88dp"
-        android:layout_height="33dp"
-        android:background="@android:color/white"
-        android:backgroundTint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
         app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
@@ -91,7 +82,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacaoCP" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
     <TextView
         android:id="@+id/tvEndereco"
@@ -105,7 +96,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNome" />
+        app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
 
     <TextView
         android:id="@+id/tvLinkO"
@@ -124,7 +115,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvPlataformaO" />
 
     <TextView
-        android:id="@+id/tvDataNasc"
+        android:id="@+id/tvDataPrevistaO"
         android:layout_width="0dp"
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
@@ -170,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvLinkO" />
 
     <TextView
-        android:id="@+id/tvLocalizacaoCP"
+        android:id="@+id/tvAtracoes0"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -200,7 +191,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvTipoContato0"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacaoCP" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAtracoes0" />
 
     <ImageView
         android:id="@+id/imFotoEvento"
@@ -225,11 +216,11 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
-        app:layout_constraintStart_toEndOf="@+id/tvDataNasc"
+        app:layout_constraintStart_toEndOf="@+id/tvDataPrevistaO"
         app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
     <TextView
-        android:id="@+id/etNome"
+        android:id="@+id/tvObjetivoO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -242,10 +233,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataNasc" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
 
     <Button
-        android:id="@+id/btnListaConviO"
+        android:id="@+id/btnVerListaConviO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

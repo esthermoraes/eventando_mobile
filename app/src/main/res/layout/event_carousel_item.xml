@@ -20,7 +20,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/etNomeF"
+        android:id="@+id/tvNomeF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -32,14 +32,14 @@
         app:layout_constraintTop_toBottomOf="@+id/imFotoEventoF" />
 
     <TextView
-        android:id="@+id/tvHorarioO"
+        android:id="@+id/tvDataF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="00/00/00"
         android:textColor="#b25abf"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNomeF" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeF" />
 
     <ImageButton
         android:id="@+id/icEstrelaF"

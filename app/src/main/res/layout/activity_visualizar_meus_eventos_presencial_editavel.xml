@@ -24,7 +24,7 @@
             tools:layout_editor_absoluteY="81dp">
 
             <Spinner
-                android:id="@+id/spinnerTipoContatoP"
+                android:id="@+id/spTipoContatoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -33,7 +33,7 @@
                 android:entries="@array/tipoContato"
                 android:spinnerMode="dropdown"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtAtracoesP" />
+                app:layout_constraintTop_toBottomOf="@+id/etAtracoesP" />
 
             <Button
                 android:id="@+id/btnListaEdConviP"
@@ -51,7 +51,8 @@
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtContatoP" />
+                app:layout_constraintTop_toBottomOf="@+id/etContatoP" />
+
 
             <EditText
                 android:id="@+id/numNumeroP"
@@ -65,11 +66,10 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtBairro" />
-
+                app:layout_constraintTop_toBottomOf="@+id/etBairroP" />
 
             <EditText
-                android:id="@+id/txtLogradouro"
+                android:id="@+id/etLogradouroP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -83,28 +83,25 @@
                 app:layout_constraintEnd_toStartOf="@+id/numNumeroP"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtCidade" />
+                app:layout_constraintTop_toBottomOf="@+id/etCidadeP" />
 
             <EditText
-                android:id="@+id/txtBairro"
+                android:id="@+id/etBairroP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Bairro"
                 android:textSize="12sp"
-                android:textStyle="bold"
 
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txtCEP"
-                app:layout_constraintTop_toBottomOf="@+id/txtEstado" />
+                app:layout_constraintTop_toBottomOf="@+id/spEstadoP" />
 
             <EditText
-                android:id="@+id/txtCidade"
+                android:id="@+id/etCidadeP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -115,24 +112,19 @@
                 android:hint="Cidade"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/txtBairro"
+                app:layout_constraintEnd_toStartOf="@+id/etBairroP"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtCEP" />
+                app:layout_constraintTop_toBottomOf="@+id/etCepP" />
 
-            <EditText
-                android:id="@+id/txtEstado"
+            <Spinner
+                android:id="@+id/spEstadoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
-                android:fontFamily="@font/montserrat"
-                android:hint="Estado"
-                android:textSize="12sp"
-                android:textStyle="bold"
+                android:entries="@array/estados"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txtCEP"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
             <TextView
@@ -160,6 +152,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/montserrat"
                 android:text="ONLINE"
+                android:textColor="#000"
                 android:textSize="14dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -171,16 +164,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="Localização
-"
+                android:fontFamily="@font/montserrat"
+                android:text="Localização"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtObjetivoP" />
+                app:layout_constraintTop_toBottomOf="@+id/etObjetivoP" />
 
             <EditText
-                android:id="@+id/txtDataPrevistaP"
+                android:id="@+id/dtDataPrevistaP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -197,22 +190,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
             <EditText
-                android:id="@+id/txtCEP"
+                android:id="@+id/etCepP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="CEP"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/txtEstado"
+                app:layout_constraintEnd_toStartOf="@+id/spEstadoP"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
             <TextView
-                android:id="@+id/txtInfoadd"
+                android:id="@+id/tvInfoadd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -223,10 +217,10 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtLogradouro" />
+                app:layout_constraintTop_toBottomOf="@+id/etLogradouroP" />
 
             <EditText
-                android:id="@+id/txtAtracoesP"
+                android:id="@+id/etAtracoesP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -240,10 +234,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtBuffetP" />
+                app:layout_constraintTop_toBottomOf="@+id/etBuffetP" />
 
             <EditText
-                android:id="@+id/txtBuffetP"
+                android:id="@+id/etBuffetP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -257,10 +251,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtInfoadd" />
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoadd" />
 
             <EditText
-                android:id="@+id/txtContatoP"
+                android:id="@+id/etContatoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -272,8 +266,8 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/spinnerTipoContatoP"
-                app:layout_constraintTop_toBottomOf="@+id/txtAtracoesP" />
+                app:layout_constraintStart_toEndOf="@+id/spTipoContatoP"
+                app:layout_constraintTop_toBottomOf="@+id/etAtracoesP" />
 
             <ImageView
                 android:id="@+id/imFotoEvento"
@@ -302,12 +296,12 @@
                 app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
             <EditText
-                android:id="@+id/txtHorarioP"
+                android:id="@+id/tmHorarioP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Hora"
@@ -316,11 +310,11 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
                 app:layout_constraintHorizontal_bias="0.615"
-                app:layout_constraintStart_toEndOf="@+id/txtDataPrevistaP"
+                app:layout_constraintStart_toEndOf="@+id/dtDataPrevistaP"
                 app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
             <EditText
-                android:id="@+id/txtObjetivoP"
+                android:id="@+id/etObjetivoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -334,7 +328,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtHorarioP" />
+                app:layout_constraintTop_toBottomOf="@+id/tmHorarioP" />
 
             <Button
                 android:id="@+id/btnImportarC"

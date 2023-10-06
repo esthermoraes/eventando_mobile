@@ -6,31 +6,31 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/etNomeListConvi"
+        android:id="@+id/tvNomeListConvi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:hint="Nome Convidado"
-        app:layout_constraintEnd_toStartOf="@+id/imEdConvi"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnEdConvi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/emEmailListaConvi"
+        android:id="@+id/tvEmailListaConvi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:hint="Email do convidado"
-        app:layout_constraintEnd_toStartOf="@+id/imEdConvi"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnEdConvi"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNomeListConvi" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeListConvi" />
 
     <ImageButton
-        android:id="@+id/imExcluirConvi"
+        android:id="@+id/ibtnExcluirConvi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -40,12 +40,12 @@
         app:srcCompat="@drawable/baseline_delete_forever_24" />
 
     <ImageButton
-        android:id="@+id/imEdConvi"
+        android:id="@+id/ibtnEdConvi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/imExcluirConvi"
+        app:layout_constraintEnd_toStartOf="@+id/ibtnExcluirConvi"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_edit_note_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,7 +33,7 @@
             app:strokeWidth="2dp" />
 
         <Button
-            android:id="@+id/btnSalvarEd"
+            android:id="@+id/btnEdPerfil"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -50,12 +50,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ConstraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/ConstraintLayoutPefil"
             app:strokeColor="#FFFFFF"
             app:strokeWidth="3dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ConstraintLayout2"
+            android:id="@+id/ConstraintLayoutPefil"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -82,10 +82,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spEstadoCadastro" />
+                app:layout_constraintTop_toBottomOf="@+id/tvEstadoPerfil" />
 
             <TextView
-                android:id="@+id/emEmailCadastro"
+                android:id="@+id/tvEmailCadastro"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -115,7 +115,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvInfoContatoNEd" />
 
             <TextView
-                android:id="@+id/tbInfoBasica"
+                android:id="@+id/tvInfoBasica"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -132,7 +132,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/etNomeNaoEd"
+                android:id="@+id/tvNomeNaoEd"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -145,10 +145,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.8"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tbInfoBasica" />
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoBasica" />
 
             <TextView
-                android:id="@+id/dtDataNasc"
+                android:id="@+id/tvDataNasc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -159,10 +159,10 @@
                 android:textColor="#424242"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etNomeNaoEd" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNomeNaoEd" />
 
             <TextView
-                android:id="@+id/spEstadoCadastro"
+                android:id="@+id/tvEstadoPerfil"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -174,7 +174,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dtDataNasc" />
+                app:layout_constraintTop_toBottomOf="@+id/tvDataNasc" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

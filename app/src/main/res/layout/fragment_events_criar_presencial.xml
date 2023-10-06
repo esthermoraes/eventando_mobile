@@ -20,11 +20,11 @@
         android:text="ToggleButton"
         android:textOff="Público"
         android:textOn="Privado"
-        app:layout_constraintStart_toStartOf="@+id/tbInfoBasica"
-        app:layout_constraintTop_toTopOf="@+id/tbInfoBasica" />
+        app:layout_constraintStart_toStartOf="@+id/tvInfoBasica"
+        app:layout_constraintTop_toTopOf="@+id/tvInfoBasica" />
 
     <TextView
-        android:id="@+id/tbInfoBasica"
+        android:id="@+id/tvInfoBasica"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/montserrat"
@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/tvObjetivoCO"
+        android:id="@+id/etObjetivoCO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
 
     <EditText
-        android:id="@+id/tvDataPrevistaCP"
+        android:id="@+id/etDataPrevistaCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,7 +68,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvObjetivoCO" />
+        app:layout_constraintTop_toBottomOf="@+id/etObjetivoCO" />
 
     <TextView
         android:id="@+id/tvLocalizacaoCP"
@@ -82,7 +82,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHorarioCO" />
+        app:layout_constraintTop_toBottomOf="@+id/etHorarioCO" />
 
     <TextView
         android:id="@+id/tvLinkO"
@@ -95,7 +95,7 @@
         tools:layout_editor_absoluteY="176dp" />
 
     <EditText
-        android:id="@+id/tvHorarioCO"
+        android:id="@+id/etHorarioCO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -110,10 +110,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaCP" />
+        app:layout_constraintTop_toBottomOf="@+id/etDataPrevistaCP" />
 
     <EditText
-        android:id="@+id/txCepCP"
+        android:id="@+id/etCepCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -142,11 +142,11 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txCepCP"
+        app:layout_constraintStart_toEndOf="@+id/etCepCP"
         app:layout_constraintTop_toBottomOf="@+id/tvLocalizacaoCP" />
 
     <EditText
-        android:id="@+id/txCidadeCP"
+        android:id="@+id/etCidadeCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -158,10 +158,10 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txCepCP" />
+        app:layout_constraintTop_toBottomOf="@+id/etCepCP" />
 
     <EditText
-        android:id="@+id/txBairroCP"
+        android:id="@+id/etBairroCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -175,11 +175,11 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txCidadeCP"
+        app:layout_constraintStart_toEndOf="@+id/etCidadeCP"
         app:layout_constraintTop_toBottomOf="@+id/txEstadoCP" />
 
     <EditText
-        android:id="@+id/txLogradouroCP"
+        android:id="@+id/etLogradouroCP"
         android:layout_width="259dp"
         android:layout_height="29dp"
         android:layout_marginStart="8dp"
@@ -191,7 +191,7 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txCidadeCP" />
+        app:layout_constraintTop_toBottomOf="@+id/etCidadeCP" />
 
     <EditText
         android:id="@+id/txNumeroCP"
@@ -208,8 +208,8 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.714"
-        app:layout_constraintStart_toEndOf="@+id/txLogradouroCP"
-        app:layout_constraintTop_toBottomOf="@+id/txBairroCP" />
+        app:layout_constraintStart_toEndOf="@+id/etLogradouroCP"
+        app:layout_constraintTop_toBottomOf="@+id/etBairroCP" />
 
     <Button
         android:id="@+id/btnCriar"
@@ -228,7 +228,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txLogradouroCP"
+        app:layout_constraintTop_toBottomOf="@+id/etLogradouroCP"
         app:layout_constraintVertical_bias="0.0"
         app:strokeColor="#ffffff"
         app:strokeWidth="2dp" />

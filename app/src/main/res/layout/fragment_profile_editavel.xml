@@ -7,9 +7,6 @@
     tools:context=".menu.perfil.ProfileEditavelFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/tvPerfil"
@@ -30,7 +27,7 @@
             tools:srcCompat="@color/material_dynamic_neutral_variant90" />
 
         <Button
-            android:id="@+id/btnSalvarEd"
+            android:id="@+id/btnSalvarEdPerfil"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -46,12 +43,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ConstraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/ConstraintLayoutPefil"
             app:strokeColor="#FFFFFF"
             app:strokeWidth="3dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ConstraintLayout2"
+            android:id="@+id/ConstraintLayoutPefil"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -64,12 +61,26 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="71dp">
 
+            <Spinner
+                android:id="@+id/spEstadoPerfil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/editext_bg"
+                android:entries="@array/estados"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDataNasc" />
+
             <TextView
                 android:id="@+id/tvInfoContato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/montserrat"
                 android:text="INFORMAÇÕES DE CONTATO"
@@ -79,7 +90,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spPlataformaO" />
+                tools:layout_editor_absoluteY="202dp" />
 
             <EditText
                 android:id="@+id/phTelefonePerfil"
@@ -123,7 +134,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvInfoContato" />
 
             <TextView
-                android:id="@+id/tbInfoBasica"
+                android:id="@+id/tvInfoBasica"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -174,20 +185,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.555"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tbInfoBasica" />
-
-            <Spinner
-                android:id="@+id/spPlataformaO"
-                android:layout_width="0dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/editext_bg"
-                android:spinnerMode="dropdown"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvDataNasc" />
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoBasica" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

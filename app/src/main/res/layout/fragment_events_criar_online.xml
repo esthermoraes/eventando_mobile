@@ -21,11 +21,11 @@
         android:text="ToggleButton"
         android:textOff="Público"
         android:textOn="Privado"
-        app:layout_constraintStart_toStartOf="@+id/tbInfoBasica"
-        app:layout_constraintTop_toTopOf="@+id/tbInfoBasica" />
+        app:layout_constraintStart_toStartOf="@+id/tvInfoBasica"
+        app:layout_constraintTop_toTopOf="@+id/tvInfoBasica" />
 
     <TextView
-        android:id="@+id/tbInfoBasica"
+        android:id="@+id/tvInfoBasica"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="@font/montserrat"
@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/tvObjetivoCO"
+        android:id="@+id/etObjetivoCO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
 
     <EditText
-        android:id="@+id/tvDataPrevistaCP"
+        android:id="@+id/etDataPrevistaCP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -69,7 +69,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvObjetivoCO" />
+        app:layout_constraintTop_toBottomOf="@+id/etObjetivoCO" />
 
     <TextView
         android:id="@+id/tvLocalizacaoCP"
@@ -83,10 +83,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHorarioCO" />
+        app:layout_constraintTop_toBottomOf="@+id/etHorarioCO" />
 
     <EditText
-        android:id="@+id/tvHorarioCO"
+        android:id="@+id/etHorarioCO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -101,10 +101,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaCP" />
+        app:layout_constraintTop_toBottomOf="@+id/etDataPrevistaCP" />
 
     <EditText
-        android:id="@+id/txHorarioCO"
+        android:id="@+id/etLinkCO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -114,7 +114,6 @@
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:hint="Link"
-        android:inputType="time"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -139,7 +138,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txHorarioCO"
+        app:layout_constraintTop_toBottomOf="@+id/etLinkCO"
         app:layout_constraintVertical_bias="0.0"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />

@@ -1,4 +1,4 @@
-package sofia.lorena.esther.eventando;
+package sofia.lorena.esther.eventando.model;
 
 /**
  * Classe para representar um produto

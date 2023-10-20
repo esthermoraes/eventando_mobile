@@ -1,6 +1,6 @@
-package sofia.lorena.esther.eventando;
+package sofia.lorena.esther.eventando.model;
 
-public class EventPresencial extends Event{
+public class EventPresencial extends Event {
 
     public String buffet;
     public String numero;

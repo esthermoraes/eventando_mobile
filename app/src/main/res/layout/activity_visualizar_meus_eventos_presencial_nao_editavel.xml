@@ -147,16 +147,19 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvOnline"
+                android:id="@+id/tvPresencial"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:fontFamily="@font/montserrat"
-                android:text="ONLINE"
+                android:text="PRESENCIAL"
                 android:textColor="#000"
                 android:textSize="14dp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
@@ -189,7 +192,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPresencial" />
 
             <TextView
                 android:id="@+id/tvInfoadd"
@@ -296,7 +299,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
                 app:layout_constraintHorizontal_bias="0.615"
                 app:layout_constraintStart_toEndOf="@+id/tvDataPrevistaP"
-                app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
+                app:layout_constraintTop_toBottomOf="@+id/tvPresencial" />
 
             <TextView
                 android:id="@+id/tvObjetivoP"

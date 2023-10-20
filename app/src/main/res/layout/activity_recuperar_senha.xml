@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#ededed"
+    android:background="#ededed"
     android:scrollbarThumbHorizontal="@drawable/painel_bg"
     tools:context=".acessar.RecuperarSenhaActivity">
 

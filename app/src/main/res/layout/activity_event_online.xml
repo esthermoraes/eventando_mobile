@@ -98,17 +98,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/montserrat"
         android:text="EVENTO ONLINE"
-        android:textAppearance="="
+        android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/tbPrivicidade"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnExcluir" />
+        tools:layout_editor_absoluteY="40dp" />
 
     <TextView
         android:id="@+id/tvOnline"
@@ -252,6 +251,7 @@
         android:layout_marginEnd="8dp"
         android:background="@android:color/transparent"
         android:scaleType="fitEnd"
+        app:layout_constraintBottom_toTopOf="@+id/tvNomeEvento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

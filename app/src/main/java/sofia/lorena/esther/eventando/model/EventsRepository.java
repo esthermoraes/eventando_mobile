@@ -133,4 +133,6 @@ public class EventsRepository {
         return null;
     }
 
+    Event loadEventDetail(String id) {return null;}
+
 }

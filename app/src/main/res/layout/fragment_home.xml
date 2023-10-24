@@ -8,7 +8,7 @@
     tools:context=".menu.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
+        android:id="@+id/constraintLayoutBuscarEvento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#BEDEF2"
@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Buscar"
             android:layout_width="395dp"
             android:layout_height="45dp"
             android:layout_marginStart="8dp"
@@ -37,7 +38,7 @@
                 android:backgroundTint="#00FFFFFF"
                 android:ems="0"
                 android:inputType="textPersonName"
-                android:text="Buscar eventos"
+                android:text="Buscar eventos ou locais"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ibtnBuscar"
@@ -57,77 +58,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/tvEventosR"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="EVENTOS RECENTES"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
-
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-        android:id="@+id/carouselEventsR"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:carouselBackground="#dccce0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEventosR"
-        app:showBottomShadow="false"
-        app:showNavigationButtons="false"
-        app:showTopShadow="false">
-
-    </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
-
-    <TextView
-        android:id="@+id/tvMeusE"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="MEUS EVENTOS"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carouselEventsR" />
-
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-        android:id="@+id/carouselMyEvents"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:carouselBackground="#dccce0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMeusE"
-        app:showBottomShadow="false"
-        app:showNavigationButtons="false"
-        app:showTopShadow="false">
-
-    </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListEvents"
+    <FrameLayout
+        android:id="@+id/frHome"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carouselMyEvents" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutBuscarEvento">
+
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

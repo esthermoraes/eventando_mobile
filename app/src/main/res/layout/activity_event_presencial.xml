@@ -30,7 +30,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:backgroundTint="#B25AbF"
         android:text="IMPORTAR CONVITE"
         android:textSize="12sp"
@@ -38,7 +37,7 @@
         app:cornerRadius="8dp"
         app:icon="@drawable/baseline_cloud_upload_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddInfoP"
+        app:layout_constraintTop_toBottomOf="@+id/flAddInfo"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 
@@ -61,15 +60,16 @@
         app:strokeWidth="2dp" />
 
     <FrameLayout
-        android:id="@+id/frameLayout3"
+        android:id="@+id/flAddInfo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerTudo">
+        app:layout_constraintTop_toBottomOf="@+id/btnAddInfoP">
 
     </FrameLayout>
 
@@ -82,7 +82,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/montserrat"
         android:text="EVENTO PRESENCIAL"
-        android:textAppearance="="
+        android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/tbPrivicidade"

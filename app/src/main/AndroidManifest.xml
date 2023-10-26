@@ -75,7 +75,7 @@
             android:name=".menu.criar_evento.criar_evento_presencial.EventPresencialActivity"
             android:exported="false" />
         <activity
-            android:name=".menu.HomeActivity"
+            android:name=".menu.home.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".menu.perfil.PerfilActivity"

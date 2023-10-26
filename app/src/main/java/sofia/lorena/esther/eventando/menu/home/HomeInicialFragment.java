@@ -1,4 +1,4 @@
-package sofia.lorena.esther.eventando.menu;
+package sofia.lorena.esther.eventando.menu.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,10 +11,10 @@ import sofia.lorena.esther.eventando.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link fragment_buscar_evento#newInstance} factory method to
+ * Use the {@link HomeInicialFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragment_buscar_evento extends Fragment {
+public class HomeInicialFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,7 +25,7 @@ public class fragment_buscar_evento extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public fragment_buscar_evento() {
+    public HomeInicialFragment() {
         // Required empty public constructor
     }
 
@@ -35,11 +35,11 @@ public class fragment_buscar_evento extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment fragment_buscar_evento.
+     * @return A new instance of fragment fragment_home_inicial.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment_buscar_evento newInstance(String param1, String param2) {
-        fragment_buscar_evento fragment = new fragment_buscar_evento();
+    public static HomeInicialFragment newInstance(String param1, String param2) {
+        HomeInicialFragment fragment = new HomeInicialFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,6 +60,6 @@ public class fragment_buscar_evento extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_buscar_evento, container, false);
+        return inflater.inflate(R.layout.fragment_home_inicial, container, false);
     }
 }

@@ -5,18 +5,23 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.FirebaseApp;
+
 import sofia.lorena.esther.eventando.acessar.LoginActivity;
-import sofia.lorena.esther.eventando.menu.HomeActivity;
+import sofia.lorena.esther.eventando.menu.home.HomeActivity;
 import sofia.lorena.esther.eventando.util.Config;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(this);
+
+
+        // Resto do código da atividade principal
         // Se o usuário ainda não logou, então não existe informação de login guardada na app.
         // Então a app é redirecionada para a tela de login.
-        if(Config.getLogin(MainActivity.this).isEmpty()) {
+        if (Config.getLogin(MainActivity.this).isEmpty()) {
             Intent i = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(i);
             finish();
@@ -30,3 +35,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
+
+

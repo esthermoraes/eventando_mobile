@@ -1,4 +1,4 @@
-package sofia.lorena.esther.eventando.menu;
+package sofia.lorena.esther.eventando.menu.home;
 
 import android.os.Bundle;
 

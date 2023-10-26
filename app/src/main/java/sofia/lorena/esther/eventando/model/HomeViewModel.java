@@ -5,35 +5,38 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.ViewModelKt;
-import androidx.paging.Pager;
-
-import androidx.paging.PagingConfig;
+import androidx.lifecycle.MutableLiveData;
 import androidx.paging.PagingData;
-import androidx.paging.PagingLiveData;
 
-import kotlinx.coroutines.CoroutineScope;
+import sofia.lorena.esther.eventando.R;
 
-/**
- * ViewModel referente a HomeActivity
- */
 public class HomeViewModel extends AndroidViewModel {
 
     LiveData<PagingData<Event>> eventsLd;
+    MutableLiveData<Integer> selectedNavigationOpId = new MutableLiveData<>();
 
     public HomeViewModel(@NonNull Application application) {
         super(application);
 
-        // Abaixo configuramos o uso da biblioteca de paginação Paging 3, assim como foi feito na
-        // atividade Galeria Pública
-        EventsRepository eventsRepository = new EventsRepository(getApplication());
-        CoroutineScope viewModelScope = ViewModelKt.getViewModelScope(this);
-        Pager<Integer, Event> pager = new Pager(new PagingConfig(10), () -> new EventsPagingSource(eventsRepository));
-        eventsLd = PagingLiveData.cachedIn(PagingLiveData.getLiveData(pager), viewModelScope);
+        // Configuração da biblioteca de paginação (Paging 3) ...
+
+        // Defina o valor padrão para a opção de navegação selecionada
+        selectedNavigationOpId.setValue(R.id.itemPerfil); // Valor padrão para a opção de perfil
+
+        // Resto da configuração do ViewModel ...
     }
 
-    public LiveData<PagingData<Event>> getProductsLd() {
+    public LiveData<PagingData<Event>> getEventsLiveData() {
         return eventsLd;
     }
 
+    // Método para definir a opção de navegação selecionada
+    public void setNavigationOpSelected(int navigationOpId) {
+        selectedNavigationOpId.setValue(navigationOpId);
+    }
+
+    // Método para obter a opção de navegação selecionada
+    public LiveData<Integer> getSelectedNavigationOpId() {
+        return selectedNavigationOpId;
+    }
 }

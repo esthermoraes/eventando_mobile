@@ -3,16 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/itemHome"
         android:icon="@drawable/baseline_home_24"
-        android:title="HOME" />
+        android:title="Home" />
     <item
+        android:id="@+id/itemFavoritos"
         android:icon="@drawable/baseline_star_rate_24"
-        android:title="FAVORITOS" />
+        android:title="Favoritos" />
     <item />
     <item
+        android:id="@+id/itemMeusEventos"
         android:icon="@drawable/baseline_format_list_bulleted_24"
-        android:title="MEUS EVENTOS" />
+        android:title="Meus Eventos" />
     <item
+        android:id="@+id/itemPerfil"
         android:icon="@drawable/baseline_person_24"
-        android:title="PERFIL" />
+        android:title="Perfil" />
 </menu>

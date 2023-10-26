@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sofia.lorena.esther.eventando.R;
-import sofia.lorena.esther.eventando.menu.HomeActivity;
+import sofia.lorena.esther.eventando.menu.home.HomeActivity;
 import sofia.lorena.esther.eventando.model.LoginViewModel;
 import sofia.lorena.esther.eventando.util.Config;
 

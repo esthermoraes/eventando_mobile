@@ -18,12 +18,12 @@ import java.util.concurrent.Executors;
  */
 public class EventsPagingSource extends ListenableFuturePagingSource<Integer, Event> {
 
-    EventsRepository eventsRepository;
+    EventandoRepository eventandoRepository;
 
     Integer initialLoadSize = 0;
 
-    public EventsPagingSource(EventsRepository eventsRepository) {
-        this.eventsRepository = eventsRepository;
+    public EventsPagingSource(EventandoRepository eventandoRepository) {
+        this.eventandoRepository = eventandoRepository;
     }
 
     /**
@@ -83,7 +83,7 @@ public class EventsPagingSource extends ListenableFuturePagingSource<Integer, Ev
             public LoadResult<Integer, Event> call() {
                 List<Event> productsList = null;
                 // envia uma requisição para o servidor web pedindo por uma nova página de dados (bloco de produtos)
-                productsList = eventsRepository.loadEvents(loadParams.getLoadSize(), finalOffSet);
+                productsList = eventandoRepository.loadEvents(loadParams.getLoadSize(), finalOffSet);
                 Integer nextKey = null;
                 if(productsList.size() >= loadParams.getLoadSize()) {
                     nextKey = finalNextPageNumber + 1;

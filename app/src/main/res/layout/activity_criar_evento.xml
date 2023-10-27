@@ -23,6 +23,69 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
+        android:id="@+id/etHorarioC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/busca_bg"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Horário"
+        android:inputType="time"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/etDataPrevistaC" />
+
+    <EditText
+        android:id="@+id/etObjetivoC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/busca_bg"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Objetivo"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeEvento" />
+
+    <EditText
+        android:id="@+id/etDataPrevistaC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/busca_bg"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Data prevista"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/etObjetivoC" />
+
+    <ToggleButton
+        android:id="@+id/tbPrivacidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000E0505"
+        android:button="@drawable/baseline_lock_open_24"
+        android:text="ToggleButton"
+        android:textOff="Público"
+        android:textOn="Privado"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout4" />
+
+    <EditText
         android:id="@+id/etNomeEvento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -35,7 +98,7 @@
         android:hint="Nome ou sigla do evento"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/rdFormato"
+        app:layout_constraintEnd_toStartOf="@+id/tbPrivacidade"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout4" />
 
@@ -49,7 +112,7 @@
         app:circularflow_radiusInDP="8dp"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
-        app:layout_constraintTop_toBottomOf="@+id/etNomeEvento"
+        app:layout_constraintTop_toBottomOf="@+id/etHorarioC"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -96,7 +159,7 @@
     </RadioGroup>
 
     <FrameLayout
-        android:id="@+id/frInfoBasicas"
+        android:id="@+id/flInfoBasicas"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"

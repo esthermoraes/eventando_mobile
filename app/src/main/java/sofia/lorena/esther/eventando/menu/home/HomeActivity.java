@@ -28,6 +28,8 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bnvMenu);
         final HomeViewModel vm = new ViewModelProvider(this).get(HomeViewModel.class);
+        Integer menuItem = vm.getSelectedNavigationOpId();
+
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -35,31 +37,33 @@ public class HomeActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.itemPerfil:
                         ProfileNaoEditavelFragment profileNaoEditavelFragment = new ProfileNaoEditavelFragment();
-                        setFragment(profileNaoEditavelFragment);
+                        setFragment(profileNaoEditavelFragment, R.id.flMenu);
                         break;
                     case R.id.itemMeusEventos:
                         MyEventsFragment myEventsFragment = new MyEventsFragment();
-                        setFragment(myEventsFragment);
+                        setFragment(myEventsFragment, R.id.flMenu);
                         break;
                     case R.id.itemHome:
                         HomeFragment homeFragment = new HomeFragment();
-                        setFragment(homeFragment);
+                        setFragment(homeFragment, R.id.flMenu);
                         break;
                     case R.id.itemFavoritos:
                         FavoriteFragment favoriteFragment = new FavoriteFragment();
-                        setFragment(favoriteFragment);
+                        setFragment(favoriteFragment, R.id.flMenu);
                         break;
                 }
                 return true;
             }
         });
+
+        bottomNavigationView.setSelectedItemId(menuItem);
     }
 
     // Método para definir o fragmento na tela
-    private void setFragment(Fragment fragment) {
+    public void setFragment(Fragment fragment, int frameLaoutId) {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flMenu, fragment)
+                .replace(frameLaoutId, fragment)
                 .addToBackStack(null)
                 .commit();
     }

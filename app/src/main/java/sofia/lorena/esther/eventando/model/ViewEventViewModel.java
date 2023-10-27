@@ -44,7 +44,7 @@ public class ViewEventViewModel extends AndroidViewModel {
 
                     // Criamos uma instância de ProductsRepository. É dentro dessa classe que estão os
                     // métodos que se comunicam com o servidor web.
-                    EventsRepository productsRepository = new EventsRepository(getApplication());
+                    EventandoRepository productsRepository = new EventandoRepository(getApplication());
 
                     // O método loadProductDetail obtem os dados detalhados de um produto junto ao servidor.
                     // Ele retorna um objeto do tipo Product, que contém os dados detalhados do produto.

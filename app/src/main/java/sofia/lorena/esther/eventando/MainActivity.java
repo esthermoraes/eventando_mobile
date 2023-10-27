@@ -5,8 +5,6 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.FirebaseApp;
-
 import sofia.lorena.esther.eventando.acessar.LoginActivity;
 import sofia.lorena.esther.eventando.menu.home.HomeActivity;
 import sofia.lorena.esther.eventando.util.Config;
@@ -15,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FirebaseApp.initializeApp(this);
 
 
         // Resto do código da atividade principal
@@ -35,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
 
 
 

@@ -19,12 +19,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/Buscar"
-            android:layout_width="395dp"
-            android:layout_height="45dp"
+            android:layout_width="383dp"
+            android:layout_height="31dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/busca_bg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,11 +34,19 @@
             <EditText
                 android:id="@+id/etBuscar"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:autoText="false"
+                android:background="#00FFFFFF"
                 android:backgroundTint="#00FFFFFF"
+                android:contextClickable="false"
+                android:elegantTextHeight="false"
                 android:ems="0"
+                android:freezesText="false"
                 android:inputType="textPersonName"
                 android:text="Buscar eventos ou locais"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textIsSelectable="true"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ibtnBuscar"
@@ -48,8 +56,8 @@
 
             <ImageButton
                 android:id="@+id/ibtnBuscar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="47dp"
+                android:layout_height="40dp"
                 android:backgroundTint="#00FFFFFF"
                 android:src="?android:attr/actionModeWebSearchDrawable"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +67,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
-        android:id="@+id/frHome"
+        android:id="@+id/flHome"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

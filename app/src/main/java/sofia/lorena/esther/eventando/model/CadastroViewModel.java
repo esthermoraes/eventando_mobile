@@ -41,12 +41,12 @@ public class CadastroViewModel extends AndroidViewModel {
 
                 // Criamos uma instância de ProductsRepository. É dentro dessa classe que estão os
                 // métodos que se comunicam com o servidor web.
-                EventsRepository eventsRepository = new EventsRepository(getApplication());
+                EventandoRepository eventandoRepository = new EventandoRepository(getApplication());
 
                 // O método login envia os dados de novo usuário ao servidor. Ele retorna
                 // um booleano indicando true caso o cadastro de novo usuário tenha sido feito com sucesso e false
                 // em caso contrário
-                boolean b = eventsRepository.register(novo_nome, nova_data_nasc, novo_estado, novo_telefone, novo_email, nova_senha);
+                boolean b = eventandoRepository.register(novo_nome, nova_data_nasc, novo_estado, novo_telefone, novo_email, nova_senha);
 
                 // Aqui postamos o resultado da operação dentro do LiveData. Quando fazemos isso,
                 // quem estiver observando o LiveData será avisado de que o resultado está disponível.

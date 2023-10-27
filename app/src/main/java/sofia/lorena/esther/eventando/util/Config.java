@@ -10,7 +10,7 @@ public class Config {
 
     // endereço base do servidor web
 
-    public static String EVENTS_APP_URL = "https://eventandoweb-estherifes2021.b4a.run/";
+    public static String EVENTS_APP_URL = "https://eventandoweb-estherifes2021.b4a.run//BD/mobile/";
 
     /**
      * Salva o login no espaço reservado da app

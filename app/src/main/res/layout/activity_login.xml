@@ -9,22 +9,22 @@
 
     <ImageView
         android:id="@+id/imLogoLogin"
-        android:layout_width="411dp"
-        android:layout_height="179dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="332dp"
+        android:layout_height="193dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@mipmap/logo_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo_login" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="338dp"
         android:layout_height="207dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/painelogin_bg"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +44,8 @@
             android:fontFamily="@font/montserrat"
             android:hint="Email"
             android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="#808080"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,6 +62,8 @@
             android:ems="10"
             android:hint="Senha"
             android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textColorHint="#808080"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -131,17 +135,19 @@
 
     <ImageView
         android:id="@+id/imRodape"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="87dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@mipmap/rodape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCadastreSe"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@mipmap/rodape" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnCadastreSe"

@@ -76,19 +76,19 @@
             android:exported="false" />
         <activity
             android:name=".menu.home.HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".menu.perfil.PerfilActivity"
-            android:exported="false" />
+            android:exported="false"/>
+
         <activity
             android:name=".acessar.RecuperarSenhaActivity"
             android:exported="false" />
         <activity
             android:name=".acessar.CadastroActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.EventandoNoActionBar"/>
         <activity
             android:name=".acessar.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.EventandoNoActionBar"/>
     </application>
 
 </manifest>

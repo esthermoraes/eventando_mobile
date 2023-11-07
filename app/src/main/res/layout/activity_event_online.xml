@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvEndereco" />
 
     <EditText
-        android:id="@+id/etLink"
+        android:id="@+id/tvLink"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -152,8 +152,8 @@
         app:layout_constraintTop_toBottomOf="@+id/tbPrivicidade"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-    <EditText
-        android:id="@+id/etDataPrevistaO"
+    <TextView
+        android:id="@+id/tvDataPrevistaO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -169,8 +169,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
-    <EditText
-        android:id="@+id/tmHorarioO"
+    <TextView
+        android:id="@+id/tvHorarioO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -185,10 +185,10 @@
         app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDataPrevistaO" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
 
-    <EditText
-        android:id="@+id/etObjetivoO"
+    <TextView
+        android:id="@+id/tvObjetivoO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -202,7 +202,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tmHorarioO" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHorarioO" />
 
     <TextView
         android:id="@+id/tvEndereco"
@@ -219,7 +219,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etObjetivoO" />
+        app:layout_constraintTop_toBottomOf="@+id/tvObjetivoO" />
 
     <Button
         android:id="@+id/btnAddInfo"
@@ -240,7 +240,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLink" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLink" />
 
     <ImageButton
         android:id="@+id/btnExcluir"

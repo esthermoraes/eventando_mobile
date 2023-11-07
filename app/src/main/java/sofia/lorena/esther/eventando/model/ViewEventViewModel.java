@@ -58,4 +58,4 @@ public class ViewEventViewModel extends AndroidViewModel {
 
             return eventDetailLD;
         }
-    }
+}

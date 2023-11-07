@@ -143,7 +143,7 @@ public class EventandoRepository {
         String password = Config.getPassword(context);
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
-        HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL + "pegar_detalhes_ususario.php", "GET", "UTF-8");
+        HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL + "pegar_detalhes_usuario.php", "GET", "UTF-8");
         httpRequest.addParam("email", login);
 
         // Para esta ação, é preciso estar logado. Então na requisição HTTP setamos o login e senha do

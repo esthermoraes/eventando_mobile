@@ -149,6 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:buttonTint="#B25ABF"
+            android:checked="true"
             android:text="PRESENCIAL"
             android:textColor="#000000" />
 

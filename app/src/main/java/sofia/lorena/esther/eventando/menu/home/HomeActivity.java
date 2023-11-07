@@ -81,10 +81,10 @@ public class HomeActivity extends AppCompatActivity {
 
 
     // Método para definir o fragmento na tela
-    public void setFragment(Fragment fragment, int frameLaoutId) {
+    public void setFragment(Fragment fragment, int frameLayoutId) {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(frameLaoutId, fragment)
+                .replace(frameLayoutId, fragment)
                 .addToBackStack(null)
                 .commit();
     }

@@ -35,6 +35,7 @@ public class HomeViewModel extends AndroidViewModel {
 
     // Método para obter a opção de navegação selecionada
     public Integer getSelectedNavigationOpId() {
+
         return selectedNavigationOpId;
     }
 }

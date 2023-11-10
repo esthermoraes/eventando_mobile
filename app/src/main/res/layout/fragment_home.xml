@@ -19,11 +19,11 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/Buscar"
-            android:layout_width="383dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="24dp"
             android:background="@drawable/busca_bg"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +34,7 @@
             <EditText
                 android:id="@+id/etBuscar"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:autoText="false"
                 android:background="#00FFFFFF"
                 android:backgroundTint="#00FFFFFF"
@@ -50,14 +50,13 @@
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ibtnBuscar"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/ibtnBuscar"
-                android:layout_width="47dp"
-                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
                 android:src="?android:attr/actionModeWebSearchDrawable"
                 app:layout_constraintBottom_toBottomOf="parent"

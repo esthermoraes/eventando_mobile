@@ -60,6 +60,17 @@
         <item>Instagram</item>
         <item>Tik Tok</item>
     </string-array>
+
+    <string-array name="tipoLogradouro">
+        <item>Tipo logradouro</item>
+        <item>Rodovia</item>
+        <item>Avenida</item>
+        <item>Alameda</item>
+        <item>Praça</item>
+        <item>Rua</item>
+        <item>Passarela</item>
+        <item>Vila</item>
+    </string-array>
 </resources>
 
 

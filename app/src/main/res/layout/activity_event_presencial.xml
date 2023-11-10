@@ -132,7 +132,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tbPrivicidade"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-    <EditText
+    <TextView
         android:id="@+id/dtDataPrevistaP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPresencial" />
 
-    <EditText
+    <TextView
         android:id="@+id/tmHorarioP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dtDataPrevistaP" />
 
-    <EditText
+    <TextView
         android:id="@+id/etObjetivoP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -201,35 +201,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etObjetivoP" />
 
-    <EditText
+    <TextView
         android:id="@+id/etCepP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
         android:background="@drawable/editext_bg"
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:hint="CEP"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/spEstadoP"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
-    <Spinner
-        android:id="@+id/spEstadoP"
-        android:layout_width="240dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/editext_bg"
-        android:entries="@array/estados"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
-
-    <EditText
+    <TextView
         android:id="@+id/etCidadeP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -247,7 +234,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCepP" />
 
-    <EditText
+    <TextView
         android:id="@+id/etBairroP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -260,13 +247,12 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spEstadoP" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEstadoP" />
 
-    <EditText
+    <TextView
         android:id="@+id/etLogradouroP"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/editext_bg"
@@ -276,13 +262,11 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/numNumeroP"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCidadeP" />
 
-    <EditText
+    <TextView
         android:id="@+id/numNumeroP"
-        android:layout_width="80dp"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
@@ -314,7 +298,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numNumeroP" />
+        app:layout_constraintTop_toBottomOf="@+id/etLogradouroP" />
 
     <ImageButton
         android:id="@+id/btnExcluir"
@@ -330,5 +314,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_delete_forever_24" />
+
+    <TextView
+        android:id="@+id/tvTipoLogradouro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/editext_bg"
+        android:hint="Tipo logradouro"
+        app:layout_constraintEnd_toStartOf="@+id/etLogradouroP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCidadeP" />
+
+    <TextView
+        android:id="@+id/tvEstadoP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/editext_bg"
+        android:hint="Estado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etCepP"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocalizacao" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

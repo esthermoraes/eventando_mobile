@@ -93,16 +93,6 @@ public class CriarEventActivity extends AppCompatActivity {
 
         btnCriar.setEnabled(false);
 
-        String currentPhotoPath = criarEventViewModel.getCurrentPhotoPath();
-        if(!currentPhotoPath.isEmpty()) {
-            ImageView imFotoEvento = findViewById(R.id.imFotoEvento);
-            // aqui carregamos a foto que está guardada dentro do arquivo currentPhotoPath dentro
-            // de um objeto do tipo Bitmap. A imagem é carregada e sofre uma escala pra ficar
-            // exatamente do tamanho do ImageView
-            Bitmap bitmap = Util.getBitmap(currentPhotoPath, imFotoEvento.getWidth(), imFotoEvento.getHeight());
-            imFotoEvento.setImageBitmap(bitmap);
-        }
-
         EditText etNomeEvento =  findViewById(R.id.etNomeEvento);
         final String newetNomeEvento = etNomeEvento.getText().toString();
         if(newetNomeEvento.isEmpty()) {
@@ -134,6 +124,15 @@ public class CriarEventActivity extends AppCompatActivity {
         }
 
         String currentPhotoPath = criarEventViewModel.getCurrentPhotoPath();
+        if(!currentPhotoPath.isEmpty()) {
+            ImageView imFotoEvento = findViewById(R.id.imFotoEvento);
+            // aqui carregamos a foto que está guardada dentro do arquivo currentPhotoPath dentro
+            // de um objeto do tipo Bitmap. A imagem é carregada e sofre uma escala pra ficar
+            // exatamente do tamanho do ImageView
+            Bitmap bitmap = Util.getBitmap(currentPhotoPath, imFotoEvento.getWidth(), imFotoEvento.getHeight());
+            imFotoEvento.setImageBitmap(bitmap);
+        }
+
         if(currentPhotoPath.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "O campo Foto do evento não foi preenchido", Toast.LENGTH_LONG).show();
             return;
@@ -208,7 +207,12 @@ public class CriarEventActivity extends AppCompatActivity {
         }
     }
 
-    public void cadastrarEventoOnline(int plataforma, String link){
+    public void cadastrarEventoOnline(int plataforma, String link, Button btnCriar){
+
+        CriarEventViewModel criarEventViewModel = new ViewModelProvider(this).get(CriarEventViewModel.class);
+
+        btnCriar.setEnabled(false);
+
         EditText etNomeEvento =  findViewById(R.id.etNomeEvento);
         final String newetNomeEvento = etNomeEvento.getText().toString();
         if(newetNomeEvento.isEmpty()) {
@@ -239,7 +243,39 @@ public class CriarEventActivity extends AppCompatActivity {
             return;
         }
 
-        //Image Button imFotoEvento = findViewById(R.id.imFotoEvento);
+        String currentPhotoPath = criarEventViewModel.getCurrentPhotoPath();
+        if(!currentPhotoPath.isEmpty()) {
+            ImageView imFotoEvento = findViewById(R.id.imFotoEvento);
+            // aqui carregamos a foto que está guardada dentro do arquivo currentPhotoPath dentro
+            // de um objeto do tipo Bitmap. A imagem é carregada e sofre uma escala pra ficar
+            // exatamente do tamanho do ImageView
+            Bitmap bitmap = Util.getBitmap(currentPhotoPath, imFotoEvento.getWidth(), imFotoEvento.getHeight());
+            imFotoEvento.setImageBitmap(bitmap);
+        }
+
+        if(currentPhotoPath.isEmpty()) {
+            Toast.makeText(CriarEventActivity.this, "O campo Foto do evento não foi preenchido", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        // Neste ponto, já verificamos que todos os campos foram preenchidos corretamente.
+        // Antes enviar esses dados ao servidor, nós fazemos uma escala na imagem escolhida
+        // para o produto. Fazemos isso porque a câmera do celular produz imagens muito grandes,
+        // com resolução muito mais alta do que aquela que realmente precisamos. Logo, na
+        // prática, o que fazemos aqui é diminuir o tamanho da imagem antes de enviá-la ao
+        // servidor. Isso garante que será usado menos recurso de rede e de banco de dados
+        // no servidor.
+        //
+        // A imagem é escalada de forma que sua altura fique em 300dp (tamanho do ImageView
+        // que exibe os detalhes de um produto. A largura vai possuir
+        // um tamanho proporcional ao tamamnho original.
+        try {
+            int h = (int) getResources().getDimension(R.dimen.img_height);
+            Util.scaleImage(currentPhotoPath, -1, 2*h);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return;
+        }
 
         Spinner spPlataformaO = (Spinner)findViewById(R.id.spPlataformaO);
         int position2 = spPlataformaO.getSelectedItemPosition();

@@ -11,6 +11,8 @@ public class CriarEventViewModel extends AndroidViewModel {
 
     Integer selectedEventType = R.id.btnPresencial;
 
+    String currentPhotoPath = "";
+
     public CriarEventViewModel(@NonNull Application application) {
         super(application);
     }
@@ -21,5 +23,13 @@ public class CriarEventViewModel extends AndroidViewModel {
 
     public void setSelectedEventType(Integer selectedEventType) {
         this.selectedEventType = selectedEventType;
+    }
+
+    public String getCurrentPhotoPath() {
+        return currentPhotoPath;
+    }
+
+    public void setCurrentPhotoPath(String currentPhotoPath) {
+        this.currentPhotoPath = currentPhotoPath;
     }
 }

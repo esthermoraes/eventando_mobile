@@ -81,14 +81,15 @@
         android:text="EDITAR EVENTO"
         android:textSize="12sp"
         android:textStyle="bold"
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerListaConviO"
+        app:layout_constraintTop_toBottomOf="@+id/btnConviteO"
         app:strokeColor="#ffffff"
         app:strokeWidth="2dp" />
 
     <Button
-        android:id="@+id/btnVerListaConviO"
+        android:id="@+id/btnConviteO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

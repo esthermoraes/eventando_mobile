@@ -41,9 +41,8 @@
 
             <TextView
                 android:id="@+id/tvNumeroP"
-                android:layout_width="0dp"
+                android:layout_width="35dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
@@ -52,26 +51,26 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.666"
-                app:layout_constraintStart_toEndOf="@+id/tvLogradouroP"
                 app:layout_constraintTop_toBottomOf="@+id/tvBairroP" />
 
 
             <TextView
                 android:id="@+id/tvLogradouroP"
-                android:layout_width="346dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Logradouro"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvNumeroP"
+                app:layout_constraintStart_toEndOf="@+id/tvTipoLogradouro"
                 app:layout_constraintTop_toBottomOf="@+id/tvCidadeP" />
 
-            <EditText
+            <TextView
                 android:id="@+id/tvBairroP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -87,7 +86,7 @@
                 app:layout_constraintStart_toEndOf="@+id/tvCidadeP"
                 app:layout_constraintTop_toBottomOf="@+id/tvEstadoP" />
 
-            <EditText
+            <TextView
                 android:id="@+id/tvCidadeP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -260,7 +259,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvAtracoesP" />
 
             <Button
-                android:id="@+id/btnVerListaConviP"
+                android:id="@+id/btnConviteP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -268,7 +267,7 @@
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#C34BD8"
                 android:fontFamily="@font/montserrat"
-                android:text="VER LISTA DE CONVIDADOS"
+                android:text="VER CONVITE"
                 android:textColor="#ffffff"
                 android:textSize="12sp"
                 android:textStyle="bold"
@@ -277,6 +276,8 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTipoContatoP" />
+
+
 
             <ImageView
                 android:id="@+id/imFotoEvento"
@@ -338,6 +339,19 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvHorarioP" />
+
+            <TextView
+                android:id="@+id/tvTipoLogradouro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/editext_bg"
+                android:fontFamily="@font/montserrat"
+                android:hint="Tipo Logradouro"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCidadeP" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

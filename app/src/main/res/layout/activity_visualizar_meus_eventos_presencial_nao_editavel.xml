@@ -12,9 +12,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -39,7 +40,7 @@
 
             <TextView
                 android:id="@+id/numNumeroP"
-                android:layout_width="0dp"
+                android:layout_width="35dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -55,7 +56,6 @@
                 android:id="@+id/tvLogradouroP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
@@ -64,7 +64,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/numNumeroP"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvTipoLogradouro"
                 app:layout_constraintTop_toBottomOf="@+id/tvCidadeP" />
 
             <TextView
@@ -319,7 +319,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvHorarioP" />
 
             <Button
-                android:id="@+id/btnVerListaConviP"
+                android:id="@+id/btnConviteP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -353,9 +353,36 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnVerListaConviP"
+                app:layout_constraintTop_toBottomOf="@+id/btnConviteP"
                 app:strokeColor="#ffffff"
                 app:strokeWidth="2dp" />
+
+            <TextView
+                android:id="@+id/tvTipoLogradouro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/editext_bg"
+                android:fontFamily="@font/montserrat"
+                android:hint="Tipo Logradouro"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvLogradouroP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCidadeP" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#C34BD8"
+                android:text="Button"
+                app:layout_constraintEnd_toStartOf="@+id/btnConviteP"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="513dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

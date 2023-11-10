@@ -56,7 +56,7 @@
 
             <EditText
                 android:id="@+id/numNumeroP"
-                android:layout_width="0dp"
+                android:layout_width="35dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -81,23 +81,24 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/numNumeroP"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spTipoLogradouro"
                 app:layout_constraintTop_toBottomOf="@+id/etCidadeP" />
 
             <EditText
                 android:id="@+id/etBairroP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Bairro"
-                android:textSize="12sp"
 
+                android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/etCidadeP"
                 app:layout_constraintTop_toBottomOf="@+id/spEstadoP" />
 
             <EditText
@@ -106,7 +107,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
                 android:background="@drawable/editext_bg"
                 android:fontFamily="@font/montserrat"
                 android:hint="Cidade"
@@ -359,7 +359,7 @@
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#B25AbF"
                 android:fontFamily="@font/montserrat"
-                android:text="CRIAR CONVITE"
+                android:text="EDITAR CONVITE"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
@@ -386,6 +386,19 @@
                 app:layout_constraintTop_toBottomOf="@+id/btnImportarC"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
+
+            <Spinner
+                android:id="@+id/spTipoLogradouro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/editext_bg"
+                android:entries="@array/tipoLogradouro"
+                app:layout_constraintEnd_toStartOf="@+id/etLogradouroP"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCidadeP" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

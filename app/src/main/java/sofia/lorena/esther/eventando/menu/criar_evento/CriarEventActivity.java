@@ -93,6 +93,16 @@ public class CriarEventActivity extends AppCompatActivity {
 
         btnCriar.setEnabled(false);
 
+        String currentPhotoPath = criarEventViewModel.getCurrentPhotoPath();
+        if(!currentPhotoPath.isEmpty()) {
+            ImageView imFotoEvento = findViewById(R.id.imFotoEvento);
+            // aqui carregamos a foto que está guardada dentro do arquivo currentPhotoPath dentro
+            // de um objeto do tipo Bitmap. A imagem é carregada e sofre uma escala pra ficar
+            // exatamente do tamanho do ImageView
+            Bitmap bitmap = Util.getBitmap(currentPhotoPath, imFotoEvento.getWidth(), imFotoEvento.getHeight());
+            imFotoEvento.setImageBitmap(bitmap);
+        }
+
         EditText etNomeEvento =  findViewById(R.id.etNomeEvento);
         final String newetNomeEvento = etNomeEvento.getText().toString();
         if(newetNomeEvento.isEmpty()) {
@@ -266,7 +276,7 @@ public class CriarEventActivity extends AppCompatActivity {
 
             // Criamos e configuramos o INTENT que dispara a câmera
             Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            Uri fUri = FileProvider.getUriForFile(CriarEventActivity.this, "com.example.produtos.fileprovider", f);
+            Uri fUri = FileProvider.getUriForFile(CriarEventActivity.this, "sofia.lorena.esther.eventando.fileprovider", f);
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, fUri);
 
             // Criamos e configuramos o INTENT que dispara a escolha de imagem via galeria
@@ -283,8 +293,6 @@ public class CriarEventActivity extends AppCompatActivity {
             Toast.makeText(CriarEventActivity.this, "Não foi possível criar o arquivo", Toast.LENGTH_LONG).show();
             return;
         }
-
-
     }
 
     /**

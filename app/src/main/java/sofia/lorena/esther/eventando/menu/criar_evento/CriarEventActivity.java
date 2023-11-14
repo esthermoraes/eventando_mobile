@@ -25,18 +25,13 @@ import androidx.lifecycle.ViewModelProvider;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import sofia.lorena.esther.eventando.R;
-import sofia.lorena.esther.eventando.acessar.CadastroActivity;
 import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_online.CriarEventOnlineFragment;
 import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial.CriarEventPresencialFragment;
-import sofia.lorena.esther.eventando.menu.perfil.ProfileNaoEditavelFragment;
 import sofia.lorena.esther.eventando.model.CriarEventViewModel;
-import sofia.lorena.esther.eventando.model.HomeViewModel;
-import sofia.lorena.esther.eventando.model.ViewEventViewModel;
 import sofia.lorena.esther.eventando.util.Util;
 
 public class CriarEventActivity extends AppCompatActivity {
@@ -48,7 +43,7 @@ public class CriarEventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_criar_evento);
         setTitle("CRIAR EVENTO");
 
-        CriarEventViewModel criarEventViewModel = new ViewModelProvider(this).get(CriarEventViewModel.class);
+        CriarEventViewModel vm = new ViewModelProvider(this).get(CriarEventViewModel.class);
 
         RadioGroup radioGroup = findViewById(R.id.rdFormato);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -65,8 +60,6 @@ public class CriarEventActivity extends AppCompatActivity {
             }
         });
 
-
-        final CriarEventViewModel vm = new ViewModelProvider(this).get(CriarEventViewModel.class);
         int optionsSelected = vm.getSelectedEventType();
         if(optionsSelected == 0){
             RadioButton btnPresencial = findViewById(R.id.btnPresencial);
@@ -87,7 +80,7 @@ public class CriarEventActivity extends AppCompatActivity {
                 .commit();
     }
 
-    public void cadastrarEventoPresencial(String cep, int estado, String cidade, String bairro, int tipoLogradouro, String logradouro, String numero, Button btnCriar){
+    public void cadastrarEventoPresencial(int cep, int estado, String cidade, String bairro, int tipoLogradouro, String logradouro, String numero, Button btnCriar){
 
         CriarEventViewModel criarEventViewModel = new ViewModelProvider(this).get(CriarEventViewModel.class);
 
@@ -100,7 +93,7 @@ public class CriarEventActivity extends AppCompatActivity {
             return;
         }
 
-        //ToggleButton tbPrivacidade = findViewById(R.id.tbPrivacidade);
+        ToggleButton tbPrivacidade = findViewById(R.id.tbPrivacidade);
 
         EditText etObjetivoC =  findViewById(R.id.etObjetivoC);
         final String newetObjetivoC = etObjetivoC.getText().toString();
@@ -117,7 +110,7 @@ public class CriarEventActivity extends AppCompatActivity {
         }
 
         EditText etHorarioC =  findViewById(R.id.etHorarioC);
-        final String newetHorarioC = etDataPrevistaC.getText().toString();
+        final String newetHorarioC = etHorarioC.getText().toString();
         if(newetHorarioC.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de horario não preenchido", Toast.LENGTH_LONG).show();
             return;
@@ -200,7 +193,7 @@ public class CriarEventActivity extends AppCompatActivity {
         }
 
         EditText etNumeroCP =  findViewById(R.id.etNumeroCP);
-        final String newetNumeroCP = etNomeEvento.getText().toString();
+        final String newetNumeroCP = etNumeroCP.getText().toString();
         if(newetNumeroCP.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de numero não preenchido", Toast.LENGTH_LONG).show();
             return;
@@ -220,7 +213,8 @@ public class CriarEventActivity extends AppCompatActivity {
             return;
         }
 
-        //ToggleButton tbPrivacidade = findViewById(R.id.tbPrivacidade);
+        ToggleButton tbPrivacidade = findViewById(R.id.tbPrivacidade);
+
 
         EditText etObjetivoC =  findViewById(R.id.etObjetivoC);
         final String newetObjetivoC = etObjetivoC.getText().toString();

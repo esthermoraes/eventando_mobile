@@ -212,7 +212,7 @@ public class EventandoRepository {
         }
         return null;
     }
-    public boolean criarEventoPresencial(String nome, String objetivo, String data, String hora, String imagem, String numero, int tipo_logradouro, String bairro_evento, String cidade_evento, int estado_evento, int cep, String privacidade, String formato) {
+    public boolean criarEventoPresencial(String nome, String objetivo, String data, String hora, String imagem, String numero, int tipo_logradouro, String bairro_evento, String cidade_evento, int estado_evento, int cep, String privacidade) {
 
         // Para cadastrar um produto, é preciso estar logado. Então primeiro otemos o login e senha
         // salvos na app.
@@ -227,13 +227,13 @@ public class EventandoRepository {
         httpRequest.addParam("horario_evento", hora);
         httpRequest.addFile("img_evento", new File(imagem));
         httpRequest.addParam("numero_evento", numero);
-        httpRequest.addParam("bairro_evento", Integer.toString(tipo_logradouro));
+        httpRequest.addParam("tipo_logradouro", Integer.toString(tipo_logradouro));
         httpRequest.addParam("bairro_evento", bairro_evento);
         httpRequest.addParam("cidade_evento", cidade_evento);
         httpRequest.addParam("estado_evento", Integer.toString(estado_evento));
         httpRequest.addParam("cep_evento", Integer.toString(cep));
         httpRequest.addParam("privacidade_evento", privacidade);
-        httpRequest.addParam("formato_evento", formato);
+        httpRequest.addParam("formato_evento", "presencial");
 
         // Para esta ação, é preciso estar logado. Então na requisição HTTP setamos o login e senha do
         // usuário. Ao executar a requisição, o login e senha do usuário serão enviados ao servidor web,
@@ -285,7 +285,7 @@ public class EventandoRepository {
         return false;
     }
 
-    public boolean criarEventoOnline(String nome, String objetivo, String data, String hora, String imagem, String link_evento, int plataforma_evento, String privacidade, String formato) {
+    public boolean criarEventoOnline(String nome, String objetivo, String data, String hora, String imagem, String link_evento, int plataforma_evento, String privacidade) {
 
         // Para cadastrar um produto, é preciso estar logado. Então primeiro otemos o login e senha
         // salvos na app.
@@ -302,7 +302,7 @@ public class EventandoRepository {
         httpRequest.addParam("link_evento", link_evento);
         httpRequest.addParam("plataforma_evento", Integer.toString(plataforma_evento));
         httpRequest.addParam("privacidade_evento", privacidade);
-        httpRequest.addParam("formato_evento", formato);
+        httpRequest.addParam("formato_evento", "online");
 
         // Para esta ação, é preciso estar logado. Então na requisição HTTP setamos o login e senha do
         // usuário. Ao executar a requisição, o login e senha do usuário serão enviados ao servidor web,

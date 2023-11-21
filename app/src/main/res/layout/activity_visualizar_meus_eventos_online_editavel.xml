@@ -185,7 +185,7 @@
 
             <ToggleButton
                 android:id="@+id/tbPrivacidade"
-                android:layout_width="88dp"
+                android:layout_width="0dp"
                 android:layout_height="33dp"
                 android:background="@android:color/white"
                 android:backgroundTint="@android:color/white"
@@ -235,21 +235,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvHorarioO" />
 
             <Button
-                android:id="@+id/btnCriarConvite"
+                android:id="@+id/btnListaEdConvi"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#C34BD8"
                 android:fontFamily="@font/montserrat"
-                android:text="EDITAR CONVITE"
+                android:text="EDITAR LISTA DE CONVIDADOS"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:layout_constraintBottom_toTopOf="@+id/btnSalvarEd"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnListaEdConvi"
+                app:layout_constraintStart_toEndOf="@+id/btnConviteO"
                 app:layout_constraintTop_toBottomOf="@+id/etContato0" />
 
             <Button
@@ -257,6 +257,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#B25AbF"
                 android:fontFamily="@font/montserrat"
@@ -267,24 +268,24 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnConviteO"
                 app:strokeColor="#FFFFFF"
-                app:strokeWidth="2dp"
-                tools:layout_editor_absoluteY="455dp" />
+                app:strokeWidth="2dp" />
 
             <Button
-                android:id="@+id/btnListaEdConvi"
+                android:id="@+id/btnConviteO"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="18dp"
                 android:backgroundTint="#C34BD8"
                 android:fontFamily="@font/montserrat"
-                android:text="EDITAR LISTA DE CONVIDADOS"
+                android:text="EDITAR CONVITE"
                 android:textColor="#ffffff"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
-                app:layout_constraintEnd_toStartOf="@+id/btnCriarConvite"
+                app:layout_constraintEnd_toStartOf="@+id/btnListaEdConvi"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spTipoContatoO" />
 

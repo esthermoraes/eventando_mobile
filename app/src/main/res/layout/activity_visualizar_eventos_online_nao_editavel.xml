@@ -10,7 +10,7 @@
 
     <ToggleButton
         android:id="@+id/tbPrivacidade"
-        android:layout_width="88dp"
+        android:layout_width="0dp"
         android:layout_height="33dp"
         android:background="@android:color/white"
         android:backgroundTint="@android:color/white"

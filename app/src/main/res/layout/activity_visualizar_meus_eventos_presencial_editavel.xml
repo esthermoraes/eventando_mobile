@@ -39,7 +39,6 @@
                 android:id="@+id/btnListaEdConviP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#C34BD8"
@@ -50,7 +49,7 @@
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnListaEdConvi"
                 app:layout_constraintTop_toBottomOf="@+id/etContatoP" />
 
 
@@ -281,7 +280,7 @@
 
             <ToggleButton
                 android:id="@+id/tbPrivacidade"
-                android:layout_width="88dp"
+                android:layout_width="0dp"
                 android:layout_height="33dp"
                 android:background="@android:color/white"
                 android:backgroundTint="@android:color/white"
@@ -330,7 +329,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tmHorarioP" />
 
-            <Button
+            Button
                 android:id="@+id/btnImportarC"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -352,28 +351,27 @@
                 app:strokeWidth="2dp" />
 
             <Button
-                android:id="@+id/btnCriarConvite"
+                android:id="@+id/btnListaEdConvi"
                 android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:backgroundTint="#B25AbF"
+                android:backgroundTint="#C34BD8"
                 android:fontFamily="@font/montserrat"
                 android:text="EDITAR CONVITE"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnListaEdConviP"
-                app:strokeColor="#FFFFFF"
-                app:strokeWidth="2dp" />
+                app:layout_constraintEnd_toStartOf="@+id/btnListaEdConviP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spTipoContatoP" />
 
             <Button
                 android:id="@+id/btnSalvarEd"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#B25AbF"
                 android:fontFamily="@font/montserrat"
@@ -382,8 +380,9 @@
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnImportarC"
+                app:layout_constraintTop_toBottomOf="@+id/btnListaEdConviP"
                 app:strokeColor="#FFFFFF"
                 app:strokeWidth="2dp" />
 

@@ -269,7 +269,7 @@
 
             <ToggleButton
                 android:id="@+id/tbPrivacidade"
-                android:layout_width="88dp"
+                android:layout_width="0dp"
                 android:layout_height="33dp"
                 android:background="@android:color/white"
                 android:backgroundTint="@android:color/white"
@@ -319,7 +319,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvHorarioP" />
 
             <Button
-                android:id="@+id/btnConviteP"
+                android:id="@+id/btnConvidadoP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -333,7 +333,7 @@
                 android:textStyle="bold"
                 app:cornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnConviteP"
                 app:layout_constraintTop_toBottomOf="@+id/tvContatoP" />
 
             <Button
@@ -353,7 +353,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnConviteP"
+                app:layout_constraintTop_toBottomOf="@+id/btnConvidadoP"
                 app:strokeColor="#ffffff"
                 app:strokeWidth="2dp" />
 
@@ -373,16 +373,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvCidadeP" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnConviteP"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="#C34BD8"
-                android:text="Button"
-                app:layout_constraintEnd_toStartOf="@+id/btnConviteP"
+                android:text="VER CONVITE"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnConvidadoP"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="513dp" />
+                app:layout_constraintTop_toBottomOf="@+id/tvTipoContatoP" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

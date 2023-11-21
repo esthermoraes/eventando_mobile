@@ -10,7 +10,7 @@
 
     <ToggleButton
         android:id="@+id/tbPrivacidade"
-        android:layout_width="88dp"
+        android:layout_width="0dp"
         android:layout_height="33dp"
         android:background="@android:color/white"
         android:backgroundTint="@android:color/white"
@@ -25,6 +25,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
     <ScrollView
+        android:id="@+id/scrollView4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,8 +94,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="18dp"
         android:backgroundTint="#C34BD8"
         android:fontFamily="@font/montserrat"
         android:text="VER CONVITE"
@@ -102,10 +102,9 @@
         android:textSize="12sp"
         android:textStyle="bold"
         app:cornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@+id/btnVerlistaConvO"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerlistaConvO" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTipoContato0" />
 
     <Button
         android:id="@+id/btnVerlistaConvO"
@@ -122,7 +121,7 @@
         android:textStyle="bold"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnConviteO"
         app:layout_constraintTop_toBottomOf="@+id/tvContatoO" />
 
     <TextView

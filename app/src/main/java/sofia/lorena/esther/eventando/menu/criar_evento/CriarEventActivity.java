@@ -50,11 +50,11 @@ public class CriarEventActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if(i == R.id.btnPresencial){
-                    CriarEventPresencialFragment criarEventPresencialFragment = new CriarEventPresencialFragment();
+                    CriarEventPresencialFragment criarEventPresencialFragment = CriarEventPresencialFragment.newInstance();
                     setFragment(criarEventPresencialFragment, R.id.flInfoBasicas);
                 }
                 else{
-                    CriarEventOnlineFragment criarEventOnlineFragment = new CriarEventOnlineFragment();
+                    CriarEventOnlineFragment criarEventOnlineFragment =CriarEventOnlineFragment.newInstance();
                     setFragment(criarEventOnlineFragment, R.id.flInfoBasicas);
                 }
             }
@@ -70,7 +70,9 @@ public class CriarEventActivity extends AppCompatActivity {
             btnOnline.setChecked(true);
         }
 
+
     }
+
 
     public void setFragment(Fragment fragment, int frameLayoutId) {
         getSupportFragmentManager()
@@ -80,25 +82,26 @@ public class CriarEventActivity extends AppCompatActivity {
                 .commit();
     }
 
-    public void cadastrarEventoPresencial(int cep, int estado, String cidade, String bairro, int tipoLogradouro, String logradouro, String numero, Button btnCriar){
+    public void cadastrarEventoPresencial(String cep, int estado, String cidade, String bairro, int tipoLogradouro, String logradouro, String numero, Button btnCriar){
 
         CriarEventViewModel criarEventViewModel = new ViewModelProvider(this).get(CriarEventViewModel.class);
-
-        btnCriar.setEnabled(false);
 
         EditText etNomeEvento =  findViewById(R.id.etNomeEvento);
         final String newetNomeEvento = etNomeEvento.getText().toString();
         if(newetNomeEvento.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de nome não preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
         ToggleButton tbPrivacidade = findViewById(R.id.tbPrivacidade);
+        boolean privacidade = tbPrivacidade.isChecked();
 
         EditText etObjetivoC =  findViewById(R.id.etObjetivoC);
         final String newetObjetivoC = etObjetivoC.getText().toString();
         if(newetObjetivoC.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de objetivo não preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
@@ -106,6 +109,7 @@ public class CriarEventActivity extends AppCompatActivity {
         final String newetDataPrevistaC = etDataPrevistaC.getText().toString();
         if(newetDataPrevistaC.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de data prevista não preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
@@ -113,6 +117,7 @@ public class CriarEventActivity extends AppCompatActivity {
         final String newetHorarioC = etHorarioC.getText().toString();
         if(newetHorarioC.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de horario não preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
@@ -128,6 +133,7 @@ public class CriarEventActivity extends AppCompatActivity {
 
         if(currentPhotoPath.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "O campo Foto do evento não foi preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
@@ -147,55 +153,6 @@ public class CriarEventActivity extends AppCompatActivity {
             Util.scaleImage(currentPhotoPath, -1, 2*h);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            return;
-        }
-
-        EditText etCepCP =  findViewById(R.id.etCepCP);
-        final String newetCepCP = etNomeEvento.getText().toString();
-        if(newetCepCP.isEmpty()) {
-            Toast.makeText(CriarEventActivity.this, "Campo de CEP não preenchido", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        Spinner spEstadoCadastroCP = (Spinner)findViewById(R.id.spEstadoCadastroCP);
-        int position = spEstadoCadastroCP.getSelectedItemPosition();
-        if(position == 0) {
-            Toast.makeText(CriarEventActivity.this, "Campo de estado não preenchido", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        EditText etCidadeCP =  findViewById(R.id.etCidadeCP);
-        final String newetCidadeCP = etNomeEvento.getText().toString();
-        if(newetCidadeCP.isEmpty()) {
-            Toast.makeText(CriarEventActivity.this, "Campo de cidade não preenchido", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        EditText etBairroCP =  findViewById(R.id.etBairroCP);
-        final String newetBairroCP = etNomeEvento.getText().toString();
-        if(newetBairroCP.isEmpty()) {
-            Toast.makeText(CriarEventActivity.this, "Campo de bairro não preenchido", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        Spinner spTipoLogradouro = (Spinner)findViewById(R.id.spTipoLogradouro);
-        int position2 = spTipoLogradouro.getSelectedItemPosition();
-        if(position2 == 0) {
-            Toast.makeText(CriarEventActivity.this, "Campo de tipo logradouro não preenchido", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        EditText etLogradouroCP =  findViewById(R.id.etLogradouroCP);
-        final String newetLogradouroCP = etNomeEvento.getText().toString();
-        if(newetLogradouroCP.isEmpty()) {
-            Toast.makeText(CriarEventActivity.this, "Campo de logradouro não preenchido", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        EditText etNumeroCP =  findViewById(R.id.etNumeroCP);
-        final String newetNumeroCP = etNumeroCP.getText().toString();
-        if(newetNumeroCP.isEmpty()) {
-            Toast.makeText(CriarEventActivity.this, "Campo de numero não preenchido", Toast.LENGTH_LONG).show();
             return;
         }
     }
@@ -204,22 +161,24 @@ public class CriarEventActivity extends AppCompatActivity {
 
         CriarEventViewModel criarEventViewModel = new ViewModelProvider(this).get(CriarEventViewModel.class);
 
-        btnCriar.setEnabled(false);
 
         EditText etNomeEvento =  findViewById(R.id.etNomeEvento);
         final String newetNomeEvento = etNomeEvento.getText().toString();
         if(newetNomeEvento.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de nome não preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
         ToggleButton tbPrivacidade = findViewById(R.id.tbPrivacidade);
+        boolean privacidade = tbPrivacidade.isChecked();
 
 
         EditText etObjetivoC =  findViewById(R.id.etObjetivoC);
         final String newetObjetivoC = etObjetivoC.getText().toString();
         if(newetObjetivoC.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de objetivo não preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
@@ -227,6 +186,7 @@ public class CriarEventActivity extends AppCompatActivity {
         final String newetDataPrevistaC = etDataPrevistaC.getText().toString();
         if(newetDataPrevistaC.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de data prevista não preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
@@ -234,6 +194,7 @@ public class CriarEventActivity extends AppCompatActivity {
         final String newetHorarioC = etDataPrevistaC.getText().toString();
         if(newetHorarioC.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "Campo de horario não preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
@@ -249,6 +210,7 @@ public class CriarEventActivity extends AppCompatActivity {
 
         if(currentPhotoPath.isEmpty()) {
             Toast.makeText(CriarEventActivity.this, "O campo Foto do evento não foi preenchido", Toast.LENGTH_LONG).show();
+            btnCriar.setEnabled(true);
             return;
         }
 
@@ -268,20 +230,6 @@ public class CriarEventActivity extends AppCompatActivity {
             Util.scaleImage(currentPhotoPath, -1, 2*h);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            return;
-        }
-
-        Spinner spPlataformaO = (Spinner)findViewById(R.id.spPlataformaO);
-        int position2 = spPlataformaO.getSelectedItemPosition();
-        if(position2 == 0) {
-            Toast.makeText(CriarEventActivity.this, "Campo de plataforma não preenchido", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        EditText etLinkCO =  findViewById(R.id.etLinkCO);
-        final String newetLinkCO = etNomeEvento.getText().toString();
-        if(newetLinkCO.isEmpty()) {
-            Toast.makeText(CriarEventActivity.this, "Campo de link não preenchido", Toast.LENGTH_LONG).show();
             return;
         }
     }

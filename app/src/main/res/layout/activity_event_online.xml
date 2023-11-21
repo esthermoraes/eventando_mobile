@@ -8,24 +8,7 @@
     tools:context=".menu.criar_evento.criar_evento_presencial.EventPresencialActivity">
 
     <Button
-        android:id="@+id/btnImportarC"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#B25AbF"
-        android:text="IMPORTAR CONVITE"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:cornerRadius="8dp"
-        app:icon="@drawable/baseline_cloud_upload_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frInfoAdd"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp" />
-
-    <Button
-        android:id="@+id/btnCriarConvite"
+        android:id="@+id/btnListaEdConvi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -37,8 +20,7 @@
         android:textStyle="bold"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnImportarC"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frInfoAdd"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
@@ -48,7 +30,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#B25AbF"
         android:text="SALVAR"
@@ -57,9 +38,9 @@
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnImportarC"
         app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp" />
+        app:strokeWidth="2dp"
+        tools:layout_editor_absoluteY="463dp" />
 
     <TextView
         android:id="@+id/tvLink"

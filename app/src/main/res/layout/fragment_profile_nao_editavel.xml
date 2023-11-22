@@ -19,8 +19,8 @@
             android:id="@+id/btnEncerrarSess"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:backgroundTint="#C80000"
             android:text="ENCERRAR SESSÃO"
             app:cornerRadius="8dp"
@@ -36,9 +36,9 @@
             android:id="@+id/btnEdPerfil"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="16dp"
             android:backgroundTint="#b25abf"
             android:contextClickable="false"
             android:fontFamily="@font/montserrat"
@@ -59,9 +59,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/painel_bg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -74,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/montserrat"
                 android:text="INFORMAÇÕES DE CONTATO"
@@ -107,7 +107,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/montserrat"
                 android:text="Telefone"
@@ -122,14 +122,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="115dp"
                 android:fontFamily="@font/montserrat"
                 android:text="INFORMAÇÕES BÁSICAS"
                 android:textColor="#20201F"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -138,13 +137,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat"
                 android:text="Nome"
                 android:textColor="#424242"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvInfoBasica"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvInfoBasica" />
 
@@ -178,6 +176,19 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvDataNasc" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imPerfilEd"
+            android:layout_width="111dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="3dp"
+            android:adjustViewBounds="false"
+            android:background="@drawable/imagemperfil"
+            android:cropToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@color/material_dynamic_neutral_variant90" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

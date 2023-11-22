@@ -54,7 +54,7 @@ public class CriarEventActivity extends AppCompatActivity {
                     setFragment(criarEventPresencialFragment, R.id.flInfoBasicas);
                 }
                 else{
-                    CriarEventOnlineFragment criarEventOnlineFragment =CriarEventOnlineFragment.newInstance();
+                    CriarEventOnlineFragment criarEventOnlineFragment = CriarEventOnlineFragment.newInstance();
                     setFragment(criarEventOnlineFragment, R.id.flInfoBasicas);
                 }
             }

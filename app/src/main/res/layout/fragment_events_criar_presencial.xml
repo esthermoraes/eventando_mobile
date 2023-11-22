@@ -82,7 +82,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
@@ -93,27 +92,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/etCidadeCP"
-        app:layout_constraintTop_toBottomOf="@+id/spEstadoCadastroCP" />
+        tools:layout_editor_absoluteY="80dp" />
 
     <EditText
         android:id="@+id/etLogradouroCP"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="259dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:background="@drawable/busca_bg"
         android:ems="10"
         android:fontFamily="@font/montserrat"
         android:hint="Logradouro"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/etNumeroCP"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCidadeCP" />
 
     <EditText
         android:id="@+id/etNumeroCP"
-        android:layout_width="35dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/busca_bg"
@@ -123,6 +123,8 @@
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toEndOf="@+id/etLogradouroCP"
         app:layout_constraintTop_toBottomOf="@+id/etBairroCP" />
 
     <Button
@@ -143,18 +145,5 @@
         app:layout_constraintTop_toBottomOf="@+id/etLogradouroCP"
         app:strokeColor="#ffffff"
         app:strokeWidth="2dp" />
-
-    <Spinner
-        android:id="@+id/spTipoLogradouro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/editext_bg"
-        android:entries="@array/tipoLogradouro"
-        app:layout_constraintEnd_toStartOf="@+id/etLogradouroCP"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCidadeCP" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

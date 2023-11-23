@@ -36,22 +36,22 @@
         </activity>
 
         <activity
-            android:name=".menu.criar_evento.criar_evento_online.VisualizarEventOnlineNaoEditavel"
+            android:name=".menu.criar_evento.criar_evento_online.VisualizarEventOnlineNaoEditavelActivity"
             android:exported="false" />
         <activity
-            android:name=".menu.criar_evento.criar_evento_presencial.VisualizarEventPresencialNaoEditavel"
+            android:name=".menu.criar_evento.criar_evento_presencial.VisualizarEventPresencialNaoEditavelActivity"
             android:exported="false" />
         <activity
-            android:name=".menu.criar_evento.criar_evento_online.VisualizarMyEventsOnlineNaoEditavel"
+            android:name=".menu.criar_evento.criar_evento_online.VisualizarMyEventsOnlineNaoEditavelActivity"
             android:exported="false" />
         <activity
-            android:name=".menu.criar_evento.criar_evento_online.VisualizarMyEventsOnlineEditavel"
+            android:name=".menu.criar_evento.criar_evento_online.VisualizarMyEventsOnlineEditavelActivity"
             android:exported="false" />
         <activity
-            android:name=".menu.criar_evento.criar_evento_presencial.VisualizarMyEventsPresencialNaoEditavel"
+            android:name=".menu.criar_evento.criar_evento_presencial.VisualizarMyEventsPresencialNaoEditavelActivity"
             android:exported="false" />
         <activity
-            android:name=".menu.criar_evento.criar_evento_presencial.VisualizarMyEventsPresencialEditavel"
+            android:name=".menu.criar_evento.criar_evento_presencial.VisualizarMyEventsPresencialEditavelActivity"
             android:exported="false" />
         <activity
             android:name=".menu.criar_evento.ListaConvidadosActivity"

@@ -5,8 +5,13 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModelKt;
+import androidx.paging.Pager;
+import androidx.paging.PagingConfig;
 import androidx.paging.PagingData;
+import androidx.paging.PagingLiveData;
 
+import kotlinx.coroutines.CoroutineScope;
 import sofia.lorena.esther.eventando.R;
 
 public class HomeViewModel extends AndroidViewModel {
@@ -17,11 +22,10 @@ public class HomeViewModel extends AndroidViewModel {
     public HomeViewModel(@NonNull Application application) {
         super(application);
 
-        // Configuração da biblioteca de paginação (Paging 3) ...
-
-        // Defina o valor padrão para a opção de navegação selecionada
-
-        // Resto da configuração do ViewModel ...
+        EventandoRepository productsRepository = new EventandoRepository(getApplication());
+        CoroutineScope viewModelScope = ViewModelKt.getViewModelScope(this);
+        Pager<Integer, Event> pager = new Pager(new PagingConfig(10), () -> new EventsPagingSource(productsRepository));
+        eventsLd = PagingLiveData.cachedIn(PagingLiveData.getLiveData(pager), viewModelScope);
     }
 
     public LiveData<PagingData<Event>> getEventsLiveData() {

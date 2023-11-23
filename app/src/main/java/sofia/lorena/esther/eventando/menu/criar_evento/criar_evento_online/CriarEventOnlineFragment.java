@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 
 import sofia.lorena.esther.eventando.R;
 import sofia.lorena.esther.eventando.menu.criar_evento.CriarEventActivity;
-import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial.CriarEventPresencialFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,25 +33,18 @@ public class CriarEventOnlineFragment extends Fragment {
     private String mParam2;
 
     CriarEventActivity criarEventActivity;
+
     public CriarEventOnlineFragment(CriarEventActivity criarEventActivity) {
         // Required empty public constructor
         this.criarEventActivity = criarEventActivity;
     }
 
-        // Required empty public constructor
+    // Required empty public constructor
 
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment EventsCriarOnlineFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static CriarEventOnlineFragment newInstance(CriarEventActivity criarEventActivity) {
-        CriarEventOnlineFragment fragment = new CriarEventOnlineFragment(CriarEventActivity criarEventActivity);
+        CriarEventOnlineFragment fragment = new CriarEventOnlineFragment(criarEventActivity);
         return fragment;
     }
 
@@ -73,29 +65,35 @@ public class CriarEventOnlineFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         Button btnCriar = view.findViewById(R.id.btnCriarO);
         btnCriar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 btnCriar.setEnabled(false);
-                Spinner spPlataformaO = (Spinner)view.findViewById(R.id.spPlataformaO);
-                int position = spPlataformaO.getSelectedItemPosition();
-                if(position == 0) {
-                    Toast.makeText(CriarEventActivity.this, "Campo de plataforma não preenchido", Toast.LENGTH_LONG).show();
-                    btnCriar.setEnabled(true);
-                    return;
-                }
+                Spinner spPlataformaO = view.findViewById(R.id.spPlataformaO);
 
-                EditText etLinkCO =  view.findViewById(R.id.etLinkCO);
-                final String newetLinkCO = etLinkCO.getText().toString();
-                if(newetLinkCO.isEmpty()) {
-                    Toast.makeText(CriarEventActivity.this, "Campo de link não preenchido", Toast.LENGTH_LONG).show();
-                    btnCriar.setEnabled(true);
-                    return;
+                if (spPlataformaO != null) {
+                    int position = spPlataformaO.getSelectedItemPosition();
+
+                    EditText etLinkCO = view.findViewById(R.id.etLinkCO);
+                    final String newetLinkCO = etLinkCO.getText().toString();
+
+                    if (position != Spinner.INVALID_POSITION) {
+                        // posição válida
+                        if (newetLinkCO.isEmpty()) {
+                            Toast.makeText(requireContext(), "Campo de link não preenchido", Toast.LENGTH_LONG).show();
+                            btnCriar.setEnabled(true);
+                            return;
+                        }
+
+                        criarEventActivity.cadastrarEventoOnline(position, newetLinkCO, btnCriar);
+                    } else {
+                        // posição inválida
+                        Toast.makeText(requireContext(), "Campo de plataforma não preenchido", Toast.LENGTH_LONG).show();
+                        btnCriar.setEnabled(true);
+                    }
                 }
-                criarEventActivity.cadastrarEventoOnline(position, newetLinkCO, btnCriar);
             }
         });
     }

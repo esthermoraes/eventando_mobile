@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import sofia.lorena.esther.eventando.util.Config;
@@ -131,7 +132,7 @@ public class EventandoRepository {
         return false;
     }
     public List<Event> loadEvents(Integer limit, Integer offSet) {
-        return null;
+        return new ArrayList<>();
     }
 
     Event loadEventDetail(String id) {return null;}
@@ -212,7 +213,7 @@ public class EventandoRepository {
         }
         return null;
     }
-    public boolean criarEventoPresencial(String nome, String objetivo, String data, String hora, String imagem, String numero, int tipo_logradouro, String bairro_evento, String cidade_evento, int estado_evento, int cep, String privacidade) {
+    public String criarEventoPresencial(String nome, String objetivo, String data, String hora, String imagem, String numero, int tipo_logradouro, String bairro_evento, String cidade_evento, int estado_evento, String cep, String privacidade) {
 
         // Para cadastrar um produto, é preciso estar logado. Então primeiro otemos o login e senha
         // salvos na app.
@@ -231,7 +232,7 @@ public class EventandoRepository {
         httpRequest.addParam("bairro_evento", bairro_evento);
         httpRequest.addParam("cidade_evento", cidade_evento);
         httpRequest.addParam("estado_evento", Integer.toString(estado_evento));
-        httpRequest.addParam("cep_evento", Integer.toString(cep));
+        httpRequest.addParam("cep_evento", cep);
         httpRequest.addParam("privacidade_evento", privacidade);
         httpRequest.addParam("formato_evento", "presencial");
 
@@ -253,7 +254,7 @@ public class EventandoRepository {
             //
             // Em caso de sucesso, será retornada uma String JSON no formato:
             //
-            // {"sucesso":1}
+            // {"sucesso":1, "id":30}
             //
             // Em caso de falha, será retornada uma String JSON no formato:
             //
@@ -274,7 +275,7 @@ public class EventandoRepository {
 
             // Se sucesso igual a 1, significa que o produto foi adicionado com sucesso.
             if(success == 1) {
-                return true;
+                return jsonObject.getString("id");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -282,10 +283,10 @@ public class EventandoRepository {
             e.printStackTrace();
             Log.e("HTTP RESULT", result);
         }
-        return false;
+        return "";
     }
 
-    public boolean criarEventoOnline(String nome, String objetivo, String data, String hora, String imagem, String link_evento, int plataforma_evento, String privacidade) {
+    public String criarEventoOnline(String nome, String objetivo, String data, String hora, String imagem, String link_evento, int plataforma_evento, String privacidade) {
 
         // Para cadastrar um produto, é preciso estar logado. Então primeiro otemos o login e senha
         // salvos na app.
@@ -344,7 +345,7 @@ public class EventandoRepository {
 
             // Se sucesso igual a 1, significa que o produto foi adicionado com sucesso.
             if(success == 1) {
-                return true;
+                return jsonObject.getString("id");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -352,7 +353,7 @@ public class EventandoRepository {
             e.printStackTrace();
             Log.e("HTTP RESULT", result);
         }
-        return false;
+        return "";
     }
 
 }

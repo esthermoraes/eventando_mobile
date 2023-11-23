@@ -1,12 +1,12 @@
 package sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import sofia.lorena.esther.eventando.R;
 
-public class VisualizarEventPresencialNaoEditavel extends AppCompatActivity {
+public class VisualizarEventPresencialNaoEditavelActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

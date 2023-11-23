@@ -15,15 +15,16 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 
 import sofia.lorena.esther.eventando.R;
+import sofia.lorena.esther.eventando.adapter.EventosAdapter;
 import sofia.lorena.esther.eventando.menu.criar_evento.CriarEventActivity;
 import sofia.lorena.esther.eventando.menu.favoritos.FavoriteFragment;
 import sofia.lorena.esther.eventando.menu.meus_eventos.MyEventsFragment;
 import sofia.lorena.esther.eventando.menu.perfil.ProfileNaoEditavelFragment;
 import sofia.lorena.esther.eventando.model.HomeViewModel;
 
-
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    EventosAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,13 +73,13 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(HomeActivity.this, CriarEventActivity.class);
                 startActivity(i);
-
             }
         });
 
-
+        // Adicione o fragmento ao contêiner
+        HomeInicialFragment homeInicialfragment = HomeInicialFragment.newInstance();
+        setFragment(homeInicialfragment, R.id.flHome);
     }
-
 
     // Método para definir o fragmento na tela
     public void setFragment(Fragment fragment, int frameLayoutId) {

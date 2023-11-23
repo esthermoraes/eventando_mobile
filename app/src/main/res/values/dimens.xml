@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="thumb_width">100dp</dimen>
+    <dimen name="thumb_height">100dp</dimen>
     <dimen name="img_height">300dp</dimen>
 </resources>

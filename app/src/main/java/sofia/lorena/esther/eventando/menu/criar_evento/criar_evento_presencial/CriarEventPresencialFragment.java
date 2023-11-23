@@ -39,17 +39,9 @@ public class CriarEventPresencialFragment extends Fragment {
         this.criarEventActivity = criarEventActivity;
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment fragment_events_presencial.
-     */
     // TODO: Rename and change types and number of parameters
     public static CriarEventPresencialFragment newInstance(CriarEventActivity criarEventActivity) {
-        CriarEventPresencialFragment fragment = new CriarEventPresencialFragment(CriarEventActivity criarEventActivity);
+        CriarEventPresencialFragment fragment = new CriarEventPresencialFragment(criarEventActivity);
         return fragment;
     }
 
@@ -69,25 +61,25 @@ public class CriarEventPresencialFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         Button btnCriar = view.findViewById(R.id.btnCriarP);
         btnCriar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 btnCriar.setEnabled(false);
-                EditText etCepCP =  view.findViewById(R.id.etCepCP);
+
+                EditText etCepCP = getView().findViewById(R.id.etCepCP);
                 final String newetCepCP = etCepCP.getText().toString();
-                if(newetCepCP.isEmpty()) {
-                    Toast.makeText(CriarEventActivity.this, "Campo de CEP não preenchido", Toast.LENGTH_LONG).show();
+
+                if (newetCepCP.isEmpty()) {
+                    Toast.makeText(getContext(), "Campo de CEP não preenchido", Toast.LENGTH_LONG).show();
                     btnCriar.setEnabled(true);
                     return;
                 }
 
                 Spinner spEstadoCadastroCP = (Spinner) view.findViewById(R.id.spEstadoCadastroCP);
                 int position = spEstadoCadastroCP.getSelectedItemPosition();
-                if(position == 0) {
-                    Toast.makeText(CriarEventActivity.this, "Campo de estado não preenchido", Toast.LENGTH_LONG).show();
+                if (position == 0) {
+                    Toast.makeText(getContext(), "Campo de estado não preenchido", Toast.LENGTH_LONG).show();
                     btnCriar.setEnabled(true);
                     return;
                 }
@@ -95,7 +87,7 @@ public class CriarEventPresencialFragment extends Fragment {
                 EditText etCidadeCP =  view.findViewById(R.id.etCidadeCP);
                 final String newetCidadeCP = etCidadeCP.getText().toString();
                 if(newetCidadeCP.isEmpty()) {
-                    Toast.makeText(CriarEventActivity.this, "Campo de cidade não preenchido", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Campo de cidade não preenchido", Toast.LENGTH_LONG).show();
                     btnCriar.setEnabled(true);
                     return;
                 }
@@ -103,7 +95,7 @@ public class CriarEventPresencialFragment extends Fragment {
                 EditText etBairroCP =  view.findViewById(R.id.etBairroCP);
                 final String newetBairroCP = etBairroCP.getText().toString();
                 if(newetBairroCP.isEmpty()) {
-                    Toast.makeText(CriarEventActivity.this, "Campo de bairro não preenchido", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Campo de bairro não preenchido", Toast.LENGTH_LONG).show();
                     btnCriar.setEnabled(true);
                     return;
                 }
@@ -111,7 +103,7 @@ public class CriarEventPresencialFragment extends Fragment {
                 Spinner spTipoLogradouro = (Spinner)view.findViewById(R.id.spTipoLogradouro);
                 int position2 = spTipoLogradouro.getSelectedItemPosition();
                 if(position2 == 0) {
-                    Toast.makeText(CriarEventActivity.this, "Campo de tipo logradouro não preenchido", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Campo de tipo logradouro não preenchido", Toast.LENGTH_LONG).show();
                     btnCriar.setEnabled(true);
                     return;
                 }
@@ -119,7 +111,7 @@ public class CriarEventPresencialFragment extends Fragment {
                 EditText etLogradouroCP =  view.findViewById(R.id.etLogradouroCP);
                 final String newetLogradouroCP = etLogradouroCP.getText().toString();
                 if(newetLogradouroCP.isEmpty()) {
-                    Toast.makeText(CriarEventActivity.this, "Campo de logradouro não preenchido", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Campo de logradouro não preenchido", Toast.LENGTH_LONG).show();
                     btnCriar.setEnabled(true);
                     return;
                 }
@@ -127,7 +119,7 @@ public class CriarEventPresencialFragment extends Fragment {
                 EditText etNumeroCP =  view.findViewById(R.id.etNumeroCP);
                 final String newetNumeroCP = etNumeroCP.getText().toString();
                 if(newetNumeroCP.isEmpty()) {
-                    Toast.makeText(CriarEventActivity.this, "Campo de número não preenchido", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "Campo de número não preenchido", Toast.LENGTH_LONG).show();
                     btnCriar.setEnabled(true);
                     return;
                 }

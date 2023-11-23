@@ -7,12 +7,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -20,6 +20,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import java.io.File;
@@ -31,6 +33,7 @@ import java.util.Date;
 import sofia.lorena.esther.eventando.R;
 import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_online.CriarEventOnlineFragment;
 import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial.CriarEventPresencialFragment;
+import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial.EventPresencialActivity;
 import sofia.lorena.esther.eventando.model.CriarEventViewModel;
 import sofia.lorena.esther.eventando.util.Util;
 
@@ -49,12 +52,11 @@ public class CriarEventActivity extends AppCompatActivity {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if(i == R.id.btnPresencial){
-                    CriarEventPresencialFragment criarEventPresencialFragment = CriarEventPresencialFragment.newInstance();
+                if (i == R.id.btnPresencial) {
+                    CriarEventPresencialFragment criarEventPresencialFragment = CriarEventPresencialFragment.newInstance(CriarEventActivity.this);
                     setFragment(criarEventPresencialFragment, R.id.flInfoBasicas);
-                }
-                else{
-                    CriarEventOnlineFragment criarEventOnlineFragment = CriarEventOnlineFragment.newInstance();
+                } else {
+                    CriarEventOnlineFragment criarEventOnlineFragment = CriarEventOnlineFragment.newInstance(CriarEventActivity.this);
                     setFragment(criarEventOnlineFragment, R.id.flInfoBasicas);
                 }
             }
@@ -69,6 +71,14 @@ public class CriarEventActivity extends AppCompatActivity {
             RadioButton btnOnline = findViewById(R.id.btnOnline);
             btnOnline.setChecked(true);
         }
+
+        ImageView imFotoEvento = findViewById(R.id.imFotoEvento);
+        imFotoEvento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dispatchGalleryOrCameraIntent();
+            }
+        });
 
 
     }
@@ -155,6 +165,32 @@ public class CriarEventActivity extends AppCompatActivity {
             e.printStackTrace();
             return;
         }
+
+        LiveData<String> resultLD = criarEventViewModel.criarEventoPresencial(newetNomeEvento, newetObjetivoC, newetDataPrevistaC, newetHorarioC, currentPhotoPath, numero, tipoLogradouro, bairro, cidade, estado, cep, String.valueOf(privacidade));
+
+        // Aqui nós observamos o LiveData. Quando o servidor responder, o resultado indicando
+        // se o cadastro deu certo ou não será guardado dentro do LiveData. Neste momento o
+        // LiveData avisa que o resultado chegou chamando o método onChanged abaixo.
+        resultLD.observe(CriarEventActivity.this, new Observer<String>() {
+            @Override
+            public void onChanged(String id) {
+                // aBoolean contém o resultado do cadastro. Se aBoolean for true, significa
+                // que o cadastro do usuário foi feito corretamente. Indicamos isso ao usuário
+                // através de uma mensagem do tipo toast e finalizamos a Activity. Quando
+                // finalizamos a Activity, voltamos para a tela de login.
+                if(!id.isEmpty()) {
+                    Toast.makeText(CriarEventActivity.this, "Novo evento criado com sucesso", Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(CriarEventActivity.this, EventPresencialActivity.class);
+                    i.putExtra("id", id);
+                    startActivity(i);
+                }
+                else {
+                    // Se o cadastro não deu certo, apenas continuamos na tela de cadastro e
+                    // indicamos com uma mensagem ao usuário que o cadastro não deu certo.
+                    Toast.makeText(CriarEventActivity.this, "Erro ao criar novo evento", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
     public void cadastrarEventoOnline(int plataforma, String link, Button btnCriar){
@@ -232,7 +268,10 @@ public class CriarEventActivity extends AppCompatActivity {
             e.printStackTrace();
             return;
         }
+        criarEventViewModel.criarEventoOnline(newetNomeEvento, newetObjetivoC, newetDataPrevistaC, newetHorarioC, currentPhotoPath,link, plataforma, String.valueOf(privacidade));
     }
+
+
 
     private void dispatchGalleryOrCameraIntent() {
 
@@ -332,7 +371,4 @@ public class CriarEventActivity extends AppCompatActivity {
             }
         }
     }
-
-
-
 }

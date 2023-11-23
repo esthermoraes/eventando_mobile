@@ -22,7 +22,7 @@ public class ViewEventViewModel extends AndroidViewModel {
          * @param pid id do produto que se quer obter os detalhes
          * @return um LiveData que vai conter a resposta do servidor quando esta estiver disponível
          */
-        public LiveData<Event> getProductDetailsLD(String pid) {
+        public LiveData<Event> getEventDetailsLD(String pid) {
 
             // Cria um container do tipo MutableLiveData (um LiveData que pode ter seu conteúdo alterado).
             MutableLiveData<Event> eventDetailLD = new MutableLiveData<>();

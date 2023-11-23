@@ -8,37 +8,38 @@
     tools:context=".acessar.LoginActivity">
 
     <ImageView
-        android:id="@+id/imLogoLogin"
-        android:layout_width="0dp"
-        android:layout_height="193dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:background="@mipmap/logo_login"
+        android:id="@+id/imageView"
+        android:layout_width="324dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_login" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/painelogin_bg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imLogoLogin">
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <EditText
             android:id="@+id/emEmailLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/editext_bg"
             android:ems="10"
             android:fontFamily="@font/montserrat"
@@ -55,9 +56,9 @@
             android:id="@+id/pwdSenhaLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/editext_bg"
             android:ems="10"
             android:hint="Senha"
@@ -73,9 +74,10 @@
             android:id="@+id/btnEntrar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="#B25ABF"
             android:fontFamily="@font/montserrat"
             android:forceHasOverlappingRendering="false"
@@ -84,35 +86,13 @@
             android:textSize="12sp"
             android:textStyle="bold"
             app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pwdSenhaLogin"
             app:strokeColor="#ffffff"
             app:strokeWidth="2dp" />
 
-        <Button
-            android:id="@+id/btnEntrarG"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#FFFF"
-            android:fontFamily="@font/montserrat"
-            android:text="ENTRAR COM O GOOGLE"
-            android:textColor="#B25ABF"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:cornerRadius="8dp"
-            app:icon="@android:drawable/radiobutton_off_background"
-            app:iconTint="#b25abf"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
-            app:strokeColor="#b25abf"
-            app:strokeWidth="2dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -133,22 +113,6 @@
         app:strokeColor="#bedef2"
         app:strokeWidth="@dimen/cardview_default_radius" />
 
-    <ImageView
-        android:id="@+id/imRodape"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@mipmap/rodape"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCadastreSe"
-        app:layout_constraintVertical_bias="1.0" />
-
     <Button
         android:id="@+id/btnCadastreSe"
         android:layout_width="wrap_content"
@@ -163,5 +127,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEsqueciSenha" />
+
+    <ImageView
+        android:id="@+id/imgRodape"
+        android:layout_width="201dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastreSe"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/rodape" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

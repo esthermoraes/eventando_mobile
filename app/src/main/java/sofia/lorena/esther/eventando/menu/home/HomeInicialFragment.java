@@ -5,9 +5,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.paging.PagingData;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import sofia.lorena.esther.eventando.R;
+import sofia.lorena.esther.eventando.adapter.EventComparator;
+import sofia.lorena.esther.eventando.adapter.EventosAdapter;
+import sofia.lorena.esther.eventando.model.Event;
+import sofia.lorena.esther.eventando.model.HomeViewModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,22 +50,14 @@ public class HomeInicialFragment extends Fragment {
      * @return A new instance of fragment fragment_home_inicial.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomeInicialFragment newInstance(String param1, String param2) {
+    public static HomeInicialFragment newInstance() {
         HomeInicialFragment fragment = new HomeInicialFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -61,5 +65,32 @@ public class HomeInicialFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home_inicial, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Configura o RecyclerView no fragmento
+        RecyclerView rvListEvents = view.findViewById(R.id.rvListEvents);
+        rvListEvents.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        rvListEvents.setLayoutManager(layoutManager);
+        EventosAdapter eventosAdapter = new EventosAdapter((HomeActivity) getActivity(), new EventComparator());
+        rvListEvents.setAdapter(eventosAdapter);
+
+        // Obtemos o ViewModel
+        HomeViewModel homeViewModel = new ViewModelProvider(getActivity()).get(HomeViewModel.class);
+
+        // Obtém o LiveData dos eventos
+        LiveData<PagingData<Event>> eventsLd = homeViewModel.getEventsLiveData();
+
+        // Observa o LiveData dos eventos
+        eventsLd.observe(getViewLifecycleOwner(), new Observer<PagingData<Event>>() {
+            @Override
+            public void onChanged(PagingData<Event> eventPagingData) {
+                eventosAdapter.submitData(getLifecycle(), eventPagingData);
+            }
+        });
     }
 }

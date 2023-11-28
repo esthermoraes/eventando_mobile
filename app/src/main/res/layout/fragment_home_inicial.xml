@@ -5,6 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".menu.home.HomeInicialFragment">
 
     <TextView
@@ -21,21 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-        android:id="@+id/carouselEventsR"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        app:carouselBackground="#dccce0"
-        app:showNavigationButtons="false"
-        app:showBottomShadow="false"
-        app:showTopShadow="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEventosR"></org.imaginativeworld.whynotimagecarousel.ImageCarousel>
-
 
     <TextView
         android:id="@+id/tvMeusE"
@@ -49,25 +35,47 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carouselEventsR" />
+        app:layout_constraintTop_toBottomOf="@+id/lLayoutER" />
 
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-        android:id="@+id/carouselMyEvents"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/lLayoutER"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        app:carouselBackground="#dccce0"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMeusE"
-        app:showBottomShadow="false"
-        app:showNavigationButtons="false"
-        app:showTopShadow="false">
+        app:layout_constraintTop_toBottomOf="@+id/tvEventosR">
 
-    </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEventsR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#dccce0"
+            android:scrollbars="horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lLayoutM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMeusE">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEventsM"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#dccce0"
+            android:scrollbars="horizontal" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvListEvents"
@@ -76,9 +84,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carouselMyEvents" />
+        app:layout_constraintTop_toBottomOf="@+id/lLayoutM" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

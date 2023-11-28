@@ -111,12 +111,12 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/tvLinkO"
         app:layout_constraintEnd_toStartOf="@+id/etNumeroCP"
-        app:layout_constraintStart_toEndOf="@+id/etTipoLogradouroCP"
+        app:layout_constraintStart_toEndOf="@+id/spTipoLogradouroCP"
         app:layout_constraintTop_toBottomOf="@+id/etBairroCP"
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
-        android:id="@+id/etTipoLogradouroCP"
+        android:id="@+id/spTipoLogradouroCP"
         android:layout_width="114dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -162,7 +162,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTipoLogradouroCP"
+        app:layout_constraintTop_toBottomOf="@+id/spTipoLogradouroCP"
         app:strokeColor="#ffffff"
         app:strokeWidth="2dp" />
 

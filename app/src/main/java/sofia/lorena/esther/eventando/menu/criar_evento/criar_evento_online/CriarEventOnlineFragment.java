@@ -68,33 +68,33 @@ public class CriarEventOnlineFragment extends Fragment {
         Button btnCriar = view.findViewById(R.id.btnCriarO);
         btnCriar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
                 btnCriar.setEnabled(false);
-                Spinner spPlataformaO = view.findViewById(R.id.spPlataformaO);
+                Spinner spPlataformaO = view.findViewById(R.id.spPlataformaCO);
 
-                if (spPlataformaO != null) {
-                    int position = spPlataformaO.getSelectedItemPosition();
+                int position = spPlataformaO.getSelectedItemPosition();
 
-                    EditText etLinkCO = view.findViewById(R.id.etLinkCO);
-                    final String newetLinkCO = etLinkCO.getText().toString();
+                EditText etLinkCO = view.findViewById(R.id.etLinkCO);
+                final String newetLinkCO = etLinkCO.getText().toString();
 
-                    if (position != Spinner.INVALID_POSITION) {
-                        // posição válida
-                        if (newetLinkCO.isEmpty()) {
-                            Toast.makeText(requireContext(), "Campo de link não preenchido", Toast.LENGTH_LONG).show();
-                            btnCriar.setEnabled(true);
-                            return;
-                        }
-
-                        criarEventActivity.cadastrarEventoOnline(position, newetLinkCO, btnCriar);
-                    } else {
-                        // posição inválida
-                        Toast.makeText(requireContext(), "Campo de plataforma não preenchido", Toast.LENGTH_LONG).show();
+                if (position != Spinner.INVALID_POSITION) {
+                    // posição válida
+                    if (newetLinkCO.isEmpty()) {
+                        Toast.makeText(requireContext(), "Campo de link não preenchido", Toast.LENGTH_LONG).show();
                         btnCriar.setEnabled(true);
+                        return;
                     }
+
+                    criarEventActivity.cadastrarEventoOnline(position, newetLinkCO, btnCriar);
+                } else {
+                    // posição inválida
+                    Toast.makeText(requireContext(), "Campo de plataforma não preenchido", Toast.LENGTH_LONG).show();
+                    btnCriar.setEnabled(true);
                 }
+                criarEventActivity.cadastrarEventoOnline(position, newetLinkCO, btnCriar );
             }
+
         });
     }
 }

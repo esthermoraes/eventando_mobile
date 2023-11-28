@@ -304,6 +304,7 @@ public class EventandoRepository {
         httpRequest.addParam("plataforma_evento", Integer.toString(plataforma_evento));
         httpRequest.addParam("privacidade_evento", privacidade);
         httpRequest.addParam("formato_evento", "online");
+        httpRequest.addParam("criador_evento", login);
 
         // Para esta ação, é preciso estar logado. Então na requisição HTTP setamos o login e senha do
         // usuário. Ao executar a requisição, o login e senha do usuário serão enviados ao servidor web,

@@ -64,10 +64,10 @@ public class CriarEventPresencialFragment extends Fragment {
         Button btnCriar = view.findViewById(R.id.btnCriarP);
         btnCriar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 btnCriar.setEnabled(false);
 
-                EditText etCepCP = getView().findViewById(R.id.etCepCP);
+                EditText etCepCP = view.findViewById(R.id.etCepCP);
                 final String newetCepCP = etCepCP.getText().toString();
 
                 if (newetCepCP.isEmpty()) {
@@ -100,7 +100,7 @@ public class CriarEventPresencialFragment extends Fragment {
                     return;
                 }
 
-                Spinner spTipoLogradouro = (Spinner)view.findViewById(R.id.spTipoLogradouro);
+                Spinner spTipoLogradouro = (Spinner)view.findViewById(R.id.spTipoLogradouroCP);
                 int position2 = spTipoLogradouro.getSelectedItemPosition();
                 if(position2 == 0) {
                     Toast.makeText(getContext(), "Campo de tipo logradouro não preenchido", Toast.LENGTH_LONG).show();

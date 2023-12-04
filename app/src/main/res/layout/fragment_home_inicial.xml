@@ -39,7 +39,7 @@
             android:id="@+id/rvEventsDoMomento"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#dccce0"
+            android:background="@drawable/painelevents_bg"
             android:scrollbars="horizontal" />
     </LinearLayout>
 

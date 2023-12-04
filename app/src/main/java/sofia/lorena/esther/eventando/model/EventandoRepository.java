@@ -519,7 +519,7 @@ public class EventandoRepository {
 
                 // A chave produtos é um array de objetos do tipo json (JSONArray), onde cada um desses representa
                 // um produto
-                JSONArray jsonArray = jsonObject.getJSONArray("meus eventos");
+                JSONArray jsonArray = jsonObject.getJSONArray("eventos");
 
                 // Cada elemento do JSONArray é um JSONObject que guarda os dados de um produto
                 for(int i = 0; i < jsonArray.length(); i++) {
@@ -617,7 +617,7 @@ public class EventandoRepository {
 
                 // A chave produtos é um array de objetos do tipo json (JSONArray), onde cada um desses representa
                 // um produto
-                JSONArray jsonArray = jsonObject.getJSONArray("eventos do momento");
+                JSONArray jsonArray = jsonObject.getJSONArray("eventos");
 
                 // Cada elemento do JSONArray é um JSONObject que guarda os dados de um produto
                 for(int i = 0; i < jsonArray.length(); i++) {

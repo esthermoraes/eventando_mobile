@@ -31,7 +31,7 @@ public class EventosAdapter extends PagingDataAdapter<Event, MyViewHolder> {
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View v = inflater.inflate(R.layout.event_carousel_item, parent, false);
+        View v = inflater.inflate(R.layout.event_lista_item, parent, false);
         MyViewHolder viewHolder = new MyViewHolder(v);
         return viewHolder;
     }
@@ -48,6 +48,9 @@ public class EventosAdapter extends PagingDataAdapter<Event, MyViewHolder> {
 
         TextView tvDataF = holder.itemView.findViewById(R.id.tvDataF);
         tvDataF.setText(event.data);
+
+        TextView tvObjetivoF = holder.itemView.findViewById(R.id.tvObjetivoF);
+        tvObjetivoF.setText(event.objetivo);
 
         // preenche o campo de foto
         int w = (int) homeActivity.getResources().getDimension(R.dimen.thumb_width);

@@ -76,7 +76,7 @@ public class MyEventsFragment extends Fragment {
         HomeViewModel homeViewModel = new ViewModelProvider(getActivity()).get(HomeViewModel.class);
 
         // Obtém o LiveData dos eventos
-        LiveData<PagingData<Event>> myEventsLd = homeViewModel.getEventsLiveData();
+        LiveData<PagingData<Event>> myEventsLd = homeViewModel.getMyEventsLiveData();
 
         // Observa o LiveData dos eventos
         myEventsLd.observe(getViewLifecycleOwner(), new Observer<PagingData<Event>>() {

@@ -15,9 +15,11 @@ import androidx.paging.PagingData;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 import sofia.lorena.esther.eventando.R;
 import sofia.lorena.esther.eventando.adapter.EventComparator;
-import sofia.lorena.esther.eventando.adapter.EventDoMomentoComparator;
+import sofia.lorena.esther.eventando.adapter.EventDoMomentoAdapter;
 import sofia.lorena.esther.eventando.adapter.EventosAdapter;
 import sofia.lorena.esther.eventando.model.Event;
 import sofia.lorena.esther.eventando.model.HomeViewModel;
@@ -42,15 +44,6 @@ public class HomeInicialFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment fragment_home_inicial.
-     */
-    // TODO: Rename and change types and number of parameters
     public static HomeInicialFragment newInstance() {
         HomeInicialFragment fragment = new HomeInicialFragment();
         return fragment;
@@ -80,12 +73,6 @@ public class HomeInicialFragment extends Fragment {
         EventosAdapter eventosAdapter = new EventosAdapter((HomeActivity) getActivity(), new EventComparator());
         rvListEvents.setAdapter(eventosAdapter);
 
-        RecyclerView rvEventsDoMomento = view.findViewById(R.id.rvEventsDoMomento);
-        rvEventsDoMomento.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-        rvEventsDoMomento.setLayoutManager(layoutManager);
-        EventosDoMomentoAdapter eventosDoMomentoAdapter = new EventosDoMomentoAdapter((HomeActivity) getActivity(), new EventDoMomentoComparator();
-        rvEventsDoMomento.setAdapter(eventosDoMomentoAdapter);
 
         // Obtemos o ViewModel
         HomeViewModel homeViewModel = new ViewModelProvider(getActivity()).get(HomeViewModel.class);
@@ -100,7 +87,23 @@ public class HomeInicialFragment extends Fragment {
                 eventosAdapter.submitData(getLifecycle(), eventPagingData);
             }
         });
-    }
 
+        RecyclerView rvEventsDoMomento = view.findViewById(R.id.rvEventsDoMomento);
+        rvEventsDoMomento.setHasFixedSize(true);
+        RecyclerView.LayoutManager    layoutManager1 = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+        rvEventsDoMomento.setLayoutManager(layoutManager1);
+
+
+
+        LiveData<List<Event>> eventsDoMomentoLd = homeViewModel.getEventsDoMomento();
+        // Observa o LiveData dos eventos
+        eventsDoMomentoLd.observe(getViewLifecycleOwner(), new Observer<List<Event>>() {
+            @Override
+            public void onChanged(List<Event> events) {
+                EventDoMomentoAdapter eventDoMomentoAdapter = new EventDoMomentoAdapter((HomeActivity) getActivity(), events);
+                rvEventsDoMomento.setAdapter(eventDoMomentoAdapter);
+            }
+        });
+    }
 
 }

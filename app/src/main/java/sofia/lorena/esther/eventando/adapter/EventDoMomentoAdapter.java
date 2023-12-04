@@ -7,21 +7,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.paging.PagingDataAdapter;
-import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 import sofia.lorena.esther.eventando.R;
 import sofia.lorena.esther.eventando.menu.home.HomeActivity;
 import sofia.lorena.esther.eventando.model.Event;
 import sofia.lorena.esther.eventando.util.ImageCache;
 
-    public class EventDoMomentoAdapter extends PagingDataAdapter<Event, MyViewHolder> {
+    public class EventDoMomentoAdapter extends RecyclerView.Adapter {
 
         HomeActivity homeActivity;
 
-        public EventDoMomentoAdapter(HomeActivity homeActivity, @NonNull DiffUtil.ItemCallback<Event> diffCallback) {
-            super(diffCallback);
+        List<Event> events;
+
+        public EventDoMomentoAdapter(HomeActivity homeActivity, List<Event> events) {
             this.homeActivity = homeActivity;
+            this.events = events;
         }
 
         /**
@@ -31,23 +34,18 @@ import sofia.lorena.esther.eventando.util.ImageCache;
         @Override
         public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            View v = inflater.inflate(R.layout.event_lista_item, parent, false);
+            View v = inflater.inflate(R.layout.event_carousel_item, parent, false);
             MyViewHolder viewHolder = new MyViewHolder(v);
             return viewHolder;
         }
 
-        /**
-         * Preenche um item da lista
-         */
         @Override
-        public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-            Event event = this.getItem(position);
+        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+            Event event = events.get(position);
 
             TextView tvNomeF = holder.itemView.findViewById(R.id.tvNomeF);
             tvNomeF.setText(event.nome);
 
-            TextView tvObjetivoF = holder.itemView.findViewById(R.id.tvObjetivoF);
-            tvObjetivoF.setText(event.objetivo);  // Corrigido o nome do atributo
 
             TextView tvDataF = holder.itemView.findViewById(R.id.tvDataF);
             tvDataF.setText(event.data);
@@ -69,6 +67,12 @@ import sofia.lorena.esther.eventando.util.ImageCache;
                     //homeActivity.startViewProductActivity(event.id, HomeActivity.this);
                 }
             });
-
         }
+
+        @Override
+        public int getItemCount() {
+            return events.size();
+        }
+
+
     }

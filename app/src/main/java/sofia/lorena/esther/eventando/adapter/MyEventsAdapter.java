@@ -15,11 +15,11 @@ import sofia.lorena.esther.eventando.menu.home.HomeActivity;
 import sofia.lorena.esther.eventando.model.Event;
 import sofia.lorena.esther.eventando.util.ImageCache;
 
-public class EventosAdapter extends PagingDataAdapter<Event, MyViewHolder> {
+public class MyEventsAdapter extends PagingDataAdapter<Event, MyViewHolder> {
 
     HomeActivity homeActivity;
 
-    public EventosAdapter(HomeActivity homeActivity, @NonNull DiffUtil.ItemCallback<Event> diffCallback) {
+    public MyEventsAdapter(HomeActivity homeActivity, @NonNull DiffUtil.ItemCallback<Event> diffCallback) {
         super(diffCallback);
         this.homeActivity = homeActivity;
     }
@@ -31,7 +31,7 @@ public class EventosAdapter extends PagingDataAdapter<Event, MyViewHolder> {
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View v = inflater.inflate(R.layout.event_carousel_item, parent, false);
+        View v = inflater.inflate(R.layout.event_lista_item, parent, false);
         MyViewHolder viewHolder = new MyViewHolder(v);
         return viewHolder;
     }
@@ -45,6 +45,9 @@ public class EventosAdapter extends PagingDataAdapter<Event, MyViewHolder> {
 
         TextView tvNomeF = holder.itemView.findViewById(R.id.tvNomeF);
         tvNomeF.setText(event.nome);
+
+        TextView tvObjetivoF = holder.itemView.findViewById(R.id.tvObjetivoF);
+        tvObjetivoF.setText(event.objetivo);  // Corrigido o nome do atributo
 
         TextView tvDataF = holder.itemView.findViewById(R.id.tvDataF);
         tvDataF.setText(event.data);

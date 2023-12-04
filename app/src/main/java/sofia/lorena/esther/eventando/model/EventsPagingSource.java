@@ -81,15 +81,16 @@ public class EventsPagingSource extends ListenableFuturePagingSource<Integer, Ev
              */
             @Override
             public LoadResult<Integer, Event> call() {
-                List<Event> productsList = null;
+                List<Event> eventsList = null;
                 // envia uma requisição para o servidor web pedindo por uma nova página de dados (bloco de produtos)
-                productsList = eventandoRepository.loadEvents(loadParams.getLoadSize(), finalOffSet);
+                eventsList = eventandoRepository.loadEvents(loadParams.getLoadSize(), finalOffSet);
                 Integer nextKey = null;
-                if(productsList.size() >= loadParams.getLoadSize()) {
+                if(eventsList.size() >= loadParams.getLoadSize()) {
                     nextKey = finalNextPageNumber + 1;
                 }
+
                 // monta uma página do padrão da biblioteca Paging 3.
-                return new LoadResult.Page<Integer, Event>(productsList,
+                return new LoadResult.Page<Integer, Event>(eventsList,
                         null,
                         nextKey);
             }

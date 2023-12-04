@@ -75,7 +75,7 @@ public class CriarEventViewModel extends AndroidViewModel {
         return result;
     }
 
-    public LiveData<String> criarEventoPresencial(String nome, String objetivo, String data, String hora, String imagem, String numero, int tipo_logradouro, String bairro_evento, String cidade_evento, int estado_evento, String cep, String privacidade) {
+    public LiveData<String> criarEventoPresencial(String nome, String objetivo, String data, String hora, String imagem, String numero, int tipo_logradouro, String logradouro, String bairro_evento, String cidade_evento, int estado_evento, String cep, String privacidade) {
 
         // Cria um container do tipo MutableLiveData (um LiveData que pode ter seu conteúdo alterado).
         MutableLiveData<String> result = new MutableLiveData<>();
@@ -101,7 +101,7 @@ public class CriarEventViewModel extends AndroidViewModel {
                 // O método addProduct envia os dados de um novo produto ao servidor. Ele retorna
                 // um booleano indicando true caso o produto tenha sido cadastrado e false
                 // em caso contrário
-                String id = eventandoRepository.criarEventoPresencial(nome, objetivo, data, hora, imagem, numero, tipo_logradouro, bairro_evento, cidade_evento, estado_evento, cep, privacidade);
+                String id = eventandoRepository.criarEventoPresencial(nome, objetivo, data, hora, imagem, numero, tipo_logradouro, logradouro, bairro_evento, cidade_evento, estado_evento, cep, privacidade);
 
                 // Aqui postamos o resultado da operação dentro do LiveData. Quando fazemos isso,
                 // quem estiver observando o LiveData será avisado de que o resultado está disponível.

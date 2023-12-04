@@ -10,7 +10,7 @@ public class Event {
     public String idcriadorEvento; // quem criou o evento
 
     public String nome;
-    public String obejtivo;
+    public String objetivo;
 
     public String data; // OLHAR DEPOIS DATE
     public String hora; // OLHAR DEPOIS TIME

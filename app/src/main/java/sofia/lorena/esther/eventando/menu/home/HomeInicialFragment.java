@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import sofia.lorena.esther.eventando.R;
 import sofia.lorena.esther.eventando.adapter.EventComparator;
+import sofia.lorena.esther.eventando.adapter.EventDoMomentoComparator;
 import sofia.lorena.esther.eventando.adapter.EventosAdapter;
 import sofia.lorena.esther.eventando.model.Event;
 import sofia.lorena.esther.eventando.model.HomeViewModel;
@@ -79,6 +80,13 @@ public class HomeInicialFragment extends Fragment {
         EventosAdapter eventosAdapter = new EventosAdapter((HomeActivity) getActivity(), new EventComparator());
         rvListEvents.setAdapter(eventosAdapter);
 
+        RecyclerView rvEventsDoMomento = view.findViewById(R.id.rvEventsDoMomento);
+        rvEventsDoMomento.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        rvEventsDoMomento.setLayoutManager(layoutManager);
+        EventosDoMomentoAdapter eventosDoMomentoAdapter = new EventosDoMomentoAdapter((HomeActivity) getActivity(), new EventDoMomentoComparator();
+        rvEventsDoMomento.setAdapter(eventosDoMomentoAdapter);
+
         // Obtemos o ViewModel
         HomeViewModel homeViewModel = new ViewModelProvider(getActivity()).get(HomeViewModel.class);
 
@@ -93,4 +101,6 @@ public class HomeInicialFragment extends Fragment {
             }
         });
     }
+
+
 }

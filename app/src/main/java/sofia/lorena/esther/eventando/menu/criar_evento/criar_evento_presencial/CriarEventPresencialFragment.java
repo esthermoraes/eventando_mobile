@@ -123,7 +123,7 @@ public class CriarEventPresencialFragment extends Fragment {
                     btnCriar.setEnabled(true);
                     return;
                 }
-                criarEventActivity.cadastrarEventoPresencial(newetCepCP, position, newetCidadeCP, newetBairroCP, position2, newetLogradouroCP, newetNumeroCP, btnCriar );
+                criarEventActivity.cadastrarEventoPresencial(newetCepCP, String.valueOf(position), newetCidadeCP, newetBairroCP, String.valueOf(position2), newetLogradouroCP, newetNumeroCP, btnCriar );
             }
         });
     }

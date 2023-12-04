@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.DiffUtil;
 
 import sofia.lorena.esther.eventando.model.Event;
 
-public class EventComparator extends DiffUtil.ItemCallback<Event> {
+    public class EventDoMomentoComparator extends DiffUtil.ItemCallback<Event> {
         @Override
         public boolean areItemsTheSame(@NonNull Event oldItem, @NonNull Event newItem) {
             return oldItem.id.equals(newItem.id);
@@ -15,8 +15,6 @@ public class EventComparator extends DiffUtil.ItemCallback<Event> {
         public boolean areContentsTheSame(@NonNull Event oldItem, @NonNull Event newItem) {
             return oldItem.id.equals(newItem.id) &&
                     oldItem.nome.equals(newItem.nome) &&
-                    oldItem.objetivo.equals(newItem.objetivo) &&
                     oldItem.data.equals(newItem.data);
         }
-    }
-
+}

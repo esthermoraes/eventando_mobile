@@ -24,6 +24,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
         app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
+    <ImageButton
+        android:id="@+id/icEstrelaF3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/imFotoEvento"
+        app:layout_constraintTop_toTopOf="@+id/imFotoEvento"
+        app:srcCompat="@drawable/baseline_star_border_24" />
+
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"

@@ -22,12 +22,11 @@ public class HomeViewModel extends AndroidViewModel {
     public HomeViewModel(@NonNull Application application) {
         super(application);
 
-        EventandoRepository productsRepository = new EventandoRepository(getApplication());
+        EventandoRepository eventandoRepository = new EventandoRepository(getApplication());
         CoroutineScope viewModelScope = ViewModelKt.getViewModelScope(this);
-        Pager<Integer, Event> pager = new Pager(new PagingConfig(10), () -> new EventsPagingSource(productsRepository));
+        Pager<Integer, Event> pager = new Pager(new PagingConfig(10), () -> new EventsPagingSource(eventandoRepository));
         eventsLd = PagingLiveData.cachedIn(PagingLiveData.getLiveData(pager), viewModelScope);
     }
-
     public LiveData<PagingData<Event>> getEventsLiveData() {
         return eventsLd;
     }

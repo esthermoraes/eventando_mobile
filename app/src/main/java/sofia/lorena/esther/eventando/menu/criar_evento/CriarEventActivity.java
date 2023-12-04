@@ -93,7 +93,7 @@ public class CriarEventActivity extends AppCompatActivity {
                 .commit();
     }
 
-    public void cadastrarEventoPresencial(String cep, int estado, String cidade, String bairro, int tipoLogradouro, String logradouro, String numero, Button btnCriar) {
+    public void cadastrarEventoPresencial(String cep, String estado, String cidade, String bairro, String tipoLogradouro, String logradouro, String numero, Button btnCriar) {
 
         CriarEventViewModel criarEventViewModel = new ViewModelProvider(this).get(CriarEventViewModel.class);
 
@@ -167,7 +167,7 @@ public class CriarEventActivity extends AppCompatActivity {
             return;
         }
 
-        LiveData<String> resultLD = criarEventViewModel.criarEventoPresencial(newetNomeEvento, newetObjetivoC, newetDataPrevistaC, newetHorarioC, currentPhotoPath, numero, tipoLogradouro, bairro, cidade, estado, cep, String.valueOf(privacidade));
+        LiveData<String> resultLD = criarEventViewModel.criarEventoPresencial(newetNomeEvento, newetObjetivoC, newetDataPrevistaC, newetHorarioC, currentPhotoPath, numero, Integer.parseInt(tipoLogradouro), logradouro, bairro, cidade, Integer.parseInt(estado), cep, String.valueOf(privacidade));
 
         // Aqui nós observamos o LiveData. Quando o servidor responder, o resultado indicando
         // se o cadastro deu certo ou não será guardado dentro do LiveData. Neste momento o

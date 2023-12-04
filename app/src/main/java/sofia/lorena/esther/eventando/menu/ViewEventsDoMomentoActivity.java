@@ -1,5 +1,4 @@
-package sofia.lorena.esther.eventando.menu.criar_evento;
-
+package sofia.lorena.esther.eventando.menu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,11 +16,11 @@ import sofia.lorena.esther.eventando.model.Event;
 import sofia.lorena.esther.eventando.model.ViewEventViewModel;
 import sofia.lorena.esther.eventando.util.ImageCache;
 
-public class ViewEventActivity extends AppCompatActivity {
+public class ViewEventsDoMomentoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.event_lista_item);
+        setContentView(R.layout.event_carousel_item);
 
         // Para obter os detalhes do produto, a app envia o id do produto ao servidor web. Este
         // último responde com os detalhes do produto referente ao pid.
@@ -58,8 +57,8 @@ public class ViewEventActivity extends AppCompatActivity {
                     // A classe ImageCache obtém a imagem de um produto específico, guarda em um cache
                     // o seta em um ImageView fornecido.
                     ImageView imvProductPhoto = findViewById(R.id.imFotoEventoF);
-                    int imgHeight = (int) ViewEventActivity.this.getResources().getDimension(R.dimen.img_height);
-                    ImageCache.loadImageUrlToImageView(ViewEventActivity.this, event.imagem, imvProductPhoto, -1, imgHeight);
+                    int imgHeight = (int) ViewEventsDoMomentoActivity.this.getResources().getDimension(R.dimen.img_carrossel_height);
+                    ImageCache.loadImageUrlToImageView(ViewEventsDoMomentoActivity.this, event.imagem, imvProductPhoto, -1, imgHeight);
 
                     // Abaixo nós obtemos os dados do produto e setamos na interfa de usuário
                     TextView tvNomeF = findViewById(R.id.tvNomeF);
@@ -69,14 +68,16 @@ public class ViewEventActivity extends AppCompatActivity {
                     tvObjetivoF.setText(event.objetivo);
 
                     TextView tvDataF = findViewById(R.id.tvDataF);
-                    tvDataF.setText(event.data);
+                    tvObjetivoF.setText(event.data);
 
                 }
                 else {
-                    Toast.makeText(ViewEventActivity.this, "Não foi possível obter os detalhes do evento", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ViewEventsDoMomentoActivity.this, "Não foi possível obter os detalhes do evento", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
 
 }
+
+

@@ -14,14 +14,15 @@ import androidx.lifecycle.ViewModelProvider;
 
 import sofia.lorena.esther.eventando.R;
 import sofia.lorena.esther.eventando.model.Event;
+import sofia.lorena.esther.eventando.model.EventOnline;
 import sofia.lorena.esther.eventando.model.ViewEventViewModel;
 import sofia.lorena.esther.eventando.util.ImageCache;
 
-public class ViewEventActivity extends AppCompatActivity {
+public class ViewEventOnlineActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.event_lista_item);
+        setContentView(R.layout.activity_visualizar_eventos_online_nao_editavel);
 
         // Para obter os detalhes do produto, a app envia o id do produto ao servidor web. Este
         // último responde com os detalhes do produto referente ao pid.
@@ -32,7 +33,7 @@ public class ViewEventActivity extends AppCompatActivity {
         String pid = i.getStringExtra("pid");
 
         // obtemos o ViewModel pois é nele que está o método que se conecta ao servior web.
-        ViewEventViewModel viewEventViewModel = new ViewModelProvider(this).get(ViewEventViewModel.class);
+        ViewEventOnlineActivity ViewEventOnlineViewModel = new ViewModelProvider(this).get(ViewEventOnlineViewModel.class);
 
         // O ViewModel possui o método getProductDetailsLD, que obtém os detalhes de um produto em
         // específico do servidor web.
@@ -40,40 +41,62 @@ public class ViewEventActivity extends AppCompatActivity {
         // O método getProductDetailsLD retorna um LiveData, que na prática é um container que avisa
         // quando o resultado do servidor chegou. Ele guarda os detalhes de um produto que o servidor
         // entregou para a app.
-        LiveData<Event> event = viewEventViewModel.getEventDetailsLD(pid);
+        LiveData<EventOnline> eventOnline = ViewEventOnlineViewModel.loadEventOnlineDetail(pid);
 
         // Aqui nós observamos o LiveData. Quando o servidor responder, o resultado contendo uma produto
         // será guardado dentro do LiveData. Neste momento o
         // LiveData avisa que o produto chegou chamando o método onChanged abaixo.
-        event.observe(this, new Observer<Event>() {
+        eventOnline.observe(this, new Observer<EventOnline>() {
             @Override
-            public void onChanged(Event event) {
+            public void onChanged(EventOnline eventOnline) {
 
                 // product contém os detalhes do produto que foram entregues pelo servidor web
-                if(event != null) {
+                if(eventOnline != null) {
 
                     // aqui nós obtemos a imagem do produto. A imagem não vem logo de cara. Primeiro
                     // obtemos os detalhes do produto. Uma vez recebidos os campos de id, nome, preço,
                     // descrição, criado por, usamos o id para obter a imagem do produto em separado.
                     // A classe ImageCache obtém a imagem de um produto específico, guarda em um cache
                     // o seta em um ImageView fornecido.
-                    ImageView imvProductPhoto = findViewById(R.id.imFotoEventoF);
-                    int imgHeight = (int) ViewEventActivity.this.getResources().getDimension(R.dimen.img_height);
-                    ImageCache.loadImageUrlToImageView(ViewEventActivity.this, event.imagem, imvProductPhoto, -1, imgHeight);
+                    ImageView imvProductPhoto = findViewById(R.id.imFotoEvento);
+                    int imgHeight = (int) ViewEventOnlineActivity.this.getResources().getDimension(R.dimen.img_height);
+                    ImageCache.loadImageUrlToImageView(ViewEventOnlineActivity.this, eventOnline.imagem, imvProductPhoto, -1, imgHeight);
 
                     // Abaixo nós obtemos os dados do produto e setamos na interfa de usuário
-                    TextView tvNomeF = findViewById(R.id.tvNomeF);
-                    tvNomeF.setText(event.nome);
+                    TextView tvNomeF = findViewById(R.id.tvNomeEvento);
+                    tvNomeF.setText(eventOnline.nome);
+
+                    TextView tvPrivacidade = findViewById(R.id.tvOnline);
+                    tvPrivacidade.setText(eventOnline.privacidade);
 
                     TextView tvObjetivoF = findViewById(R.id.tvObjetivoF);
-                    tvObjetivoF.setText(event.objetivo);
+                    tvObjetivoF.setText(eventOnline.objetivo);
 
-                    TextView tvDataF = findViewById(R.id.tvDataF);
-                    tvDataF.setText(event.data);
+                    TextView tvDataPrevista = findViewById(R.id.tvDataPrevistaO);
+                    tvDataPrevista.setText(eventOnline.data);
+
+                    TextView tvHora = findViewById(R.id.tvHorarioO);
+                    tvHora.setText(eventOnline.hora);
+
+                    TextView tvPlataforma = findViewById(R.id.tvPlataformaO);
+                    tvPlataforma.setText(eventOnline.plataforma);
+
+                    TextView tvLink = findViewById(R.id.tvLinkO);
+                    tvLink.setText(eventOnline.link);
+
+                    TextView tvAtracoes = findViewById(R.id.tvAtracoes0);
+                    tvAtracoes.setText(eventOnline.atracoes);
+
+                    TextView tvTipoContato = findViewById(R.id.tvTipoContato0);
+                    tvTipoContato.setText(eventOnline.tipo_contato);
+
+                    TextView tvContato0 = findViewById(R.id.tvContato0);
+                    tvContato0.setText(eventOnline.contato);
+
 
                 }
                 else {
-                    Toast.makeText(ViewEventActivity.this, "Não foi possível obter os detalhes do evento", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ViewEventOnlineActivity.this, "Não foi possível obter os detalhes do evento", Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -307,8 +307,8 @@
 
             <ImageButton
                 android:id="@+id/icEstrelaF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="33dp"
+                android:layout_height="31dp"
                 android:background="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/imFotoEvento"
                 app:layout_constraintTop_toTopOf="@+id/imFotoEvento"

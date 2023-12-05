@@ -8,6 +8,23 @@
     tools:context=".menu.criar_evento.criar_evento_online.VisualizarMyEventsOnlineNaoEditavelActivity"
     tools:layout_editor_absoluteY="81dp">
 
+    <Button
+        android:id="@+id/btnexcluir3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#C80000"
+        android:text="EXCLUIR EVENTO"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/baseline_delete_forever_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#ffffff"
+        app:strokeWidth="2dp" />
+
     <ToggleButton
         android:id="@+id/tbPrivacidade"
         android:layout_width="0dp"
@@ -23,24 +40,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
         app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
-
-    <ScrollView
-        android:id="@+id/scrollView4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 
     <TextView
         android:id="@+id/tvNomeEvento"
@@ -256,6 +255,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/icEstrelaF5"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/imFotoEvento"
+        app:layout_constraintTop_toTopOf="@+id/imFotoEvento"
+        app:srcCompat="@drawable/baseline_star_border_24" />
 
     <TextView
         android:id="@+id/tvHorarioO"

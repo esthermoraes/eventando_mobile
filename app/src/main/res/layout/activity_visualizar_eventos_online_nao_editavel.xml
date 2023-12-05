@@ -213,6 +213,15 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <ImageButton
+        android:id="@+id/icEstrelaF2"
+        android:layout_width="33dp"
+        android:layout_height="31dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/imFotoEvento"
+        app:layout_constraintTop_toTopOf="@+id/imFotoEvento"
+        app:srcCompat="@drawable/baseline_star_border_24" />
+
     <TextView
         android:id="@+id/tvHorarioO"
         android:layout_width="wrap_content"

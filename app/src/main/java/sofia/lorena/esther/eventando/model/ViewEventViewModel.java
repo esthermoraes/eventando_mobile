@@ -19,6 +19,7 @@ public class ViewEventViewModel extends AndroidViewModel {
         /**
          * Método que cria e executa uma requisição ao servidor web para obter os detalhes de um produto
          * na base de dados do servidor
+         *
          * @param pid id do produto que se quer obter os detalhes
          * @return um LiveData que vai conter a resposta do servidor quando esta estiver disponível
          */

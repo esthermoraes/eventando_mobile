@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    android:background="#9EFFFFFF"
+    android:background="#00FFFFFF"
     app:cardCornerRadius="8dp"
     app:cardUseCompatPadding="true">
 
@@ -34,7 +34,7 @@
             android:id="@+id/tvNomeF"
             android:layout_width="77dp"
             android:layout_height="15dp"
-            android:background="#9EFFFFFF"
+            android:background="#00FFFFFF"
             android:text="Nome"
             android:textAlignment="center"
             android:textColor="#000000"
@@ -50,7 +50,7 @@
             android:layout_height="17dp"
             android:layout_marginTop="1dp"
             android:layout_marginBottom="1dp"
-            android:background="#9EFFFFFF"
+            android:background="#00FFFFFF"
             android:text="00/00/00"
             android:textAlignment="center"
             android:textColor="#b25abf"

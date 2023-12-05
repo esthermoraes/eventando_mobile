@@ -10,7 +10,6 @@
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -182,6 +181,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/icEstrelaF4"
+                android:layout_width="33dp"
+                android:layout_height="31dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/imFotoEvento"
+                app:layout_constraintTop_toTopOf="@+id/imFotoEvento"
+                app:srcCompat="@drawable/baseline_star_border_24" />
 
             <ToggleButton
                 android:id="@+id/tbPrivacidade"

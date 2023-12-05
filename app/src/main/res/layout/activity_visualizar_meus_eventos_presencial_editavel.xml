@@ -278,6 +278,15 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
 
+            <ImageButton
+                android:id="@+id/icEstrelaF6"
+                android:layout_width="33dp"
+                android:layout_height="31dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/imFotoEvento"
+                app:layout_constraintTop_toTopOf="@+id/imFotoEvento"
+                app:srcCompat="@drawable/baseline_star_border_24" />
+
             <ToggleButton
                 android:id="@+id/tbPrivacidade"
                 android:layout_width="0dp"

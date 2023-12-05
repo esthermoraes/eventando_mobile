@@ -16,7 +16,7 @@ public class Event {
     public String hora; // OLHAR DEPOIS TIME
 
     public String imagem;
-
+    public String formato;
     public String atracoes;
 
 }

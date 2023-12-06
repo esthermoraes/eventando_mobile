@@ -10,9 +10,9 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ViewEventOnlineViewModel extends AndroidViewModel {
+public class ViewEventPresencialViewModel extends AndroidViewModel{
 
-    public ViewEventOnlineViewModel(@NonNull Application application) {
+    public ViewEventPresencialViewModel(@NonNull Application application) {
         super(application);
     }
 
@@ -22,10 +22,10 @@ public class ViewEventOnlineViewModel extends AndroidViewModel {
      * @param pid id do produto que se quer obter os detalhes
      * @return um LiveData que vai conter a resposta do servidor quando esta estiver disponível
      */
-    public LiveData<EventOnline> getEventOnlineDetailsLD(String pid) {
+    public LiveData<EventPresencial> getEventPresencialDetailsLD(String pid) {
 
         // Cria um container do tipo MutableLiveData (um LiveData que pode ter seu conteúdo alterado).
-        MutableLiveData<EventOnline> eventOnlineDetailLD = new MutableLiveData<>();
+        MutableLiveData<EventPresencial> eventPresencialDetailLD = new MutableLiveData<>();
 
         // Cria uma nova linha de execução (thread). O android obriga que chamadas de rede sejam feitas
         // em uma linha de execução separada da principal.
@@ -48,14 +48,15 @@ public class ViewEventOnlineViewModel extends AndroidViewModel {
 
                 // O método loadProductDetail obtem os dados detalhados de um produto junto ao servidor.
                 // Ele retorna um objeto do tipo Product, que contém os dados detalhados do produto.
-                EventOnline e = eventandoRepository.loadEventOnlineDetail(pid);
+                EventPresencial e = eventandoRepository.loadEventPresencialDetail(pid);
 
                 // Aqui postamos o resultado da operação dentro do LiveData. Quando fazemos isso,
                 // quem estiver observando o LiveData será avisado de que o resultado está disponível.
-                eventOnlineDetailLD.postValue(e);
+                eventPresencialDetailLD.postValue(e);
             }
         });
 
-        return eventOnlineDetailLD;
+        return eventPresencialDetailLD;
     }
 }
+

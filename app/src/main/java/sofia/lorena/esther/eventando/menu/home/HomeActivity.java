@@ -17,7 +17,8 @@ import com.google.android.material.navigation.NavigationBarView;
 import sofia.lorena.esther.eventando.R;
 import sofia.lorena.esther.eventando.adapter.EventosAdapter;
 import sofia.lorena.esther.eventando.menu.criar_evento.CriarEventActivity;
-import sofia.lorena.esther.eventando.menu.criar_evento.ViewEventOnlineActivity;
+import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_online.ViewEventOnlineActivity;
+import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial.ViewEventPresencialActivity;
 import sofia.lorena.esther.eventando.menu.favoritos.FavoriteFragment;
 import sofia.lorena.esther.eventando.menu.meus_eventos.MyEventsFragment;
 import sofia.lorena.esther.eventando.menu.perfil.ProfileNaoEditavelFragment;
@@ -91,9 +92,14 @@ public class HomeActivity extends AppCompatActivity {
                 .commit();
     }
 
-    public void startViewEventOnlineActivity(String pid) {
-        // Use getActivity() para obter o contexto do fragmento
+    public void startViewEventOnlineAcitivity(String pid) {
         Intent i = new Intent(this, ViewEventOnlineActivity.class);
+        i.putExtra("pid", pid);
+        startActivity(i);
+    }
+
+    public void startViewEventPresencialAcitivity(String pid) {
+        Intent i = new Intent(this, ViewEventPresencialActivity.class);
         i.putExtra("pid", pid);
         startActivity(i);
     }

@@ -8,5 +8,7 @@ public class EventPresencial extends Event {
     public String cep;
     public String tipoLogradouro;
     public String bairro;
+    public String cidade;
+    public String estado;
 
 }

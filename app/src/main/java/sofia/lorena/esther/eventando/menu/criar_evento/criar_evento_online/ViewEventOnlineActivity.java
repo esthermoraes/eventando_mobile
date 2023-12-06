@@ -1,4 +1,4 @@
-package sofia.lorena.esther.eventando.menu.criar_evento;
+package sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_online;
 
 
 import android.content.Intent;
@@ -13,9 +13,8 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import sofia.lorena.esther.eventando.R;
-import sofia.lorena.esther.eventando.model.Event;
 import sofia.lorena.esther.eventando.model.EventOnline;
-import sofia.lorena.esther.eventando.model.ViewEventViewModel;
+import sofia.lorena.esther.eventando.model.ViewEventOnlineViewModel;
 import sofia.lorena.esther.eventando.util.ImageCache;
 
 public class ViewEventOnlineActivity extends AppCompatActivity {
@@ -33,7 +32,7 @@ public class ViewEventOnlineActivity extends AppCompatActivity {
         String pid = i.getStringExtra("pid");
 
         // obtemos o ViewModel pois é nele que está o método que se conecta ao servior web.
-        ViewEventOnlineActivity ViewEventOnlineViewModel = new ViewModelProvider(this).get(ViewEventOnlineViewModel.class);
+        ViewEventOnlineViewModel viewEventOnlineViewModel = new ViewModelProvider(this).get(ViewEventOnlineViewModel.class);
 
         // O ViewModel possui o método getProductDetailsLD, que obtém os detalhes de um produto em
         // específico do servidor web.
@@ -41,7 +40,7 @@ public class ViewEventOnlineActivity extends AppCompatActivity {
         // O método getProductDetailsLD retorna um LiveData, que na prática é um container que avisa
         // quando o resultado do servidor chegou. Ele guarda os detalhes de um produto que o servidor
         // entregou para a app.
-        LiveData<EventOnline> eventOnline = ViewEventOnlineViewModel.loadEventOnlineDetail(pid);
+        LiveData<EventOnline> eventOnline = viewEventOnlineViewModel.getEventOnlineDetailsLD(pid);
 
         // Aqui nós observamos o LiveData. Quando o servidor responder, o resultado contendo uma produto
         // será guardado dentro do LiveData. Neste momento o
@@ -66,7 +65,7 @@ public class ViewEventOnlineActivity extends AppCompatActivity {
                     TextView tvNomeF = findViewById(R.id.tvNomeEvento);
                     tvNomeF.setText(eventOnline.nome);
 
-                    TextView tvPrivacidade = findViewById(R.id.tvOnline);
+                    TextView tvPrivacidade = findViewById(R.id.tbPrivacidade);
                     tvPrivacidade.setText(eventOnline.privacidade);
 
                     TextView tvObjetivoF = findViewById(R.id.tvObjetivoF);

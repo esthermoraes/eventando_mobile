@@ -66,7 +66,13 @@ public class EventosAdapter extends PagingDataAdapter<Event, MyViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //homeActivity.startViewProductActivity(event.id, HomeActivity.this);
+                if(event.formato.equals("online")) {
+                    homeActivity.startViewEventOnlineAcitivity(event.id);
+                }
+                else {
+                    homeActivity.startViewEventPresencialAcitivity(event.id);
+                }
+
             }
         });
     }

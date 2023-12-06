@@ -6,8 +6,4 @@ public class EventOnline extends Event {
 
     public String plataforma;
 
-    public String tipo_contato;
-    public String contato;
-
-
 }

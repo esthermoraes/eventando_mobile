@@ -19,4 +19,8 @@ public class Event {
     public String formato;
     public String atracoes;
 
+    public String tipo_contato;
+
+    public String contato;
+
 }

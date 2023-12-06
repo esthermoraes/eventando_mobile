@@ -4,10 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import sofia.lorena.esther.eventando.R;
@@ -66,22 +63,22 @@ public class HomeFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        HomeActivity homeActivity = (HomeActivity) getActivity();
-
-        HomeInicialFragment homeInicialFragment = new HomeInicialFragment();
-        homeActivity.setFragment(homeInicialFragment, R.id.flHome);
-
-        ImageButton ibtnPesquisa = view.findViewById(R.id.ibtnBuscar);
-        ibtnPesquisa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                BuscarEventoFragment buscarEventoFragment = new BuscarEventoFragment();
-                homeActivity.setFragment(buscarEventoFragment, R.id.flHome);
-            }
-        });
-    }
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        super.onViewCreated(view, savedInstanceState);
+//
+//        HomeActivity homeActivity = (HomeActivity) getActivity();
+//
+//        HomeInicialFragment homeInicialFragment = new HomeInicialFragment();
+//        homeActivity.setFragment(homeInicialFragment, R.id.flHome);
+//
+//        ImageButton ibtnPesquisa = view.findViewById(R.id.ibtnBuscar);
+//        ibtnPesquisa.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                BuscarEventoFragment buscarEventoFragment = new BuscarEventoFragment();
+//                homeActivity.setFragment(buscarEventoFragment, R.id.flHome);
+//            }
+//        });
+//    }
 }

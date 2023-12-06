@@ -38,6 +38,7 @@ public class HomeViewModel extends AndroidViewModel {
         Pager<Integer, Event> pager1 = new Pager(new PagingConfig(10), () -> new MyEventsPagingSource(eventandoRepository));
         myEventsLd = PagingLiveData.cachedIn(PagingLiveData.getLiveData(pager1), viewModelScope);
     }
+
     public LiveData<PagingData<Event>> getEventsLiveData() {
         return eventsLd;
     }
@@ -84,15 +85,36 @@ public class HomeViewModel extends AndroidViewModel {
         return result;
     }
 
+//    public LiveData<List<Event>> getEventPesquisaLD(String pesquisa) {
+//        MutableLiveData<List<Event>> eventPesquisaLD = new MutableLiveData<>();
+//        ExecutorService executorService = Executors.newSingleThreadExecutor();
+//        executorService.execute(new Runnable() {
+//            /**
+//             * Tudo o que colocármos dentro da função run abaixo será executada dentro da nova linha
+//             * de execução.
+//             */
+//            @Override
+//            public void run() {
+//
+//                EventandoRepository eventandoRepository = new EventandoRepository(getApplication());
+//
+//                List<Event> p = eventandoRepository.searchEvents(pesquisa);
+//
+//                eventPesquisaLD.postValue(p);
+//            }
+//        });
 
-    // Método para definir a opção de navegação selecionada
-    public void setNavigationOpSelected(int navigationOpId) {
-        selectedNavigationOpId = navigationOpId;
+
+        // Método para definir a opção de navegação selecionada
+        public void setNavigationOpSelected ( int navigationOpId){
+            selectedNavigationOpId = navigationOpId;
+        }
+
+        // Método para obter a opção de navegação selecionada
+        public Integer getSelectedNavigationOpId () {
+
+            return selectedNavigationOpId;
+        }
     }
 
-    // Método para obter a opção de navegação selecionada
-    public Integer getSelectedNavigationOpId() {
 
-        return selectedNavigationOpId;
-    }
-}

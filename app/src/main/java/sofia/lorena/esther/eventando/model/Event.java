@@ -22,18 +22,4 @@ public class Event {
     public String tipo_contato;
 
     public String contato;
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-
-        Event otherEvent = (Event) obj;
-
-        // Comparar os campos relevantes para determinar se os objetos são iguais
-        return id == otherEvent.id && nome.equals(otherEvent.nome) && data.equals(otherEvent.data) && objetivo.equals(otherEvent.objetivo);
-    }
 }

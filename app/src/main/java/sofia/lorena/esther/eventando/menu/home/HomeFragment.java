@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
@@ -78,8 +79,9 @@ public class HomeFragment extends Fragment {
         ImageButton ibtnPesquisa = view.findViewById(R.id.ibtnBuscar);
         ibtnPesquisa.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                BuscarEventoFragment buscarEventoFragment = new BuscarEventoFragment();
+            public void onClick(View v) {
+                EditText etPesquisa = view.findViewById(R.id.etBuscar);
+                BuscarEventoFragment buscarEventoFragment = BuscarEventoFragment.newInstance(etPesquisa.getText().toString());
                 homeActivity.setFragment(buscarEventoFragment, R.id.flHome);
             }
         });

@@ -275,7 +275,7 @@ public class EventandoRepository {
 
             // Se sucesso igual a 1, significa que o produto foi adicionado com sucesso.
             if(success == 1) {
-                return jsonObject.getString("id");
+                return jsonObject.getString("evento_id");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -345,7 +345,7 @@ public class EventandoRepository {
 
             // Se sucesso igual a 1, significa que o produto foi adicionado com sucesso.
             if(success == 1) {
-                return jsonObject.getString("id");
+                return jsonObject.getString("evento_id");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -721,7 +721,7 @@ public class EventandoRepository {
                 String hora = jsonObject.getString("horario");
                 String objetivo = jsonObject.getString("objetivo");
                 String atracoes = jsonObject.getString("atracoes");
-                String link = jsonObject.getString("link");
+                    String link = jsonObject.getString("link");
                 String plataforma = jsonObject.getString("plataforma");
                 String contato = jsonObject.getString("contato");
                 String tipo_contato = jsonObject.getString("tipo_contato");
@@ -871,12 +871,12 @@ public class EventandoRepository {
 
     public List<Event> searchEvents(String pesquisa) {
         // cria a lista de produtos incicialmente vazia, que será retornada como resultado
-        List<Event> eventsList = new ArrayList<>();
+         List<Event> eventsList = new ArrayList<>();
 
         // Para obter a lista de produtos é preciso estar logado. Então primeiro otemos o login e senha
         // salvos na app.
-        //String login = Config.getLogin(context);
-        //String password = Config.getPassword(context);
+        String login = Config.getLogin(context);
+        String password = Config.getPassword(context);
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
         HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL +"pesquisar_eventos.php", "GET", "UTF-8");
@@ -888,7 +888,7 @@ public class EventandoRepository {
         // usuário. Ao executar a requisição, o login e senha do usuário serão enviados ao servidor web,
         // o qual verificará se o login e senha batem com aquilo que está no BD. Somente depois dessa
         // verificação de autenticação é que o servidor web irá realizar esta ação.
-        //httpRequest.setBasicAuth(login, password);
+        httpRequest.setBasicAuth(login, password);
 
         String result = "";
         try {
@@ -944,6 +944,7 @@ public class EventandoRepository {
                     String objetivo = jEvent.getString("objetivo");
                     String data = jEvent.getString("data_prevista");
                     String img = jEvent.getString("img");
+                    String formato = jEvent.getString("formato");
 
                     // Criamo um objeto do tipo Product para guardar esses dados
                     Event event = new Event();
@@ -952,6 +953,111 @@ public class EventandoRepository {
                     event.objetivo = objetivo;
                     event.data = data;
                     event.imagem = img;
+                    event.formato = formato;
+
+
+
+
+
+
+                    // Adicionamos o objeto product na lista de produtos
+                    eventsList.add(event);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e("HTTP RESULT", result);
+        }
+
+        return eventsList;
+    }
+
+    public List<Event> favoritaEvents(Integer limit, Integer offSet) {
+        // cria a lista de produtos incicialmente vazia, que será retornada como resultado
+        List<Event> eventsList = new ArrayList<>();
+
+        // Para obter a lista de produtos é preciso estar logado. Então primeiro otemos o login e senha
+        // salvos na app.
+        String login = Config.getLogin(context);
+        String password = Config.getPassword(context);
+
+        // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
+        HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL +"pegar_eventos_favoritos.php", "GET", "UTF-8");
+        httpRequest.addParam("limit", limit.toString());
+        httpRequest.addParam("offset", offSet.toString());
+        httpRequest.addParam("user_email", login);
+
+
+        // Para esta ação, é preciso estar logado. Então na requisição HTTP setamos o login e senha do
+        // usuário. Ao executar a requisição, o login e senha do usuário serão enviados ao servidor web,
+        // o qual verificará se o login e senha batem com aquilo que está no BD. Somente depois dessa
+        // verificação de autenticação é que o servidor web irá realizar esta ação.
+        httpRequest.setBasicAuth(login, password);
+
+        String result = "";
+        try {
+            // Executa a requisição HTTP. É neste momento que o servidor web é contactado. Ao executar
+            // a requisição é aberto um fluxo de dados entre o servidor e a app (InputStream is).
+            InputStream is = httpRequest.execute();
+
+            // Obtém a resposta fornecida pelo servidor. O InputStream é convertido em uma String. Essa
+            // String é a resposta do servidor web em formato JSON.
+            //
+            // Em caso de sucesso, será retornada uma String JSON no formato:
+            //
+            // {"sucesso":1,
+            //  "produtos":[
+            //          {"id":"7", "nome":"produto 1", "preco":"10.00", "img":"www.imgur.com/img1.jpg"},
+            //          {"id":"8", "nome":"produto 2", "preco":"20.00", "img":"www.imgur.com/img2.jpg"}
+            //       ]
+            // }
+            //
+            // Em caso de falha, será retornada uma String JSON no formato:
+            //
+            // {"sucesso":0,"erro":"Erro ao obter produtos"}
+            result = Util.inputStream2String(is, "UTF-8");
+
+            // Fecha a conexão com o servidor web.
+            httpRequest.finish();
+
+            Log.i("HTTP PRODUCTS RESULT", result);
+
+            // A classe JSONObject recebe como parâmetro do construtor uma String no formato JSON e
+            // monta internamente uma estrutura de dados similar ao dicionário em python.
+            JSONObject jsonObject = new JSONObject(result);
+
+            // obtem o valor da chave sucesso para verificar se a ação ocorreu da forma esperada ou não.
+            int success = jsonObject.getInt("sucesso");
+
+            // Se sucesso igual a 1, os produtos são obtidos da String JSON e adicionados à lista de
+            // produtos a ser retornada como resultado.
+            if(success == 1) {
+
+                // A chave produtos é um array de objetos do tipo json (JSONArray), onde cada um desses representa
+                // um produto
+                JSONArray jsonArray = jsonObject.getJSONArray("eventos");
+
+                // Cada elemento do JSONArray é um JSONObject que guarda os dados de um produto
+                for(int i = 0; i < jsonArray.length(); i++) {
+
+                    // Obtemos o JSONObject referente a um produto
+                    JSONObject jEvent = jsonArray.getJSONObject(i);
+
+                    String pid = jEvent.getString("id");
+                    String nome = jEvent.getString("nome");
+                    String data = jEvent.getString("data_prevista");
+                    String img = jEvent.getString("img");
+                    String formato = jEvent.getString("formato");
+
+                    // Criamo um objeto do tipo Product para guardar esses dados
+                    Event event = new Event();
+                    event.id = pid;
+                    event.nome = nome;
+                    event.data = data;
+                    event.imagem = img;
+                    event.formato = formato;
 
                     // Adicionamos o objeto product na lista de produtos
                     eventsList.add(event);

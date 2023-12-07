@@ -86,11 +86,11 @@ public class CriarEventOnlineFragment extends Fragment {
                         return;
                     }
 
-                    criarEventActivity.cadastrarEventoOnline(position, newetLinkCO, btnCriar);
                 } else {
                     // posição inválida
                     Toast.makeText(requireContext(), "Campo de plataforma não preenchido", Toast.LENGTH_LONG).show();
                     btnCriar.setEnabled(true);
+                    return;
                 }
                 criarEventActivity.cadastrarEventoOnline(position, newetLinkCO, btnCriar );
             }

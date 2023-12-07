@@ -3,6 +3,8 @@ package sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_online;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,8 +33,26 @@ public class ViewEventOnlineActivity extends AppCompatActivity {
         Intent i = getIntent();
         String pid = i.getStringExtra("pid");
 
+
+
         // obtemos o ViewModel pois é nele que está o método que se conecta ao servior web.
         ViewEventOnlineViewModel viewEventOnlineViewModel = new ViewModelProvider(this).get(ViewEventOnlineViewModel.class);
+
+        ImageButton icEstrelaF2 = findViewById(R. id.icEstrelaF2);
+        icEstrelaF2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LiveData<Boolean> favoritarEventLD = viewEventOnlineViewModel.favoritar(pid);
+                favoritarEventLD.observe(this, new Observer<Boolean>() {
+                    @Override
+                    public void onChanged(Boolean aBoolean) {
+                        if(aBoolean) {
+                            //setar estrelinha diferente
+                        }
+                    }
+                });
+            }
+        });
 
         // O ViewModel possui o método getProductDetailsLD, que obtém os detalhes de um produto em
         // específico do servidor web.

@@ -1,6 +1,5 @@
 package sofia.lorena.esther.eventando.adapter;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,34 +7,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.paging.PagingDataAdapter;
-import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 import sofia.lorena.esther.eventando.R;
 import sofia.lorena.esther.eventando.menu.home.HomeActivity;
 import sofia.lorena.esther.eventando.model.Event;
 import sofia.lorena.esther.eventando.util.ImageCache;
 
-public class PesquisaAdapter extends PagingDataAdapter<Event, MyViewHolder> {
+public class PesquisaAdapter extends RecyclerView.Adapter {
 
     HomeActivity homeActivity;
 
-    public PesquisaAdapter(HomeActivity homeActivity) {
-        super(new DiffUtil.ItemCallback<Event>() {
-            @Override
-            public boolean areItemsTheSame(@NonNull Event oldItem, @NonNull Event newItem) {
-                // Verifique se os identificadores dos itens são os mesmos
-                return oldItem.id.equals(newItem.id);
-            }
+    List<Event> events;
 
-            @Override
-            public boolean areContentsTheSame(@NonNull Event oldItem, @NonNull Event newItem) {
-                // Verifique se o conteúdo dos itens é o mesmo
-                return oldItem.equals(newItem);
-            }
-        });
+    public PesquisaAdapter(HomeActivity homeActivity, List<Event> events) {
         this.homeActivity = homeActivity;
+        this.events =  events;
     }
 
     @NonNull
@@ -48,8 +37,8 @@ public class PesquisaAdapter extends PagingDataAdapter<Event, MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Event event = getItem(position);
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        Event event = events.get(position);
         if (event != null) {
             View v = holder.itemView;
 
@@ -69,15 +58,24 @@ public class PesquisaAdapter extends PagingDataAdapter<Event, MyViewHolder> {
 
             ImageCache.loadImageUrlToImageView(homeActivity, event.imagem, imFotoEventoF, w, h);
 
-            v.setOnClickListener(new View.OnClickListener() {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    Intent i = new Intent(homeActivity, Event.class);
-                    i.putExtra("codigo_evento", event.id);
-                    homeActivity.startActivity(i);
-                    homeActivity.finish();
+                public void onClick(View v) {
+                    if(event.formato.equals("online")) {
+                        homeActivity.startViewEventOnlineAcitivity(event.id);
+                    }
+                    else {
+                        homeActivity.startViewEventPresencialAcitivity(event.id);
+                    }
+
                 }
             });
         }
     }
+
+    @Override
+    public int getItemCount() {
+        return events.size();
+    }
+
 }

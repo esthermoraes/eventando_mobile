@@ -636,6 +636,7 @@ public class EventandoRepository {
                     String img = jEvent.getString("img");
                     String formato = jEvent.getString("formato");
 
+
                     // Criamo um objeto do tipo Product para guardar esses dados
                     Event event = new Event();
                     event.id = pid;
@@ -724,22 +725,28 @@ public class EventandoRepository {
                 String plataforma = jsonObject.getString("plataforma");
                 String contato = jsonObject.getString("contato");
                 String tipo_contato = jsonObject.getString("tipo_contato");
-                String formato = jsonObject.getString("formato");
 
-                // Cria um objeto Product e guarda os detalhes do produto dentro dele.
+                String priv;
+
+                if ("false".equals(privacidade)) {
+                    priv = "PÚBLICO";
+                } else {
+                    priv = "PRIVADO";
+                }
+
                 EventOnline p = new EventOnline();
                 p.nome = nome;
                 p.id = id;
-                p.privacidade = privacidade;
+                p.privacidade = priv;
                 p.imagem = imagem;
                 p.data = data;
                 p.hora = hora;
                 p.objetivo = objetivo;
+                p.atracoes = atracoes;
                 p.link = link;
                 p.plataforma = plataforma;
                 p.contato = contato;
                 p.tipo_contato = tipo_contato;
-                p.formato = formato;
 
                 return p;
             }
@@ -814,7 +821,6 @@ public class EventandoRepository {
                 String atracoes = jsonObject.getString("atracoes");
                 String numero = jsonObject.getString("numero");
                 String logradouro = jsonObject.getString("logradouro");
-                String formato = jsonObject.getString("formato");
                 String cep = jsonObject.getString("cep");
                 String tipo_logradouro = jsonObject.getString("tipo_logradouro");
                 String bairro = jsonObject.getString("bairro");
@@ -824,12 +830,19 @@ public class EventandoRepository {
                 String tipo_contato = jsonObject.getString("tipo_contato");
                 String contato = jsonObject.getString("contato");
 
+                String priv;
 
-                // Cria um objeto Product e guarda os detalhes do produto dentro dele.
+                if ("false".equals(privacidade)) {
+                    priv = "PÚBLICO";
+                } else {
+                    priv = "PRIVADO";
+                }
+
+
                 EventPresencial p = new EventPresencial();
                 p.nome = nome;
                 p.id = id;
-                p.privacidade = privacidade;
+                p.privacidade = priv;
                 p.imagem = imagem;
                 p.data = data;
                 p.hora = hora;
@@ -845,7 +858,6 @@ public class EventandoRepository {
                 p.buffet = buffet;
                 p.tipo_contato = tipo_contato;
                 p.contato = contato;
-                p.formato = formato;
 
                 return p;
             }
@@ -867,7 +879,7 @@ public class EventandoRepository {
         //String password = Config.getPassword(context);
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
-        HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL +"pesquisar_produtos.php", "GET", "UTF-8");
+        HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL +"pesquisar_eventos.php", "GET", "UTF-8");
         //httpRequest.addParam("limit", limit.toString());
         //httpRequest.addParam("offset", offSet.toString());
         httpRequest.addParam("pesquisa", pesquisa);

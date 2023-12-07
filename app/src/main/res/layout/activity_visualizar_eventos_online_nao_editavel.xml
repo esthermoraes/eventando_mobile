@@ -8,22 +8,6 @@
     tools:context=".menu.criar_evento.criar_evento_online.VisualizarEventOnlineNaoEditavelActivity"
     tools:layout_editor_absoluteY="81dp">
 
-    <ToggleButton
-        android:id="@+id/tbPrivacidade"
-        android:layout_width="0dp"
-        android:layout_height="33dp"
-        android:background="@android:color/white"
-        android:backgroundTint="@android:color/white"
-        android:button="@drawable/baseline_lock_open_24"
-        android:buttonTint="#B25ABF"
-        android:fontFamily="@font/montserrat"
-        android:textOff="PÚBLICO"
-        android:textOn="PRIVADO"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
-        app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
-
     <ImageButton
         android:id="@+id/icEstrelaF3"
         android:layout_width="wrap_content"
@@ -129,7 +113,8 @@
         android:layout_width="0dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/editext_bg"
         android:ems="10"
         android:fontFamily="@font/montserrat"
@@ -137,6 +122,7 @@
         android:inputType="date"
         android:textSize="12dp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
 
@@ -205,13 +191,32 @@
 
     <ImageView
         android:id="@+id/imFotoEvento"
-        android:layout_width="164dp"
-        android:layout_height="120dp"
+        android:layout_width="165dp"
+        android:layout_height="150dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/paineleventsfeedmy_bg"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <ToggleButton
+        android:id="@+id/tbPrivacidade"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:background="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:button="@drawable/baseline_lock_open_24"
+        android:buttonTint="#B25ABF"
+        android:enabled="false"
+        android:fontFamily="@font/montserrat"
+        android:textOff="PÚBLICO"
+        android:textOn="PRIVADO"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imFotoEvento"
+        app:layout_constraintEnd_toEndOf="@+id/imFotoEvento" />
 
     <ImageButton
         android:id="@+id/icEstrelaF2"
@@ -224,26 +229,26 @@
 
     <TextView
         android:id="@+id/tvHorarioO"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/editext_bg"
         android:fontFamily="@font/montserrat"
         android:hint="Hora"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imFotoEvento"
-        app:layout_constraintStart_toEndOf="@+id/tvDataPrevistaO"
-        app:layout_constraintTop_toBottomOf="@+id/tvOnline" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
 
     <TextView
         android:id="@+id/tvObjetivoO"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/editext_bg"
         android:fontFamily="@font/montserrat"
@@ -252,7 +257,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataPrevistaO" />
+        app:layout_constraintTop_toBottomOf="@+id/imFotoEvento" />
 
     <Button
         android:id="@+id/btnConviteO"

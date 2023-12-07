@@ -68,7 +68,7 @@ public class ViewEventOnlineActivity extends AppCompatActivity {
                     TextView tvPrivacidade = findViewById(R.id.tbPrivacidade);
                     tvPrivacidade.setText(eventOnline.privacidade);
 
-                    TextView tvObjetivoF = findViewById(R.id.tvObjetivoF);
+                    TextView tvObjetivoF = findViewById(R.id.tvObjetivoO);
                     tvObjetivoF.setText(eventOnline.objetivo);
 
                     TextView tvDataPrevista = findViewById(R.id.tvDataPrevistaO);

@@ -64,41 +64,41 @@ public class BuscarEventoFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_buscar_evento, container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        RecyclerView rvPesquisa = view.findViewById(R.id.rvEventsBuscados);
-        rvPesquisa.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        HomeActivity homeActivity = (HomeActivity) getActivity();
-        HomeViewModel mViewModel = new ViewModelProvider(homeActivity).get(HomeViewModel.class);
-
-        // Verifique se a pesquisa não é nula e não está vazia
-        if (pesquisa != null && !pesquisa.equals("")) {
-            LiveData<List<Event>> prodLiveData = mViewModel.getEventPesquisaLD(this.pesquisa);
-            prodLiveData.observe(getViewLifecycleOwner(), new Observer<List<Event>>() {
-                @Override
-                public void onChanged(List<Event> events) {
-                    // Correção: use um DiffUtil.ItemCallback válido
-                    PesquisaAdapter pesquisaAdapter = new PesquisaAdapter(homeActivity, new DiffUtil.ItemCallback<Event>() {
-                        @Override
-                        public boolean areItemsTheSame(@NonNull Event oldItem, @NonNull Event newItem) {
-                            return oldItem.getId().equals(newItem.getId()); // Corrigido: use getId
-                        }
-
-                        @Override
-                        public boolean areContentsTheSame(@NonNull Event oldItem, @NonNull Event newItem) {
-                            return oldItem.equals(newItem);
-                        }
-                    });
-                    pesquisaAdapter.submitList(events); // Adicione essa linha para enviar a lista ao adaptador
-                    rvPesquisa.setAdapter(pesquisaAdapter);
-                }
-            });
-        } else {
-            // Se pesquisa for nula ou vazia, exiba "nao"
-            Toast.makeText(getContext(), "nao", Toast.LENGTH_SHORT).show();
-        }
-    }
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        super.onViewCreated(view, savedInstanceState);
+//
+//        RecyclerView rvPesquisa = view.findViewById(R.id.rvEventsBuscados);
+//        rvPesquisa.setLayoutManager(new LinearLayoutManager(getContext()));
+//
+//        HomeActivity homeActivity = (HomeActivity) getActivity();
+//        HomeViewModel mViewModel = new ViewModelProvider(homeActivity).get(HomeViewModel.class);
+//
+//        // Verifique se a pesquisa não é nula e não está vazia
+//        if (pesquisa != null && !pesquisa.equals("")) {
+//            LiveData<List<Event>> prodLiveData = mViewModel.getEventPesquisaLD(this.pesquisa);
+//            prodLiveData.observe(getViewLifecycleOwner(), new Observer<List<Event>>() {
+//                @Override
+//                public void onChanged(List<Event> events) {
+//                    // Correção: use um DiffUtil.ItemCallback válido
+//                    PesquisaAdapter pesquisaAdapter = new PesquisaAdapter(homeActivity, new DiffUtil.ItemCallback<Event>() {
+//                        @Override
+//                        public boolean areItemsTheSame(@NonNull Event oldItem, @NonNull Event newItem) {
+//                            return oldItem.getId().equals(newItem.getId()); // Corrigido: use getId
+//                        }
+//
+//                        @Override
+//                        public boolean areContentsTheSame(@NonNull Event oldItem, @NonNull Event newItem) {
+//                            return oldItem.equals(newItem);
+//                        }
+//                    });
+//                    pesquisaAdapter.submitList(events); // Adicione essa linha para enviar a lista ao adaptador
+//                    rvPesquisa.setAdapter(pesquisaAdapter);
+//                }
+//            });
+//        } else {
+//            // Se pesquisa for nula ou vazia, exiba "nao"
+//            Toast.makeText(getContext(), "nao", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 }

@@ -544,7 +544,7 @@ public class EventandoRepository {
                     event.objetivo = objetivo;
                     event.data = data;
                     event.imagem = img;
-                    event.formato = formato;
+                    event.formato = formato; //QUANDO EU  TIRO FORMATO DAQUI, OS EVENTOS PRESENCIAIS APARECEM
 
                     // Adicionamos o objeto product na lista de produtos
                     myEventsArrayList.add(event);

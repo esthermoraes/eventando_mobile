@@ -12,10 +12,11 @@ public class EventOnlineActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_online);
+        setContentView(R.layout.fragment_home_inicial);
 
         Intent i = getIntent();
         String id = i.getStringExtra("id");
+
 
 
     }

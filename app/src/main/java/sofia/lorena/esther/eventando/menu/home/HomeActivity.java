@@ -81,6 +81,7 @@ public class HomeActivity extends AppCompatActivity {
         // Adicione o fragmento ao contêiner
         HomeInicialFragment homeInicialfragment = HomeInicialFragment.newInstance();
         setFragment(homeInicialfragment, R.id.flHome);
+
     }
 
     // Método para definir o fragmento na tela

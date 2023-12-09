@@ -2,59 +2,43 @@ package sofia.lorena.esther.eventando.menu.favoritos;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.paging.PagingData;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import sofia.lorena.esther.eventando.R;
+import sofia.lorena.esther.eventando.adapter.FavoritosAdapter;
+import sofia.lorena.esther.eventando.menu.home.HomeActivity;
+import sofia.lorena.esther.eventando.model.Event;
+import sofia.lorena.esther.eventando.model.HomeViewModel;
+import sofia.lorena.esther.eventando.util.Util;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FavoriteFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class FavoriteFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    HomeActivity homeActivity;
 
     public FavoriteFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FavoriteFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FavoriteFragment newInstance(String param1, String param2) {
+    public static FavoriteFragment newInstance() {
         FavoriteFragment fragment = new FavoriteFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -62,5 +46,34 @@ public class FavoriteFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_favorite, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Configura o RecyclerView no fragmento
+        RecyclerView rvFavorites = view.findViewById(R.id.rvFavorites);
+        rvFavorites.setHasFixedSize(true);
+        float w = getResources().getDimension(R.dimen.img_carrossel_width);
+        int numberOfColumns = 3;
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), numberOfColumns);
+        rvFavorites.setLayoutManager(layoutManager);
+        FavoritosAdapter favoritosAdapter = new FavoritosAdapter((HomeActivity) getActivity());
+        rvFavorites.setAdapter(favoritosAdapter);
+
+        // Obtemos o ViewModel
+        HomeViewModel homeViewModel = new ViewModelProvider(requireActivity()).get(HomeViewModel.class);
+
+        // Obtém o LiveData dos eventos
+        LiveData<PagingData<Event>> favoritosLd = homeViewModel.getFavoritosLiveData();
+
+        // Observa o LiveData dos eventos
+        favoritosLd.observe(getViewLifecycleOwner(), new Observer<PagingData<Event>>() {
+            @Override
+            public void onChanged(PagingData<Event> eventPagingData) {
+                favoritosAdapter.submitData(getViewLifecycleOwner().getLifecycle(), eventPagingData);
+            }
+        });
     }
 }

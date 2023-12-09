@@ -10,53 +10,84 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ViewEventPresencialViewModel extends AndroidViewModel{
+public class ViewEventPresencialViewModel extends AndroidViewModel {
+    EventPresencial eventPresencial;
 
     public ViewEventPresencialViewModel(@NonNull Application application) {
         super(application);
     }
 
-    /**
-     * Método que cria e executa uma requisição ao servidor web para obter os detalhes de um produto
-     * na base de dados do servidor
-     * @param pid id do produto que se quer obter os detalhes
-     * @return um LiveData que vai conter a resposta do servidor quando esta estiver disponível
-     */
     public LiveData<EventPresencial> getEventPresencialDetailsLD(String pid) {
-
-        // Cria um container do tipo MutableLiveData (um LiveData que pode ter seu conteúdo alterado).
         MutableLiveData<EventPresencial> eventPresencialDetailLD = new MutableLiveData<>();
-
-        // Cria uma nova linha de execução (thread). O android obriga que chamadas de rede sejam feitas
-        // em uma linha de execução separada da principal.
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
-        // Executa a nova linha de execução. Dentro dessa linha, iremos realizar as requisições ao
-        // servidor web.
-        executorService.execute(new Runnable() {
+        executorService.execute(() -> {
+            EventandoRepository eventandoRepository = new EventandoRepository(getApplication());
+            EventPresencial eventPresencial = eventandoRepository.loadEventPresencialDetail(pid);
 
-            /**
-             * Tudo o que colocármos dentro da função run abaixo será executada dentro da nova linha
-             * de execução.
-             */
-            @Override
-            public void run() {
+            // Atualize o status de favorito com base em lógica específica (consultando banco de dados local, etc.)
+            // Aqui, assumimos que o status de favorito é obtido do servidor.
+            eventPresencial.setFavorito(true); // Exemplo: Consideramos que é favorito
 
-                // Criamos uma instância de ProductsRepository. É dentro dessa classe que estão os
-                // métodos que se comunicam com o servidor web.
-                EventandoRepository eventandoRepository = new EventandoRepository(getApplication());
-
-                // O método loadProductDetail obtem os dados detalhados de um produto junto ao servidor.
-                // Ele retorna um objeto do tipo Product, que contém os dados detalhados do produto.
-                EventPresencial e = eventandoRepository.loadEventPresencialDetail(pid);
-
-                // Aqui postamos o resultado da operação dentro do LiveData. Quando fazemos isso,
-                // quem estiver observando o LiveData será avisado de que o resultado está disponível.
-                eventPresencialDetailLD.postValue(e);
-            }
+            eventPresencialDetailLD.postValue(eventPresencial);
         });
 
         return eventPresencialDetailLD;
     }
-}
 
+    public LiveData<Boolean> favoritar(String pid) {
+        MutableLiveData<Boolean> favoritarEventLD = new MutableLiveData<>();
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+        executorService.execute(() -> {
+            EventandoRepository eventandoRepository = new EventandoRepository(getApplication());
+
+            // Tente favoritar e obtenha o resultado
+            Boolean favoritado = eventandoRepository.favorita(pid);
+
+            if (favoritado) {
+                // Se for favoritado, atualize o status localmente
+                // Supondo que você tenha acesso ao objeto EventPresencial na sua classe ViewModel
+                if (eventPresencial != null) {
+                    eventPresencial.setFavorito(true);
+
+                    // Salve no banco de dados local, se necessário
+                    // eventandoRepository.salvarEventoLocal(eventPresencial);
+                }
+            }
+
+            // Poste o resultado
+            favoritarEventLD.postValue(favoritado);
+        });
+
+        return favoritarEventLD;
+    }
+
+    public LiveData<Boolean> desfavoritar(String pid) {
+        MutableLiveData<Boolean> desfavoritarEventLD = new MutableLiveData<>();
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+        executorService.execute(() -> {
+            EventandoRepository eventandoRepository = new EventandoRepository(getApplication());
+
+            // Tente desfavoritar e obtenha o resultado
+            Boolean desfavoritado = eventandoRepository.desfavorita(pid);
+
+            if (desfavoritado) {
+                // Se for desfavoritado, atualize o status localmente
+                // Supondo que você tenha acesso ao objeto EventPresencial na sua classe ViewModel
+                if (eventPresencial != null) {
+                    eventPresencial.setFavorito(false);
+
+                    // Salve no banco de dados local, se necessário
+                    // eventandoRepository.salvarEventoLocal(eventPresencial);
+                }
+            }
+
+            // Poste o resultado
+            desfavoritarEventLD.postValue(desfavoritado);
+        });
+
+        return desfavoritarEventLD;
+    }
+}

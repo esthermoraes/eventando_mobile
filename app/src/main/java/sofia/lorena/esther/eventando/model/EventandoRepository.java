@@ -1073,4 +1073,97 @@ public class EventandoRepository {
         return eventsList;
     }
 
+    public boolean favorita(String id) {
+        // Cria uma variável para indicar se a operação foi bem-sucedida
+        boolean favoritadoComSucesso = false;
+
+        // Obtém o login e senha salvos na aplicação
+        String login = Config.getLogin(context);
+        String password = Config.getPassword(context);
+
+        // Cria uma requisição HTTP
+        HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL + "favoritar.php", "GET", "UTF-8");
+
+        // Adiciona parâmetros à requisição
+        httpRequest.addParam("criador_evento", login);
+        httpRequest.addParam("id_evento", id);
+        // Configura autenticação básica
+        httpRequest.setBasicAuth(login, password);
+
+        String result = "";
+        try {
+            // Executa a requisição HTTP
+            InputStream is = httpRequest.execute();
+            result = Util.inputStream2String(is, "UTF-8");
+
+            // Fecha a conexão com o servidor web
+            httpRequest.finish();
+
+            Log.i("HTTP PRODUCTS RESULT", result);
+
+            // Converte a resposta do servidor para um objeto JSON
+            JSONObject jsonObject = new JSONObject(result);
+
+            // Obtém o valor da chave "sucesso" para verificar se a ação ocorreu conforme esperado
+            int success = jsonObject.getInt("sucesso");
+
+            // Se sucesso igual a 1, indica que a operação foi bem-sucedida
+            if (success == 1) {
+                favoritadoComSucesso = true;
+            }
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+            Log.e("HTTP RESULT", result);
+        }
+
+        return favoritadoComSucesso;
+    }
+
+    public boolean desfavorita(String id) {
+        // Cria uma variável para indicar se a operação foi bem-sucedida
+        boolean desfavoritadoComSucesso = false;
+
+        // Obtém o login e senha salvos na aplicação
+        String login = Config.getLogin(context);
+        String password = Config.getPassword(context);
+
+        // Cria uma requisição HTTP
+        HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL + "desfavoritar.php", "GET", "UTF-8");
+
+        // Adiciona parâmetros à requisição
+        httpRequest.addParam("criador_evento", login);
+        httpRequest.addParam("id_evento", id);
+        // Configura autenticação básica
+        httpRequest.setBasicAuth(login, password);
+
+        String result = "";
+        try {
+            // Executa a requisição HTTP
+            InputStream is = httpRequest.execute();
+            result = Util.inputStream2String(is, "UTF-8");
+
+            // Fecha a conexão com o servidor web
+            httpRequest.finish();
+
+            Log.i("HTTP PRODUCTS RESULT", result);
+
+            // Converte a resposta do servidor para um objeto JSON
+            JSONObject jsonObject = new JSONObject(result);
+
+            // Obtém o valor da chave "sucesso" para verificar se a ação ocorreu conforme esperado
+            int success = jsonObject.getInt("sucesso");
+
+            // Se sucesso igual a 1, indica que a operação foi bem-sucedida
+            if (success == 1) {
+                desfavoritadoComSucesso = true;
+            }
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+            Log.e("HTTP RESULT", result);
+        }
+
+        return desfavoritadoComSucesso;
+    }
+
+
 }

@@ -25,6 +25,8 @@ public class HomeViewModel extends AndroidViewModel {
     LiveData<PagingData<Event>> eventsLd;
 
     LiveData<PagingData<Event>> myEventsLd;
+
+    LiveData<PagingData<Event>> eventsFavoritosLd;
     Integer selectedNavigationOpId = R.id.itemHome;
 
     public HomeViewModel(@NonNull Application application) {
@@ -38,6 +40,9 @@ public class HomeViewModel extends AndroidViewModel {
 
         Pager<Integer, Event> pager1 = new Pager(new PagingConfig(10), () -> new MyEventsPagingSource(eventandoRepository));
         myEventsLd = PagingLiveData.cachedIn(PagingLiveData.getLiveData(pager1), viewModelScope);
+
+        Pager<Integer, Event> pager2 = new Pager(new PagingConfig(10), () -> new EventsFavoritosPagingSource(eventandoRepository));
+        eventsFavoritosLd = PagingLiveData.cachedIn(PagingLiveData.getLiveData(pager2), viewModelScope);
     }
 
     public LiveData<PagingData<Event>> getEventsLiveData() {
@@ -83,4 +88,9 @@ public class HomeViewModel extends AndroidViewModel {
     public Integer getSelectedNavigationOpId() {
         return selectedNavigationOpId;
     }
+
+    public LiveData<PagingData<Event>> getFavoritosLiveData() {
+            return eventsFavoritosLd;
+    }
 }
+

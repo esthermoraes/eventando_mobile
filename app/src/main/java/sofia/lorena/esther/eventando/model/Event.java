@@ -22,4 +22,38 @@ public class Event {
     public String tipo_contato;
 
     public String contato;
+
+    private boolean favorito;
+
+    public String getId() {
+        return id;
+    }
+
+    public boolean isFavorito() {
+        return favorito;
+    }
+
+    public void setFavorito(boolean favorito) {
+        this.favorito = favorito;
+    }
+
+    public String img() {
+        return imagem;
+    }
+
+    public String formato() {
+        return formato;
+    }
+
+    public String nome() {
+        return nome;
+    }
+
+    public String data() {
+        return data;
+    }
+
+    public void setId(String pid) {
+        this.id = id;
+    }
 }

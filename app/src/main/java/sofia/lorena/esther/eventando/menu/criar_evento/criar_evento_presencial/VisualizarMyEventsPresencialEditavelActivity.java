@@ -12,5 +12,6 @@ public class VisualizarMyEventsPresencialEditavelActivity extends AppCompatActiv
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizar_meus_eventos_presencial_editavel);
+
     }
 }

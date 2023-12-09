@@ -12,5 +12,6 @@ public class VisualizarMyEventsPresencialNaoEditavelActivity extends AppCompatAc
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizar_meus_eventos_presencial_nao_editavel);
+
     }
 }

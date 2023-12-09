@@ -35,6 +35,8 @@ import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_online.Criar
 import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_online.EventOnlineActivity;
 import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial.CriarEventPresencialFragment;
 import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial.EventPresencialActivity;
+import sofia.lorena.esther.eventando.menu.home.HomeActivity;
+import sofia.lorena.esther.eventando.menu.home.HomeInicialFragment;
 import sofia.lorena.esther.eventando.model.CriarEventViewModel;
 import sofia.lorena.esther.eventando.util.Util;
 
@@ -181,8 +183,8 @@ public class CriarEventActivity extends AppCompatActivity {
                 // finalizamos a Activity, voltamos para a tela de login.
                 if (!id.isEmpty()) {
                     Toast.makeText(CriarEventActivity.this, "Novo evento criado com sucesso", Toast.LENGTH_LONG).show();
-                    Intent i = new Intent(CriarEventActivity.this, EventPresencialActivity.class);
-                    i.putExtra("id", id);
+                    Intent i = new Intent(CriarEventActivity.this, HomeActivity.class);
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(i);
                 } else {
                     // Se o cadastro não deu certo, apenas continuamos na tela de cadastro e
@@ -285,8 +287,8 @@ public class CriarEventActivity extends AppCompatActivity {
                 // finalizamos a Activity, voltamos para a tela de login.
                 if (!id.isEmpty()) {
                     Toast.makeText(CriarEventActivity.this, "Novo evento criado com sucesso", Toast.LENGTH_LONG).show();
-                    Intent i = new Intent(CriarEventActivity.this, EventOnlineActivity.class);
-                    i.putExtra("id", id);
+                    Intent i = new Intent(CriarEventActivity.this, HomeActivity.class);
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(i);
                 } else {
                     // Se o cadastro não deu certo, apenas continuamos na tela de cadastro e

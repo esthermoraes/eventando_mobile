@@ -2,6 +2,8 @@ package sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_presencial;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,27 +14,61 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import sofia.lorena.esther.eventando.R;
+import sofia.lorena.esther.eventando.menu.criar_evento.criar_evento_online.ViewEventOnlineActivity;
 import sofia.lorena.esther.eventando.model.EventPresencial;
+import sofia.lorena.esther.eventando.model.ViewEventOnlineViewModel;
 import sofia.lorena.esther.eventando.model.ViewEventPresencialViewModel;
 import sofia.lorena.esther.eventando.util.ImageCache;
 
 public class ViewEventPresencialActivity extends AppCompatActivity{
+    private boolean isFavorito = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizar_eventos_presencial_nao_editavel);
 
-        // Para obter os detalhes do produto, a app envia o id do produto ao servidor web. Este
-        // último responde com os detalhes do produto referente ao pid.
-
-        // O pid do produto é enviado para esta tela quando o produto é clicado na tela de Home.
-        // Aqui nós obtemos o pid.
         Intent i = getIntent();
         String pid = i.getStringExtra("pid");
 
-        // obtemos o ViewModel pois é nele que está o método que se conecta ao servior web.
         ViewEventPresencialViewModel viewEventPresencialViewModel = new ViewModelProvider(this).get(ViewEventPresencialViewModel.class);
+
+        ImageButton icEstrelaF = findViewById(R.id.icEstrelaF);
+
+        // Adiciona um clique ao botão para alternar entre favoritar e desfavoritar
+        icEstrelaF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isFavorito) {
+                    // Se já foi favoritado, desfavorize
+                    LiveData<Boolean> desfavoritarEventLD = viewEventPresencialViewModel.desfavoritar(pid);
+                    desfavoritarEventLD.observe(ViewEventPresencialActivity.this, new Observer<Boolean>() {
+                        @Override
+                        public void onChanged(Boolean desfavoritado) {
+                            if (desfavoritado) {
+                                // Se foi desfavoritado, exiba o ícone de estrela vazia
+                                icEstrelaF.setImageResource(R.drawable.baseline_star_border_24);
+                                isFavorito = false;
+                            }
+                        }
+                    });
+                } else {
+                    // Se não foi favoritado, favorize
+                    LiveData<Boolean> favoritarEventLD = viewEventPresencialViewModel.favoritar(pid);
+                    favoritarEventLD.observe(ViewEventPresencialActivity.this, new Observer<Boolean>() {
+                        @Override
+                        public void onChanged(Boolean favoritado) {
+                            if (favoritado) {
+                                // Se foi favoritado, exiba o ícone de estrela cheia
+                                icEstrelaF.setImageResource(R.drawable.baseline_star_24);
+                                isFavorito = true;
+                            }
+                        }
+                    });
+                }
+            }
+        });
+
 
         // O ViewModel possui o método getProductDetailsLD, que obtém os detalhes de um produto em
         // específico do servidor web.
@@ -118,6 +154,7 @@ public class ViewEventPresencialActivity extends AppCompatActivity{
                 }
             }
         });
+
     }
 
 }

@@ -367,6 +367,7 @@ public class EventandoRepository {
         String password = Config.getPassword(context);
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
+
         HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL +"pegar_eventos_feed.php", "GET", "UTF-8");
         httpRequest.addParam("limit", limit.toString());
         httpRequest.addParam("offset", offSet.toString());
@@ -766,8 +767,8 @@ public class EventandoRepository {
         String password = Config.getPassword(context);
 
         // Cria uma requisição HTTP a adiona o parâmetros que devem ser enviados ao servidor
-        HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL + "pegar_detalhes_evento_presencial.php", "GET", "UTF-8");
-        httpRequest.addParam("evento_id", id);
+             HttpRequest httpRequest = new HttpRequest(Config.EVENTS_APP_URL + "pegar_detalhes_evento_presencial.php", "GET", "UTF-8");
+                 httpRequest.addParam("evento_id", id);
 
         // Para esta ação, é preciso estar logado. Então na requisição HTTP setamos o login e senha do
         // usuário. Ao executar a requisição, o login e senha do usuário serão enviados ao servidor web,
@@ -803,7 +804,7 @@ public class EventandoRepository {
             JSONObject jsonObject = new JSONObject(result);
 
             // obtem o valor da chave sucesso para verificar se a ação ocorreu da forma esperada ou não.
-            int success = jsonObject.getInt("sucesso");
+                                    int success = jsonObject.getInt("sucesso");
 
             // Se sucesso igual a 1, os detalhes do produto são obtidos da String JSON e um objeto
             // do tipo Product é criado para guardar esses dados
